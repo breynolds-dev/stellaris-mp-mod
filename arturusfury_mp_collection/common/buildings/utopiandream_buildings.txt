@@ -1,0 +1,88 @@
+building_paradise_dome_2 = {
+	icon = "building_paradise_dome"
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	produced_resources = {
+		food = 4
+		unity = 2
+	}
+	
+	planet_modifier = {
+		pop_citizen_happiness = 0.05
+		# pop_environment_tolerance = 0.05
+	}
+	
+	potential = {
+		owner = {
+			not = { has_authority = auth_machine_intelligence }
+			has_ascension_perk = ap_prosperity
+		}
+	}
+
+	destroy_if = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				NOT = { has_ascension_perk = ap_prosperity }
+			}
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1_or_hab"
+			planet = {
+				OR = {
+					has_building = "building_hab_capital"
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+		
+		# If planet only has slaves/robots, keep it to mining and farming...
+		is_slave_tile_or_planet = no	
+	}
+	
+	ai_replace = no
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			planet = {
+				not = { has_building = building_paradise_dome }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			planet = {
+				has_building = building_paradise_dome
+			}
+		}
+	}
+}

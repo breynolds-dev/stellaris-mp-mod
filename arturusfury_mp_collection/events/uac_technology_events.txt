@@ -1,0 +1,141 @@
+namespace = uac_technology_event
+
+#Psionic events
+
+#Gestalt Psionic Theory
+country_event = {
+	id = uac_technology_event.1
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_psionic_theory }
+			has_technology = tech_gestalt_psionic_theory
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_psionic_theory message = no }
+	}
+}
+
+#Gestalt Telepathy
+country_event = {
+	id = uac_technology_event.2
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_telepathy }
+			has_technology = tech_gestalt_telepathy
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_telepathy message = no }
+	}
+}
+
+#Gestalt Precognition Interface
+country_event = {
+	id = uac_technology_event.3
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_precognition_interface }
+			has_technology = tech_gestalt_precognition_interface
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_precognition_interface message = no }
+	}
+}
+
+#Gestalt Psi Jump Drive
+country_event = {
+	id = uac_technology_event.4
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_psi_jump_drive_1 }
+			has_technology = tech_gestalt_psi_jump_drive_1
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_psi_jump_drive_1 message = no }
+	}
+}
+
+#Robotics events
+
+#Gestalt Robotics Workers
+country_event = {
+	id = uac_technology_event.5
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_robotic_workers }
+			has_technology = tech_gestalt_robotic_workers
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_robotic_workers message = no }
+	}
+}
+
+#Gestalt Droid Workers
+country_event = {
+	id = uac_technology_event.6
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_droid_workers }
+			has_technology = tech_gestalt_droid_workers
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_droid_workers message = no }
+	}
+}
+
+#Gestalt Synthetic Workers
+country_event = {
+	id = uac_technology_event.7
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_synthetic_workers }
+			has_technology = tech_gestalt_synthetic_workers
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_synthetic_workers message = no }
+	}
+}
+
+#Gestalt Synthetic Leaders
+country_event = {
+	id = uac_technology_event.8
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			NOT = { has_technology = tech_synthetic_leaders }
+			has_technology = tech_gestalt_synthetic_leaders
+		}
+	}
+
+	immediate = {
+		give_technology = { tech = tech_synthetic_leaders message = no }
+	}
+}

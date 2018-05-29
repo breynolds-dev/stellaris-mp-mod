@@ -1,0 +1,7 @@
+# RING
+num_stars_core_perc = 0.19	
+core_radius_perc = 0.5				## Core radius is 30% of the galaxy radius
+ring = {
+	width 	= 0.5					## Percentage of radius to use as the width of the ring
+	offset 	= 0.1					## Percentage of radius to use as the offset from center for the ring
+}

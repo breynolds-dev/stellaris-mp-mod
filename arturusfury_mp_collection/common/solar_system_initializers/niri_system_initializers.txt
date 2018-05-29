@@ -1,0 +1,766 @@
+@distance = 50
+@base_moon_distance = 10
+
+
+### Niri System
+niri_system_initializer = {
+	class = "sc_g"
+	usage = custom_empire
+
+	init_effect = {
+		spawn_megastructure = {
+			type = "gateway_ruined"
+			random_pos = yes
+			orbit_angle = 360		# range of the randomization
+		}
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+	}
+
+	change_orbit = 25
+
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 45
+		orbit_angle = 70
+		size = 15
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_continental"
+		orbit_distance = 50
+		orbit_angle = 60
+		size = 25
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifier = lush_planet
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		init_effect = {
+			every_tile = {
+				clear_deposits = yes
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				set_deposit = d_vast_energy_deposit
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_vast_farmland_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_vast_farmland_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					set_deposit = d_rich_energy_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					set_deposit = d_vast_mineral_deposit
+				}
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles < 3 }
+				set_building = "building_basic_science_lab_1"
+				set_deposit = d_rich_physics_deposit
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					set_deposit = d_rich_society_deposit
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					set_deposit = d_rich_engineering_deposit
+				}
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_society_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_rich_society_deposit
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_rich_energy_deposit
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_engineering_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_rich_physics_deposit
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_food_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_farmland_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_energy_deposit
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_deposit = d_betharian_deposit
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_energy_deposit
+			}
+
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_building = "building_mining_network_1"
+				set_deposit = d_vast_mineral_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no has_deposit = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_mineral_deposit
+			}
+		}
+
+		moon = {
+
+			class = "pc_barren_cold"
+			size = 12
+			orbit_distance = 10
+			orbit_angle = 0
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 75
+		orbit_angle = 200
+		size = 40
+		has_ring = no
+		change_orbit = 6
+
+		moon = {
+			class = "pc_molten"
+			size = 9
+			orbit_distance = 10
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+
+			class = "pc_gaia"
+			size = 16
+			orbit_distance = 10
+			orbit_angle = 10
+			has_ring = yes
+			modifier = natural_beauty
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+
+			init_effect = {
+				clear_deposits = yes
+				clear_blockers = yes
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					set_deposit = d_vast_energy_deposit
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_farmland_deposit
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_farmland_deposit
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_farmland_deposit
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_mineral_deposit
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_alien_pets_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_rich_mineral_deposit
+					set_blocker = "tb_crater"
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_rich_engineering_deposit
+					set_blocker = "tb_crater"
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_physics_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_energy_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_farmland_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_mineral_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_rich_physics_deposit
+					set_blocker = "tb_active_volcano"
+				}
+			}
+		}
+		moon = {
+
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 2.5
+			orbit_angle = -95
+			has_ring = no
+		}
+		moon = {
+
+			class = "pc_gaia"
+			size = 16
+			orbit_distance = 3.5
+			orbit_angle = 180
+			has_ring = no
+			modifier = natural_beauty
+
+			init_effect = {
+				prevent_anomaly = yes
+			}
+
+			init_effect = {
+				clear_deposits = yes
+				clear_blockers = yes
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					set_deposit = d_vast_energy_deposit
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_farmland_deposit
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_farmland_deposit
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_farmland_deposit
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no has_deposit = no }
+						set_deposit = d_rich_mineral_deposit
+					}
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_alien_pets_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_rich_mineral_deposit
+					set_blocker = "tb_crater"
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_rich_engineering_deposit
+					set_blocker = "tb_crater"
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_physics_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_energy_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_farmland_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_mineral_deposit
+				}
+
+				random_tile = {
+					limit = { has_blocker = no has_building = no has_deposit = no }
+					set_deposit = d_rich_physics_deposit
+					set_blocker = "tb_active_volcano"
+				}
+			}
+		}
+
+	}
+
+	planet = {
+		class = "pc_frozen"
+		size = 16
+		orbit_distance = 40
+		orbit_angle = 110
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_frozen"
+		size = 12
+		orbit_distance = 50
+		orbit_angle = 115
+		has_ring = no
+	}
+
+	neighbor_system = {
+		distance = { min = 5 max = @distance }
+		initializer = "niri_neighbor_3a"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "niri_neighbor"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "niri_neighbor_2"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "sentry_array_init_01"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "science_nexus_init_01"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "dyson_sphere_init_01"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "niri_neighbor_3"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = @distance }
+		initializer = "niri_neighbor_1a"
+	}
+}
+
+# Niri Neighbor
+niri_neighbor = {
+	class = sc_k
+	asteroids_distance = 165
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 25 max = 35 }
+		has_ring = no
+	}
+
+	change_orbit = 60
+
+	planet = {
+		orbit_distance = 45
+		class = ideal_planet_class
+		orbit_angle = { min = 90 max = 270 }
+		size = 22
+		has_ring = yes
+
+		init_effect = {
+			clear_deposits = yes
+			clear_blockers = yes
+			generate_velutaria_deposits = yes
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = "asteroid_belt"
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 58
+		orbit_angle = -210
+		size = 8
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 3
+		orbit_angle = 10
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 2
+		orbit_angle = 185
+		size = 6
+		has_ring = no
+	}
+
+	planet = {
+		orbit_distance = 40
+		class = pc_barren
+		orbit_angle = { min = -200 max = -260 }
+		size = 16
+	}
+
+	planet = {
+		orbit_distance = 57
+		class = pc_barren_cold
+		orbit_angle = { min = 100 max = 130 }
+		size = 12
+	}
+}
+
+# Niri Neighbor 1a
+niri_neighbor_1a = {
+	class = sc_f
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 25 max = 35 }
+		has_ring = no
+	}
+
+	change_orbit = 20
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 45
+		orbit_angle = 150
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		orbit_distance = 45
+		class = "pc_ocean"
+		orbit_angle = 315
+		size = 22
+		has_ring = no
+
+		moon = {
+
+			class = "pc_arid"
+			size = 17
+			orbit_distance = 15
+			orbit_angle = 32
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 60
+		orbit_angle = 180
+		size = 13
+		has_ring = no
+	}
+}
+
+# Niri Neighbor 2
+niri_neighbor_2 = {
+	class = sc_g
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 25 max = 35 }
+		has_ring = no
+	}
+
+	change_orbit = 45
+
+	planet = {
+		orbit_distance = 40
+		class = pc_barren
+		orbit_angle = { min = 10 max = 90 }
+		size = 14
+	}
+
+	planet = {
+		orbit_distance = 45
+		class = ideal_planet_class
+		orbit_angle = { min = 10 max = 170 }
+		size = 18
+		has_ring = no
+
+		init_effect = {
+			clear_deposits = yes
+			clear_blockers = yes
+			generate_destiny_deposits = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+
+			class = "pc_barren"
+			size = 9
+			orbit_distance = 10
+			orbit_angle = -20
+			has_ring = no
+		}
+
+		moon = {
+
+			class = "pc_barren"
+			size = 10
+			orbit_distance = 10
+			orbit_angle = 20
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 48
+		orbit_angle = 110
+		size = 12
+		has_ring = no
+
+		moon = {
+
+			class = "pc_asteroid"
+			size = 8
+			orbit_distance = 10
+			orbit_angle = 165
+			has_ring = no
+		}
+		moon = {
+
+			class = "pc_asteroid"
+			size = 5
+			orbit_distance = 6
+			orbit_angle = 125
+			has_ring = no
+		}
+		moon = {
+
+			class = "pc_asteroid"
+			size = 7
+			orbit_distance = 8
+			orbit_angle = 205
+			has_ring = no
+		}
+	}
+
+	planet = {
+		orbit_distance = 70
+		class = pc_barren
+		orbit_angle = { min = -100 max = -160 }
+		size = 13
+	}
+}
+
+# Niri Neighbor 3
+niri_neighbor_3 = {
+	class = sc_g
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 25 max = 35 }
+		has_ring = no
+	}
+
+	change_orbit = 20
+
+	planet = {
+		orbit_distance = 25
+		class = "pc_molten"
+		orbit_angle = { min = -20 max = 60 }
+		size = 14
+	}
+
+	planet = {
+		orbit_distance = 35
+		class = "pc_barren"
+		orbit_angle = { min = 40 max = 270 }
+		size = 16
+		has_ring = no
+	}
+
+	planet = {
+		orbit_distance = 40
+		class = "pc_savannah"
+		orbit_angle = { min = 40 max = 270 }
+		size = 19
+		has_ring = no
+	}
+
+	planet = {
+		orbit_distance = 45
+		class = "pc_tropical"
+		orbit_angle = { min = -100 max = -160 }
+		size = 21
+		has_ring = no
+	}
+
+	planet = {
+		orbit_distance = 50
+		class = "pc_tundra"
+		orbit_angle = { min = -100 max = -160 }
+		size = 23
+		has_ring = no
+	}
+
+	planet = {
+		orbit_distance = 60
+		class = "pc_frozen"
+		orbit_angle = { min = -100 max = -160 }
+		size = 20
+		has_ring = no
+	}
+}
+
+# Niri Neighbor 3a
+niri_neighbor_3a = {
+	class = sc_pulsar
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { 35 }
+		has_ring = no
+	}
+}

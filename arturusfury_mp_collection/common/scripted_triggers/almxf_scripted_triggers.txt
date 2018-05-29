@@ -1,0 +1,153 @@
+has_alien_pets_deposit = {
+	has_resource = {
+		type = sr_alien_pets
+		amount > 0
+	}
+}
+
+has_npooper_deposit = {
+	has_resource = {
+		type = sr_fauna_neutropooper
+		amount > 0
+	}
+}
+
+has_merglin_deposit = {
+	has_resource = {
+		type = sr_fauna_merglin
+		amount > 0
+	}
+}
+
+has_psipenguin_deposit = {
+	has_resource = {
+		type = sr_fauna_psipenguin
+		amount > 0
+	}
+}
+
+has_pukachi_deposit = {
+	has_resource = {
+		type = sr_fauna_pukachi
+		amount > 0
+	}
+}
+
+has_headhug_deposit = {
+	has_resource = {
+		type = sr_fauna_headhug
+		amount > 0
+	}
+}
+
+has_rocknosher_deposit = {
+	has_resource = {
+		type = sr_fauna_beast1
+		amount > 0
+	}
+}
+
+has_emeraldtiger_deposit = {
+	has_resource = {
+		type = sr_fauna_beast2
+		amount > 0
+	}
+}
+
+has_monarcheagle_deposit = {
+	has_resource = {
+		type = sr_fauna_beast8
+		amount > 0
+	}
+}
+
+has_lumbercat_deposit = {
+	has_resource = {
+		type = sr_fauna_beast6
+		amount > 0
+	}
+}
+
+has_kinkragon_deposit = {
+	has_resource = {
+		type = sr_fauna_beast7
+		amount > 0
+	}
+}
+
+has_npooper_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_neutropooper
+		amount = 1
+	}
+}
+
+has_merglin_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_merglin
+		amount = 1
+	}
+}
+
+has_psipenguin_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_psipenguin
+		amount = 1
+	}
+}
+
+has_pukachi_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_pukachi
+		amount = 1
+	}
+}
+
+has_headhug_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_headhug
+		amount = 1
+	}
+}
+
+has_rocknosher_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_beast1
+		amount = 1
+	}
+}
+
+has_emeraldtiger_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_beast2
+		amount = 1
+	}
+}
+
+has_monarcheagle_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_beast8
+		amount = 1
+	}
+}
+
+has_lumbercat_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_beast6
+		amount = 1
+	}
+}
+
+has_kinkragon_deposit_1 = {
+	has_resource = {
+		type = sr_fauna_beast7
+		amount = 1
+	}
+}
+
+has_society_deposit = {
+	has_resource = {
+		type = society_research
+		amount > 0
+	}
+}

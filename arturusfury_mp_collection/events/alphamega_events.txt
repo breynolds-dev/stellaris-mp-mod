@@ -1,0 +1,224 @@
+namespace = alphamega
+
+#Convert unity to ascend
+country_event = {
+	id = alphamega.4
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+		has_country_edict = united_to_ascend
+		nor = { 
+			has_technology = tech_ascension_theory
+			has_technology = tech_ascension_theory_apoc
+		}	
+	}
+	immediate = {
+		if = {
+			limit = {
+				host_has_dlc = "Apocalypse"
+			}
+			give_technology = { message = yes tech = tech_ascension_theory_apoc }
+			else = {
+				give_technology = { message = yes tech = tech_ascension_theory }
+			}
+		}
+	}
+}
+
+#Convert unity to megastructure research
+country_event = {
+	id = alphamega.5
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = default
+		has_country_edict = united_to_megastructures
+		not = { has_technology = tech_mega_engineering }	
+	}
+	
+	immediate = {
+		give_technology = { message = yes tech = tech_mega_engineering }
+	}
+}
+
+# Convert unity to influence
+event = {
+	id = alphamega.2
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_country_edict = convert_unity_to_influence
+			}
+			while = {
+				limit = {
+					unity > 1000
+				}
+				add_unity = -1000
+				add_influence = 1
+			}
+		}
+	}
+}
+			
+# Retroactive fix
+# event = {
+	# id = alphamega.1
+	# is_triggered_only = yes
+	# hide_window = yes
+	
+	# immediate = {
+		# every_country = {
+			# limit = {
+				# is_country_type = default
+				# not = { has_technology = tech_orbitalhabitats_2 }
+				# has_ascension_perk = ap_voidborn
+			# }
+			# give_technology = { message = no tech = tech_orbitalhabitats_2 }			
+		# }
+		# every_country = {
+			# limit = {
+				# is_country_type = default
+				# not = { has_technology = tech_orbitalhabitats }
+				# has_ascension_perk = ap_voidborn
+			# }
+			# give_technology = { message = no tech = tech_orbitalhabitats }			
+		# }
+		# every_country = {
+			# limit = {
+				# is_country_type = default
+				# has_ascension_perk = ap_master_builders
+				# has_ascension_perk = ap_galactic_force_projection
+			# }
+			# give_technology = { message = no tech = tech_space_defense_station_3 }
+			# give_technology = { message = no tech = tech_megafortresses }		
+		# }
+	# }
+# }
+
+# event = {
+	# id = alphamega.10
+	# is_triggered_only = yes
+	# hide_window = yes
+	
+	# immediate = {
+		# every_country = {
+			# limit = {
+				# or = {
+					# is_country_type = default
+					# is_country_type = fallen_empire
+					# is_country_type = awakened_fallen_empire
+				# }
+			# }
+			# if = {
+				# limit = {
+					# any_neignbouring_country = {
+						# any_owned_planet = {
+							# has_modifier = border_habitat
+							# has_edict = 
+						# }
+					# }
+				# }
+			# }
+				
+	# }
+# }
+
+planet_event = {
+	id = alphamega.1000
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		save_event_target_as = habitat_upgraded
+		while = {
+			limit = {
+				planet_size < 25
+			}
+			change_planet_size = 1
+		}
+		remove_modifier = light_population
+		remove_modifier = ex_asteroid
+		
+		owner = {
+			country_event = { id = alphamega.2000 }
+		}
+	}
+}
+
+country_event = {
+	id = alphamega.2000
+	title = "Habitat Upgraded"
+	desc = "Upgrades to one of our habitats have been completed."
+	picture = GFX_evt_megastructure_construction
+	show_sound = event_alien_signal
+	location = event_target:habitat_upgraded
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Excellent."
+	}
+}
+
+event = {
+	id = alphamega.3000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_valid_civic = civic_orbital_ambitions
+			}
+			save_event_target_as = this_empire
+			give_technology = { message = no tech = tech_orbitalhabitats }
+			every_owned_planet = {
+				limit = {
+					is_homeworld = yes
+				}
+				save_event_target_as = this_homeworld
+				solar_system = {
+					spawn_planet = {
+						class = "pc_habitat"
+						location = event_target:this_homeworld
+						orbit_location = yes
+						orbit_angle_offset = 15
+						orbit_distance_offset = 19.899
+						size = 12
+						has_ring = no
+						
+						init_effect = {
+							set_name = "HABITAT_PLANET_NAME"
+							set_planet_entity = {
+								entity = "orbital_habitat_entity"
+								graphical_culture = event_target:this_empire
+							}
+							surveyed = {
+								set_surveyed = yes
+								surveyor = event_target:this_empire
+							}
+							set_all_comms_surveyed = yes				
+							while = {
+								limit = {
+									any_tile = { has_blocker = yes }
+								}
+								random_tile = {
+									limit = { has_blocker = yes }
+									remove_blocker = yes
+								}
+							}
+							set_planet_flag = megastructure
+							set_planet_flag = habitat
+							set_planet_flag = pf_habitat
+						}
+					}
+				}
+			}
+		}		
+	}
+}

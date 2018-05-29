@@ -1,0 +1,24 @@
+[h1]Arturusfury's Multiplayer Collection[/h1]
+Stellaris version supported: v2.1.*
+
+This is mostly a collection of mods with slight alterations to make a multiplayer game faster.  It speeds up just about everything without trying to make it too cheap and easy, all that said it does seem easy ... until pirates wipe you out of the galaxy.
+
+
+[h1]Included Mods:[/h1]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=131413971]Altered Starbases[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1149888293]Enhanced Robomodding[/url]
+[*] Galaxy Centers
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1318299775]Military Station Fortifier 2[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1248790999]More Leader Levels[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1200778581]Longer Trade Deals[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1331855174]Panda's Auto Explore[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1290047689]Simple Leader Skill Icons[/url]
+[*] Starbase Buildings Extended ( No Longer on Steam Workshop )
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=707297106]Unique Systems Spawn 100%[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1395238253]XenoFauna[/url]
+[/list]
+
+
+[h1]Other Additions:[/h1]
+[*] A new custom starting system has been added, Ithin.  It uses several of the new star types to create a complex and interesting starting area

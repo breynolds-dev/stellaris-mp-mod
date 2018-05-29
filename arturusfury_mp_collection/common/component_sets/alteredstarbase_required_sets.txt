@@ -1,0 +1,9 @@
+#
+
+component_set = {
+	key = "alteredstarbase_accelerator"
+	
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1	
+}

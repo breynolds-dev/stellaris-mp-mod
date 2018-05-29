@@ -1,0 +1,337 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 500
+@tier1cost2 = 750
+@tier1cost3 = 1000
+
+@tier2cost1 = 1500
+@tier2cost2 = 2000
+@tier2cost3 = 2500
+
+@tier3cost1 = 4000
+@tier3cost2 = 5000
+@tier3cost3 = 6000
+
+@tier4cost1 = 8000
+@tier4cost2 = 10000
+@tier4cost3 = 12000
+
+@tier5cost1 = 15000
+@tier5cost2 = 17500
+@tier5cost3 = 20000
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+
+@tier2weight1 = 85
+@tier2weight2 = 75
+@tier2weight3 = 70
+
+@tier3weight1 = 65
+@tier3weight2 = 60
+@tier3weight3 = 50
+
+@tier4weight1 = 45
+@tier4weight2 = 40
+@tier4weight3 = 35
+
+@tier5weight1 = 30
+@tier5weight2 = 25
+@tier5weight3 = 20
+
+# ##################
+# Psionics
+# ##################
+
+#Psionic Theory
+tech_gestalt_psionic_theory = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { psionics }
+	is_rare = yes
+	weight = @tier3weight1
+	is_reverse_engineerable = no
+	
+	gateway = psionics
+	
+	potential = {
+		has_ethic = ethic_gestalt_consciousness
+	}
+	
+	#modifier = {
+	#	country_resource_unity_mult = 0.05
+	#}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+#Telepathy
+tech_gestalt_telepathy = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { psionics }
+	is_rare = yes	
+	prerequisites = { "tech_gestalt_psionic_theory" }
+	weight = @tier3weight3
+	is_reverse_engineerable = no
+	
+	potential = {
+		has_ethic = ethic_gestalt_consciousness
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			host_has_dlc = "Utopia"
+		}
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 4
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+tech_gestalt_precognition_interface = {
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { "tech_gestalt_telepathy" }
+	weight = @tier4weight2
+	is_reverse_engineerable = no
+	
+	# unlocks precognitive interface-component, combat-computer granting evasion to ships
+	
+	#prereqfor_desc = {
+	#	hide_prereq_for_desc = component
+	#	custom = {
+	#		title = "TECH_UNLOCK_COMBAT_COMPUTER_PRECOG_TITLE"
+	#		desc = "TECH_UNLOCK_COMBAT_COMPUTER_PRECOG_DESC"
+	#	}
+	#}
+	
+	potential = {
+		has_ethic = ethic_gestalt_consciousness
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.1 #TODO: This doesn't get pulled from Utopia Shroud
+			host_has_dlc = "Utopia"
+		}
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 4
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+#TODO: This doesn't get pulled from Utopia Shroud
+tech_gestalt_psi_jump_drive_1 = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	category = { psionics }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	prerequisites = { "tech_gestalt_precognition_interface" }
+	weight = @tier5weight2
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	
+	#feature_flags = {
+	#	jump_method
+	#}
+	
+	#prereqfor_desc = {
+	#	component = {
+	#		title = "TECH_UNLOCK_PSI_JUMPDRIVE_1_TITLE"
+	#		desc = "TECH_UNLOCK_PSI_JUMPDRIVE_1_DESC"
+	#	}
+	#}
+	
+	potential = {
+		has_ethic = ethic_gestalt_consciousness
+	}
+	
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 0.1 #TODO: This doesn't get pulled from Utopia Shroud
+			host_has_dlc = "Utopia"
+		}
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}		
+	}
+}

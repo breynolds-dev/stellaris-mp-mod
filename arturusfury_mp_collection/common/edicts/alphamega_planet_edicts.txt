@@ -1,0 +1,290 @@
+# Sets the edict-cost for all edicts with this variable
+@standardEdictCost = 150
+
+# planet_edict = {
+	# name = "stake_out_wider_borders"
+	# influence_cost = 150
+	
+	# length = 18000
+
+	# modifier = {
+		# planet_border_mult = 1.0
+		# planet_sensor_range_mult = 1.5
+		# tile_resource_energy_mult = -0.1
+	# }
+	
+	# potential = {
+		# has_modifier = border_habitat
+		# owner = {
+			# nor = {
+				# has_ethic = ethic_fanatic_pacifist
+				# has_ethic = ethic_pacifist
+			# }
+			# or = {
+				# has_ascension_perk = ap_interstellar_dominion
+				# has_ascension_perk = ap_imperial_prerogative
+				# has_ascension_perk = ap_multiculturalism
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# weight = 1
+		# modifier = {
+			# factor = 0
+			# owner = {
+				# influence < 500
+			# }
+		# }
+	# }
+# }
+
+# planet_edict = {
+	# name = "subvert_bordering_colonies"
+	# influence_cost = 150
+	
+	# length = 3600
+
+	# modifier = {
+		# tile_resource_energy_mult = -0.1
+	# }
+	
+	# potential = {
+		# has_modifier = border_habitat
+		
+		# any_country = {
+			# is_primitive = no
+			# NOT = { is_same_value = root.owner }
+			# NOT = { is_in_federation_with = root.owner }
+			# OR = {
+				# opinion = {
+					# who = root.owner
+					# value < 1
+				# }
+				# is_country_type = fallen_empire
+				# is_country_type = awakened_fallen_empire
+			# }
+
+			# any_owned_planet = {
+				# not = { has_modifier = general_subversion }
+				# distance = {
+					# source = root
+					# max_distance = 150
+				# }
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# weight = 1
+		# modifier = {
+			# factor = 0
+			# owner = {
+				# or = {
+				# has_ethic = ethic_xenophile
+				# has_ethic = ethic_fanatic_xenophile
+				# has_ethic = ethic_pacifist
+				# has_ethic = ethic_fanatic_pacifist
+				# has_ethic = ethic_fanatic_militarist
+				# }
+			# }
+		# }
+		# modifier = {
+			# factor = 0
+			# owner = {
+				# influence < 500
+			# }
+		# }
+	# }
+	
+	# effect = {
+		# every_country = {
+			# is_primitive = no
+			# NOT = { is_same_value = root.owner }
+			# NOT = { is_in_federation_with = root.owner }
+			# OR = {
+				# opinion = {
+					# who = root.owner
+					# value < 1
+				# }
+				# is_country_type = fallen_empire
+				# is_country_type = awakened_fallen_empire
+			# }
+
+			# every_owned_planet = {
+				# limit = {
+					# not { has_modifier = general_subversion }
+					# distance = {
+						# source = root
+						# max_distance = 150
+					# }
+				# }
+				
+				# #random op
+				# random_list = {
+					# 25 = {}
+					# 75 = {
+						# add_modifier = {
+							# modifier = general_subversion
+							# days = 3600
+						# }
+					# }
+				# }				
+			# }			
+		# }
+	# }
+# }
+
+# planet_edict = {
+	# name = "clear_mountains"
+	# cost = { energy = 200 }
+	
+	# length = 0
+
+	# modifier = {
+	# }
+	
+	# potential = {
+		# any_tile = {
+			# has_blocker = tb_mountain_range
+			# # has_blocker = tb_active_volcano
+			# # has_blocker = tb_dangerous_wildlife
+			# # has_blocker = tb_dense_jungle
+			# # has_blocker = tb_quicksand_basin
+			# # has_blocker = tb_noxious_swamp
+			# # has_blocker = tb_massive_glacier
+			# # has_blocker = tb_toxic_kelp
+			# # has_blocker = tb_deep_sinkhole
+			# # has_blocker = tb_radioactive_wasteland
+			# # has_blocker = tb_city_ruins
+			# # has_blocker = tb_crater	
+		# }
+		# owner = {
+			# has_ascension_perk = ap_mastery_of_nature
+			# has_technology = tech_tb_mountain_range
+		# }
+		# OR = {
+			# is_planet_class = pc_continental
+			# is_planet_class = pc_arctic
+			# is_planet_class = pc_tundra
+			# is_planet_class = pc_alpine
+			# is_planet_class = pc_desert
+			# is_planet_class = pc_arid
+			# is_planet_class = pc_savannah
+			# is_planet_class = pc_ocean
+			# is_planet_class = pc_tropical
+			# is_planet_class = pc_nuked
+		# }
+	# }
+	
+	# effect = {
+		# every_tile = {
+			# limit = {
+				# has_blocker = tb_mountain_range
+				# # has_blocker = tb_active_volcano
+				# # has_blocker = tb_dangerous_wildlife
+				# # has_blocker = tb_dense_jungle
+				# # has_blocker = tb_quicksand_basin
+				# # has_blocker = tb_noxious_swamp
+				# # has_blocker = tb_massive_glacier
+				# # has_blocker = tb_toxic_kelp
+				# # has_blocker = tb_deep_sinkhole
+				# # has_blocker = tb_radioactive_wasteland
+				# # has_blocker = tb_city_ruins
+				# # has_blocker = tb_crater	
+			# }
+			# remove_blocker = yes
+			# clear_deposits = yes
+			# random_list = {
+				# 60 = {
+					# add_deposit = d_mineral_deposit
+				# }
+				# 35 = {
+					# add_deposit = d_rich_mineral_deposit
+				# }
+				# 5 = {
+					# add_deposit = d_vast_mineral_deposit
+				# }
+			# }
+		# }
+	# }
+	
+	# ai_weight = {
+		# weight = 1
+	# }
+# }
+
+planet_edict = {
+	name = "world_shape_homeworld"
+	cost = { influence = 150 }
+	length = 0
+	
+	modifier = {
+	}
+
+	potential = {
+		or = {
+			is_homeworld = yes
+			has_modifier = capital
+		}
+		planet_size < 25
+		not = { has_planet_flag = pf_hwworldshaped }
+		owner = {
+			has_ascension_perk = ap_world_shaper
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_planet_flag = pf_hwworldshaped
+			while = {
+				limit = {
+					planet_size < 25
+				}
+				change_planet_size = 1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			owner = {
+				influence < 500
+			}
+		}
+	}
+}
+
+planet_edict = {
+	name = "upgrade_habitat"
+	cost = { energy = 1000 minerals = 1500 }
+	length = 0
+
+	potential = {
+		is_planet_class = pc_habitat
+		planet_size < 25
+		not = { has_modifier = mining_habitat }
+		not = { has_modifier = hydroponics_habitat }
+		not = { has_modifier = solar_farm }
+		not = { has_modifier = upgrading_habitat }
+		owner = {
+			has_ascension_perk = ap_voidborn
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = upgrading_habitat
+				days = 720
+			}
+			planet_event = { id = alphamega.1000 days = 720 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

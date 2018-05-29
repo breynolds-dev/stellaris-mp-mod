@@ -1,0 +1,185 @@
+# Terraformer 
+terraformer_0 = {
+	entity = "dyson_sphere_phase_01_entity"
+	construction_entity = "dyson_sphere_frame_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+    #construction_blocks_others = no
+
+	build_time = 720
+	build_cost = {
+		minerals = 5000
+		energy = 2500
+		influence = 200
+	}
+
+	maintenance = {
+		energy = 20
+	}
+
+	potential = {
+		has_ascension_perk = ap_world_shaper
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				has_no_non_gate_megastructure = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+			custom_tooltip = {
+				fail_text = "requires_dead_world"
+				OR = {
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_frozen
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_ring"
+				has_ring = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {}
+}
+
+# terraformer frame
+terraformer_1 = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	
+	upgrade_from = {
+		terraformer_0
+	}
+	build_time = 720
+	build_cost = {
+		energy = 5000
+	}
+
+	maintenance = {
+		energy = 25
+	}
+
+	monthly_production = {
+	}
+}
+
+terraformer_2 = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	
+	upgrade_from = {
+		terraformer_1
+	}
+
+	build_time = 720
+	
+	build_cost = {
+		energy = 5000
+	}
+
+	on_build_complete = {
+		fromfrom.planet = {
+			while = {
+				limit = {
+					planet_size > 25
+				}
+				change_planet_size = -1
+			}
+			while = {
+				limit = {
+					planet_size < 20
+				}
+				change_planet_size = 1
+			}
+			random_list = {
+				10 = { change_pc = "pc_savannah" }
+				15 = { change_pc = "pc_continental" }
+				15 = { change_pc = "pc_tropical" }
+				10 = { change_pc = "pc_alpine" }
+				50 = { change_pc = "pc_gaia" }
+			}
+			add_modifier = {
+				modifier = natural_beauty
+				days = -1
+			}
+			add_modifier = {
+				modifier = lush_planet
+				days = -1
+			}
+			add_modifier = {
+				modifier = world_shaped
+				days = -1
+			}
+			every_tile = {
+				random_list = {
+					3 = { add_deposit = d_mineral_deposit }
+					3 = { add_deposit = d_energy_deposit }
+					2 = { add_deposit = d_rich_energy_deposit }
+					7 = { add_deposit = d_rich_food_mineral_deposit }
+
+					2 = { add_deposit = d_rich_mineral_deposit }
+					3 = { add_deposit = d_mineral_energy_deposit }
+					12 = { add_deposit = d_farmland_deposit }
+					10 = { add_deposit = d_rich_farmland_deposit }
+					3 = { add_deposit = d_society_deposit }
+
+					2 = { add_deposit = d_rich_society_deposit }
+					1 = { add_deposit = d_physics_deposit }
+					1 = { add_deposit = d_engineering_deposit }
+
+					1 = { add_deposit = d_betharian_deposit }
+					50 = {}
+				}
+			}
+		}
+		remove_megastructure = fromfrom		
+	}
+}

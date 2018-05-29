@@ -1,0 +1,52 @@
+trait_psi_receptors= {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+
+	initial = no
+	randomized = no
+	modification = yes
+
+	allowed_archetypes = { ROBOT MACHINE }
+	
+	species_potential_add = {
+		from = {
+			has_ascension_perk = ap_mind_over_matter
+		}
+	}
+	
+	opposites = { trait_psi_emitters }
+	
+	modifier = {
+		tile_resource_engineering_research_mult = 0.05
+		tile_resource_physics_research_mult = 0.05
+		tile_resource_society_research_mult = 0.05
+		tile_resource_energy_mult = 0.05
+	}
+}
+
+trait_psi_emitters = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
+
+	initial = no
+	randomized = no
+	modification = yes
+
+	allowed_archetypes = { ROBOT MACHINE }
+	
+	species_potential_add = {
+		from = {
+			has_ascension_perk = ap_transcendence
+		}
+	}
+	
+	opposites = { trait_robotic_1 trait_robotic_2 trait_psi_receptors} # Synth and Machine only
+	
+	modifier = {
+		tile_resource_engineering_research_mult = 0.10
+		tile_resource_physics_research_mult = 0.10
+		tile_resource_society_research_mult = 0.10
+		tile_resource_energy_mult = 0.10
+		pop_happiness = 0.05
+	}
+}

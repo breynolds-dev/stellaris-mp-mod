@@ -1,0 +1,148 @@
+namespace = enhancedrobomodding
+
+country_event = {
+	id = enhancedrobomodding.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				Or = {
+					last_increased_tech = "tech_robomodding_points_1"
+					last_increased_tech = "tech_binary_motivators"
+				}
+			}
+			give_technology = { message = no tech = tech_enhancedrobomodding_tier2 }
+		}
+	}
+	
+	option = {
+	}
+}
+
+country_event = {
+	id = enhancedrobomodding.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				Or = {
+					last_increased_tech = "tech_robomodding_points_2"
+					last_increased_tech = "tech_nanite_assemblers"
+				}
+			}
+			give_technology = { message = no tech = tech_enhancedrobomodding_tier3 }
+		}
+	}
+	
+	option = {
+	}
+}
+
+#Matrioshka Brain
+country_event = {
+	id = enhancedrobomodding.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = big_brain_5
+				}
+			}
+			add_research_option = tech_enhancedrobomodding_matrioshka_brain_uplink
+		}
+	}
+	
+	option = {
+	}
+}
+
+#Engineering Mega
+country_event = {
+	id = enhancedrobomodding.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = engineering_megabase_1
+				}
+			}
+			add_research_option = tech_enhancedrobomodding_engineering
+		}
+	}
+	
+	option = {
+	}
+}
+
+#Society Mega
+country_event = {
+	id = enhancedrobomodding.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = massive_zoo_1
+				}
+			}
+			add_research_option = tech_enhancedrobomodding_society
+		}
+	}
+	
+	option = {
+	}
+}
+
+#Physics Mega
+country_event = {
+	id = enhancedrobomodding.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = particle_accelerator_1
+				}
+			}
+			add_research_option = tech_enhancedrobomodding_physics
+		}
+	}
+	
+	option = {
+	}
+}
+
+#Neutronium mega
+country_event = {
+	id = enhancedrobomodding.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = neutronium_gigaforge_3
+				}
+			}
+			add_research_option = tech_enhancedrobomodding_neutronium_applications
+		}
+	}
+	
+	option = {
+	}
+}

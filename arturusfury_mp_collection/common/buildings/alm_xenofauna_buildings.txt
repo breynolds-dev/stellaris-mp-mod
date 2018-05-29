@@ -1,0 +1,884 @@
+building_xenofauna_studies = {
+	base_buildtime = 180
+	planet_unique = yes
+	
+	cost = {
+		minerals = 100
+	}
+	
+	required_resources = {
+		energy = 2
+	}
+	
+	produced_resources = {		
+		society_research = 5
+	}
+	
+	planet_modifier = {
+	}
+	
+	prerequisites = {
+		"tech_alien_life_studies"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_xenofauna_breed = {
+	base_buildtime = 180
+	planet_unique = yes
+	
+	cost = {
+		minerals = 100
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 4
+	}
+	
+	planet_modifier = {
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { 
+				OR = {
+					has_headhug_deposit = yes
+					has_psipenguin_deposit = yes
+					has_pukachi_deposit = yes
+					has_merglin_deposit = yes
+					has_npooper_deposit = yes
+					has_monarcheagle_deposit = yes
+					has_emeraldtiger_deposit = yes
+					has_kinkragon_deposit = yes
+					has_lumbercat_deposit = yes
+					has_rocknosher_deposit = yes
+				}		
+			}
+		}	
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_xenofauna_deposit"
+			any_neighboring_tile = {
+				OR = {
+					has_headhug_deposit = yes
+					has_psipenguin_deposit = yes
+					has_pukachi_deposit = yes
+					has_merglin_deposit = yes
+					has_npooper_deposit = yes
+					has_monarcheagle_deposit = yes
+					has_emeraldtiger_deposit = yes
+					has_kinkragon_deposit = yes
+					has_lumbercat_deposit = yes
+					has_rocknosher_deposit = yes
+				}					
+			}
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_alien_life_studies"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_xenofauna_breed_headhug = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 2
+		sr_fauna_headhug = 1
+	}
+	
+	planet_modifier = {
+		planet_migration_all_pull = -0.4
+		pop_happiness = -0.1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_psipenguin = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 4
+		sr_fauna_psipenguin = 1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_pukachi = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 3
+		sr_fauna_pukachi = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_merglin = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 3
+		engineering_research = 2
+		sr_fauna_merglin = 1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_npooper = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 2
+		sr_fauna_neutropooper = 1
+		energy = 4
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = 0.15
+		tile_resource_food_mult = -0.15
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_emeraldtiger = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 3
+		sr_fauna_beast2 = 1
+	}
+	
+	planet_modifier = {
+		planet_unrest_add = -10
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_monarcheagle = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 4
+		sr_fauna_beast8 = 1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_rocknosher = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 2
+		engineering_research = 2
+		sr_fauna_beast1 = 1
+	}
+	
+	planet_modifier = {
+		planet_clear_blocker_time_mult = -0.1
+		planet_clear_blocker_cost_mult = -0.1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_kinkragon = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 3
+		sr_fauna_beast7 = 1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+		pop_growth_speed = 0.05
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_xenofauna_breed_lumbercat = {
+	icon = "building_xenofauna_breed"
+	is_listed = no
+	
+	produced_resources = {		
+		society_research = 3
+		minerals = 2
+		sr_fauna_beast6 = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_minerals_mult = 0.1
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_hostile_xenofauna_labs = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 3
+		engineering_research = 2
+		sr_fauna_headhug = 1
+	}
+	
+	planet_modifier = {
+		planet_migration_all_pull = -0.5
+		pop_happiness = -0.1
+	}
+	
+	country_modifier = {
+		army_damage_mult = 0.19
+		category_military_theory_research_speed_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_headhug_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_headhug_deposit"
+			tile = { has_headhug_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_military_xenofauna_apps = {
+	icon = "building_xenofauna_security"
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 3
+		engineering_research = 2
+		sr_fauna_beast2 = 1
+	}
+	
+	planet_modifier = {
+		planet_unrest_add = -10
+	}
+	
+	country_modifier = {
+		planet_unrest_add = -4
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_emeraldtiger_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_emeraldtiger_deposit"
+			tile = { has_emeraldtiger_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_psi_xenofauna_labs = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 3
+		physics_research = 2
+		sr_fauna_psipenguin = 1
+	}
+	
+	country_modifier = {
+		ship_anomaly_research_speed_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_psipenguin_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_psipenguin_deposit"
+			tile = { has_psipenguin_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_psi_xenofauna_labs_2 = {
+	icon = "building_psi_xenofauna_labs"
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 4
+		physics_research = 1
+		sr_fauna_beast8 = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_influence_mult = 0.09
+	}
+	
+	country_modifier = {
+		diplomacy_influence_cost = -0.04
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_monarcheagle_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_monarcheagle_deposit"
+			tile = { has_monarcheagle_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_medical_xenofauna_labs = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 5
+		sr_fauna_pukachi = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+	
+	country_modifier = {
+		leader_age = 4
+		pop_happiness = 0.05
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_pukachi_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_pukachi_deposit"
+			tile = { has_pukachi_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_medical_xenofauna_labs_2 = {
+	icon = "building_medical_xenofauna_labs"
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+	}
+	
+	produced_resources = {		
+		society_research = 5
+		sr_fauna_beast7 = 1
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.15
+		pop_growth_speed = 0.05
+	}
+	
+	country_modifier = {
+		pop_happiness = 0.04
+		pop_growth_speed = 0.04
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_kinkragon_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_kinkragon_deposit"
+			tile = { has_kinkragon_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_labour_xenofauna_apps = {
+	icon = "building_engineering_xenofauna_apps"
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+		#sr_biomass = 2
+	}
+	
+	produced_resources = {
+		society_research = 4
+		engineering_research = 2
+		sr_fauna_beast6 = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_minerals_mult = 0.2
+	}
+	
+	country_modifier = {
+		#building_time_mult = -0.04
+		pop_resettlement_cost_mult = -0.04
+		tile_resource_minerals_mult = 0.05
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_lumbercat_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_lumbercat_deposit"
+			tile = { has_lumbercat_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_engineering_xenofauna_apps = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		energy = 1
+		minerals = 1
+	}
+	
+	produced_resources = {
+		society_research = 2
+		engineering_research = 4
+		sr_fauna_merglin = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_engineering_research_mult = 0.1
+	}
+	
+	country_modifier = {
+		tile_resource_engineering_research_mult = 0.04
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_merglin_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_merglin_deposit"
+			tile = { has_merglin_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_engineering_xenofauna_apps_2 = {
+	icon = "building_engineering_xenofauna_apps"
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+		minerals = 3
+	}
+	
+	produced_resources = {
+		society_research = 3
+		engineering_research = 3
+		sr_fauna_beast1 = 1
+	}
+	
+	planet_modifier = {
+		planet_clear_blocker_time_mult = -0.15
+		planet_clear_blocker_cost_mult = -0.15
+	}
+	
+	country_modifier = {
+		planet_clear_blocker_time_mult = -0.09
+		planet_clear_blocker_cost_mult = -0.09
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_rocknosher_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_rocknosher_deposit"
+			tile = { has_rocknosher_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}
+
+building_npoop_processing = {
+	base_buildtime = 360
+	empire_unique = yes
+	
+	cost = {
+		minerals = 150
+		energy = 50
+	}
+	
+	required_resources = {
+	}
+	
+	produced_resources = {
+		physics_research = 3
+		energy = 12
+		sr_fauna_neutropooper = 1
+	}
+	
+	planet_modifier = {
+		tile_resource_energy_mult = 0.25
+		tile_resource_food_mult = -0.25
+	}
+	
+	country_modifier = {
+		tile_resource_energy_mult = 0.04
+	}
+	
+	potential = {
+		planet = {
+			any_tile = { has_npooper_deposit = yes }
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_npooper_deposit"
+			tile = { has_npooper_deposit = yes }
+		}
+	}
+	
+	prerequisites = {
+	#	"tech_morphogenetic_field_mastery"
+	}
+	
+	# ai_special_building = yes
+	ai_replace = no
+	
+	ai_weight = {
+		weight = 1	
+		modifier = {
+			factor = 2
+			from = { any_tile = { has_society_deposit = yes } }
+		}
+	}
+}

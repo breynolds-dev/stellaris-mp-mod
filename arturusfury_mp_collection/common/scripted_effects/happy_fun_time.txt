@@ -1,0 +1,148 @@
+generate_velutaria_deposits = {
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_deposit = d_rich_energy_deposit
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_mineral_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_farmland_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_energy_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_mineral_deposit
+		}
+	}
+
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_rich_engineering_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dangerous_wildlife"
+		set_deposit = d_society_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_rich_physics_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_rich_energy_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dangerous_wildlife"
+		set_deposit = d_rich_farmland_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_rich_food_mineral_deposit
+	}
+
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_energy_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_farmland_deposit
+	}
+}
+
+generate_destiny_deposits = {
+	random_tile = {
+		limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+		set_deposit = d_vast_energy_deposit
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_mineral_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_farmland_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_energy_deposit
+		}
+		random_neighboring_tile = {
+			limit = { has_blocker = no has_deposit = no has_building = no }
+			set_deposit = d_rich_energy_deposit
+		}
+	}
+
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dangerous_wildlife"
+		set_deposit = d_rich_society_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_rich_energy_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_vast_energy_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dense_jungle"
+		set_deposit = d_rich_energy_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_blocker = "tb_dangerous_wildlife"
+		set_deposit = d_rich_farmland_deposit
+	}
+
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_energy_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_mineral_deposit
+	}
+	random_tile = {
+		limit = { has_blocker = no has_deposit = no has_building = no }
+		set_deposit = d_farmland_deposit
+	}
+}

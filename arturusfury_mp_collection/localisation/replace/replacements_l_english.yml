@@ -1,0 +1,4 @@
+﻿l_english: 
+ # Perk Features
+ allow_habitats:0 "§HUnlocks Stations:§! Habitat, Mining Habitat, Solar Farm, Hydroponics Hab and Advanced Habitat"
+ ap_defender_of_the_galaxy_modifier_desc:0 "Damage to Endgame Crisis factions: §G+50%§!\nDamage to Pirates: §G+50%§!"

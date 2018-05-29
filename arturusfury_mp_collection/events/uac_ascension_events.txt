@@ -1,0 +1,443 @@
+namespace = utopia_ascension_enhancements
+
+# New Synth Leaders Get Psionic Leader traits
+country_event = {
+	id = utopia_ascension_enhancements.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			AND = {
+				species = { has_trait = trait_robotic_3 }
+				species = { has_trait = trait_psi_emitters }
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+		}
+	}
+}
+
+# Mind over Matter fix for robots
+# If primary species is synth, remove base 'trait_latent_psionic' added by
+# base game, and add robot-specific 'trait_psi_receptors'
+country_event = {
+	id = utopia_ascension_enhancements.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner_species = {
+					NOR = {
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+					}
+				}
+			}
+			#Call base Mind Over Matter event
+			country_event = { id = utopia.2600 }
+			
+			else = {
+				country_event = { id = utopia_ascension_enhancements.8 }
+			}
+		}
+	}
+}
+
+#Dummy out Mind Over Matter event for Machine Empires
+country_event = {
+	id = utopia_ascension_enhancements.8
+	title = "utopia.2600.name"
+	desc = "utopia.2600.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_mind_over_matter
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				NOT = { species = { has_trait = trait_psi_receptors } }
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_psi_receptors
+			}
+		}
+		every_country = {
+			limit = { 
+				is_ai = no
+				has_communications = root
+				NOT = { is_same_value = root }
+			}
+			country_event = { id = utopia.2602 }
+		}
+		change_dominant_species = { species = last_created change_all = yes }
+	}
+	
+	option = {
+		name = "utopia.2600.a"
+		tooltip = {
+			modify_species = {
+				species = this
+				add_trait = trait_psi_receptors
+			}
+		}
+		custom_tooltip = ALLOW_PSI_CORPS
+		custom_tooltip = ALLOW_PSI_ARMIES
+	}
+}
+
+#country_event = { id = utopia.2650 }
+# Transcendence upgrade for Synth empires
+# Will apply trait_psi_receptors primary species if they are synths and had
+# trait_psi_receptors already
+country_event = {
+	id = utopia_ascension_enhancements.3
+	is_triggered_only = yes
+	hide_window = yes
+
+
+	immediate = {
+		if = {
+			limit = {
+				owner_species = {
+					NOR = {
+						has_trait = trait_machine_unit
+						has_trait = trait_mechanical
+					}
+				}
+			}
+			#Call base Transcendence event
+			country_event = { id = utopia.2650 }
+			
+			else = {
+				country_event = { id = utopia_ascension_enhancements.9 }
+			}
+		}
+	}
+}
+
+# Transcendence for synthetic empires
+country_event = {
+	id = utopia_ascension_enhancements.9
+	title = "utopia.2650.name"
+	desc = "utopia.2650.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_the_great_awakening
+	
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				has_trait = trait_psi_receptors
+			}
+			modify_species = {
+				species = this
+				remove_trait = trait_psi_receptors
+				add_trait = trait_psi_emitters
+			}
+			#owner_species = { save_event_target_as = psionic_species }
+		}
+		change_dominant_species = { species = last_created change_all = yes }
+	}
+	
+	option = {
+		name = "utopia.2650.a"
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				every_owned_leader = {
+					limit = {
+						is_same_species = root
+						NOR = {
+							has_trait =	leader_trait_admiral_psionic
+							has_trait =	leader_trait_general_psionic
+							has_trait =	leader_trait_governor_psionic
+							has_trait =	leader_trait_scientist_psionic
+							has_trait =	leader_trait_ruler_psionic
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_psionic
+					}
+				}
+				every_pool_leader = {
+					limit = {
+						is_same_species = root
+						NOR = {
+							has_trait = leader_trait_admiral_psionic
+							has_trait = leader_trait_general_psionic
+							has_trait = leader_trait_governor_psionic
+							has_trait = leader_trait_scientist_psionic
+							has_trait = leader_trait_ruler_psionic
+						}
+					}
+					if = {
+						limit = { leader_class = admiral }
+						add_trait = leader_trait_admiral_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = general }
+						add_trait = leader_trait_general_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = governor }
+						add_trait = leader_trait_governor_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = scientist }
+						add_trait = leader_trait_scientist_psionic
+						add_ruler_trait = leader_trait_ruler_psionic
+					}
+					if = {
+						limit = { leader_class = ruler }
+						add_trait = leader_trait_ruler_psionic
+					}
+				}
+			}
+			every_country = {
+				limit = { 
+					is_ai = no
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = { id = utopia.2652 }
+			}
+			country_event = { id = utopia.2655 days = 30 random = 20 }
+		}
+	}
+}
+
+#Synthetic ascension gateway
+country_event = { 
+	id = utopia_ascension_enhancements.4
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = synthetic_empire
+		NOT = { has_country_flag = uac_synthetic_empire }
+	}
+
+	immediate = {
+		country_event = { id = utopia_ascension_enhancements.5 }
+		country_event = { id = utopia_ascension_enhancements.6 }
+		country_event = { id = utopia_ascension_enhancements.7 }
+
+		ROOT = {
+			set_country_flag = uac_synthetic_empire
+		}
+	}
+}
+
+country_event = {
+	id = utopia_ascension_enhancements.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = synthetic_empire
+		has_ethic = ethic_gestalt_consciousness
+	}
+
+	immediate = {
+		create_species = {
+			is_mod = yes
+			name = this
+			namelist = this
+			plural = this
+			class = "ROBOT"
+			portrait = this
+			traits = {
+				trait = "trait_mechanical"
+				trait = "trait_robotic_3"
+				trait = "trait_hive_mind"
+			}
+			
+			new_pop_resource_requirement = {
+				type = robot_food
+				value = 30.0
+			}
+			pops_auto_growth = 1.0
+			
+			pops_can_be_colonizers = yes
+			pops_can_migrate = no
+			pops_can_reproduce = no
+			pops_can_join_factions = no
+			pop_maintenance = 1
+			can_generate_leaders = yes
+			pops_can_be_slaves = no
+			pops_have_happiness = no
+			#pop_ethics = random	#can also be pop_ethics = { some_ethic some_other_ethic etc }
+		}
+	
+		every_owned_pop = {
+			limit = {
+				OR = {
+					species = { has_trait = trait_machine_unit }
+					species = { has_trait = trait_mechanical }
+				}
+			}
+			change_species = last_created
+		}
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				OR = {
+					species = { has_trait = trait_machine_unit }
+					species = { has_trait = trait_mechanical }
+				}
+			}
+			change_species = last_created
+		}
+		every_owned_leader = {
+			limit = { 
+				OR = {
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_ruler_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
+				}
+			}
+			change_species = last_created
+			change_leader_portrait = species
+		}
+		every_pool_leader = {
+			limit = { 
+				OR = {
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_ruler_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
+				}
+			}
+			change_species = last_created
+			change_leader_portrait = species
+		}
+		change_dominant_species = { species = last_created }
+	}
+}
+
+country_event = {
+	id = utopia_ascension_enhancements.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = synthetic_empire
+		has_ascension_perk = ap_mind_over_matter
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				OR = {
+					species = { has_trait = trait_machine_unit }
+					species = { has_trait = trait_mechanical }
+				}
+				NOT = { species = { has_trait = trait_psi_receptors } }
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_psi_receptors
+			}
+		}
+	}
+}
+
+country_event = {
+	id = utopia_ascension_enhancements.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = synthetic_empire
+		has_ascension_perk = ap_transcendence
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				OR = {
+					species = { has_trait = trait_machine_unit }
+					species = { has_trait = trait_mechanical }
+				}
+				NOT = { species = { has_trait = trait_psi_emitters } }
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_psi_emitters
+				remove_trait = trait_psi_receptors
+			}
+		}
+	}
+}

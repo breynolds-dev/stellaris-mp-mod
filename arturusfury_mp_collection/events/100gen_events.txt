@@ -1,0 +1,271 @@
+namespace = 100gen
+
+# country_event = {
+	# id = 100gen.1
+	# hide_window = yes
+	# fire_only_once = yes
+
+	# immediate = {
+		# if = {
+			# limit = {
+				# NOT = {
+					# any_system = {
+						# has_star_flag = sol
+					# }
+				# }
+			# }
+			# random_list = {
+				# 30 = {
+					# random_system = {
+						# spawn_system = { initializer = "special_init_03" }
+					# }
+				# }
+				# 10 = {
+					# random_system = {
+						# spawn_system = { initializer = "special_init_04" }
+					# }
+				# }
+			# }
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_of_zanaam
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = special_init_06 }
+			# }
+			# log = "guardians_of_zanaam"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = sanctuary_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = sanctuary_system }
+			# }
+			# log = "sanctuary_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = manufactory_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = crystal_manufactory_system }
+			# }
+			# log = "manufactory_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_stellarite_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_stellarites }
+			# }
+			# log = "guardians_stellarite_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_dragon_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_dragon }
+			# }
+			# log = "guardians_dragon_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_horror_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_horror }
+			# }
+			# log = "guardians_horror_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_dreadnought_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_dreadnought }
+			# }
+			# log = "guardians_dreadnought_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_hive_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_hive }
+			# }
+			# log = "guardians_hive_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_technosphere_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_technosphere }
+			# }
+			# log = "guardians_technosphere_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_fortress_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_fortress }
+			# }
+			# log = "guardians_fortress_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = guardians_wraith_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = guardians_init_wraith }
+			# }
+			# log = "guardians_wraith_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = ruined_sentry_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = sentry_array_init_01 }
+			# }
+			# log = "ruined_sentry_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = ruined_ring_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = ring_world_init_01 }
+			# }
+			# log = "ruined_ring_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = ruined_nexus_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = science_nexus_init_01 }
+			# }
+			# log = "ruined_nexus_system"
+		# }
+		# if = {
+			# limit = {
+				# not = {
+					# any_system = {
+						# has_star_flag = ruined_dyson_system
+					# }
+				# }
+			# }
+			# random_system = {
+				# limit = {
+					# has_owner = no
+				# }
+				# spawn_system = { initializer = dyson_sphere_init_01 }
+			# }
+			# log = "ruined_dyson_system"
+		# }
+	# }
+# }

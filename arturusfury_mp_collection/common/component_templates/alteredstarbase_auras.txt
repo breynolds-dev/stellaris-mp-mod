@@ -1,0 +1,158 @@
+### NON-FTL DRIVE
+utility_component_template = {
+	key = alteredstarbase_accelerator_t0
+	size = medium
+	icon = GFX_ship_part_aura_snare
+	icon_frame = 1
+	power = 0
+	cost = 0	
+	class_restriction = {
+		shipclass_starbase
+	}
+	friendly_aura = {
+		name = alteredstarbase_aura_accelerator
+		system_wide = yes
+		modifier = {
+			ship_speed_mult = 0.05
+		}
+	}
+	component_set = alteredstarbase_accelerator
+	upgrades_to = alteredstarbase_accelerator_t1
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = alteredstarbase_accelerator_t1
+	size = medium
+	icon = GFX_ship_part_aura_snare
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = {
+		shipclass_starbase
+	}
+	prerequisites = {
+		alteredstarbase_tech_accelerator_t1
+	}
+	friendly_aura = {
+		name = alteredstarbase_aura_accelerator
+		system_wide = yes
+		modifier = {
+			ship_speed_mult = 0.25
+		}
+	}
+	component_set = alteredstarbase_accelerator
+	upgrades_to = alteredstarbase_accelerator_t2
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = alteredstarbase_accelerator_t2
+	size = medium
+	icon = GFX_ship_part_aura_snare
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = {
+		shipclass_starbase
+	}
+	prerequisites = {
+		alteredstarbase_tech_accelerator_t2
+	}
+	friendly_aura = {
+		name = alteredstarbase_aura_accelerator
+		system_wide = yes
+		modifier = {
+			ship_speed_mult = 0.5
+		}
+	}
+	component_set = alteredstarbase_accelerator
+	upgrades_to = alteredstarbase_accelerator_t3
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = alteredstarbase_accelerator_t3
+	size = medium
+	icon = GFX_ship_part_aura_snare
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = {
+		shipclass_starbase
+	}
+	prerequisites = {
+		alteredstarbase_tech_accelerator_t3
+	}
+	friendly_aura = {
+		name = alteredstarbase_aura_accelerator
+		system_wide = yes
+		modifier = {
+			ship_speed_mult = 1
+		}
+	}
+	component_set = alteredstarbase_accelerator
+	upgrades_to = alteredstarbase_accelerator_t4
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = alteredstarbase_accelerator_t4
+	size = medium
+	icon = GFX_ship_part_aura_snare
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = {
+		shipclass_starbase
+	}
+	prerequisites = {
+		alteredstarbase_tech_accelerator_t4
+	}
+	friendly_aura = {
+		name = alteredstarbase_aura_accelerator
+		system_wide = yes
+		modifier = {
+			ship_speed_mult = 1.25
+		}
+	}
+	component_set = alteredstarbase_accelerator
+	upgrades_to = alteredstarbase_accelerator_t5
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = alteredstarbase_accelerator_t5
+	size = medium
+	icon = GFX_ship_part_aura_snare
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = {
+		shipclass_starbase
+	}
+	prerequisites = {
+		alteredstarbase_tech_accelerator_t5
+	}
+	friendly_aura = {
+		name = alteredstarbase_aura_accelerator
+		system_wide = yes
+		modifier = {
+			ship_speed_mult = 1.5
+		}
+	}
+	component_set = alteredstarbase_accelerator
+	ai_weight = {
+		weight = 6
+	}
+}

@@ -1,0 +1,179 @@
+@gboost = 0.50
+@doublegboost = 1.0
+@supergboost = 2.0
+
+tech_fastergame_starbaseboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		starbase_shipyard_build_speed_mult = @gboost
+		starbase_building_build_speed_mult = @doublegboost
+		starbase_module_build_speed_mult = @doublegboost
+	}
+}
+
+tech_fastergame_megaboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		megastructure_build_speed_mult = @supergboost
+	}
+}
+
+tech_fastergame_techboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		all_technology_research_speed = @gboost
+	}
+}
+
+tech_fastergame_shipboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		spaceport_ship_build_speed_mult = @gboost
+	}
+}
+
+tech_fastergame_colonyboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		planet_colony_development_speed_mult = @gboost
+		terraform_speed_mult = @doublegboost
+	}
+}
+
+tech_fastergame_growthboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		pop_growth_speed = @gboost
+	}
+}
+
+tech_fastergame_robotbuildboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		pop_robot_build_speed_mult = @gboost
+	}
+}
+
+tech_fastergame_buildboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		building_time_mult = -0.25
+		planet_clear_blocker_time_mult = -0.25
+	}
+}
+
+tech_fastergame_armyboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		planet_army_build_speed_mult = 0.25
+	}
+}
+
+tech_mega_engineering = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_starbase_5" "tech_battleships" "tech_zero_point_power" }
+	weight = @tier5weight3
+	is_rare = yes
+	start_tech = yes
+
+	feature_flags = {
+		megaengineering
+	}
+
+	modifier = {
+		max_minerals = 20000
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 0.5
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_voidborn
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_master_builders
+		}
+		modifier = {
+			factor = 20
+			has_any_megastructure_in_empire = yes
+		}
+	}
+
+	ai_weight = {
+		factor = 1.25 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

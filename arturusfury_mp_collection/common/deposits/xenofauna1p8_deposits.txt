@@ -1,0 +1,187 @@
+d_sr_fauna_beast1 = {
+	resources = { 
+		sr_fauna_beast1 = 1
+		minerals = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast1_2 = {
+	resources = { 
+		sr_fauna_beast1 = 2
+		minerals = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast2 = {
+	resources = { 
+		sr_fauna_beast2 = 1
+		food = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast2_2 = {
+	resources = { 
+		sr_fauna_beast2 = 2
+		food = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast6 = {
+	resources = { 
+		sr_fauna_beast6 = 1
+		food = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast6_2 = {
+	resources = { 
+		sr_fauna_beast6 = 2
+		food = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast7 = {
+	resources = { 
+		sr_fauna_beast7 = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast7_2 = {
+	resources = { 
+		sr_fauna_beast7 = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast8 = {
+	resources = { 
+		sr_fauna_beast8 = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_beast8_2 = {
+	resources = { 
+		sr_fauna_beast8 = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_psipenguin = {
+	resources = { 
+		sr_fauna_psipenguin = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_psipenguin_2 = {
+	resources = { 
+		sr_fauna_psipenguin = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_pukachi = {
+	resources = { 
+		sr_fauna_pukachi = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_pukachi_2 = {
+	resources = { 
+		sr_fauna_pukachi = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_headhug = {
+	resources = { 
+		sr_fauna_headhug = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_headhug_2 = {
+	resources = { 
+		sr_fauna_headhug = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_merglin = {
+	resources = { 
+		sr_fauna_merglin = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_merglin_2 = {
+	resources = { 
+		sr_fauna_merglin = 2
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_neutropooper = {
+	resources = { 
+		sr_fauna_neutropooper = 1
+		food = 3
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}
+
+d_sr_fauna_neutropooper_2 = {
+	resources = { 
+		sr_fauna_neutropooper = 2
+		food = 3
+	}
+	station = shipclass_research_station
+	orbital_weight = { weight = 0 }
+	drop_weight = { weight = 0 }
+}

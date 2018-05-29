@@ -1,0 +1,19 @@
+on_blocker_cleared = {
+	events = {
+		almxenofauna.1
+		# This one is for testing - the one above is the real thing
+		#almxenofauna.1000
+	}
+}
+
+on_building_complete = {
+	events = {
+		almxenofauna.3
+	}
+}
+
+on_building_replaced = {
+	events = {
+		almxenofauna.3
+	}
+}

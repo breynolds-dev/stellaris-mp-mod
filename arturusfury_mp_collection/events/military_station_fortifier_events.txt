@@ -1,0 +1,252 @@
+##########################################################################
+# Events for Military Station Fortifier
+#
+# Written by ScepraX
+##########################################################################
+
+namespace = military_station_fortifier
+
+# Variables
+
+@days_between_upgrades = 3600
+
+# Managed the military stations fortification (HIDDEN)
+# Called monthly
+event = {
+	id = military_station_fortifier.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Limited to countries that have development
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			
+			# Find the legit stations of this country
+			every_owned_ship = {
+				limit = {
+					is_ship_class = shipclass_military_station
+				}
+				
+				# Check for new military stations
+				if = {
+					limit = {
+						NOT = {
+							has_ship_flag = military_station_fortifier_flag
+						}
+					}
+				
+					# Mark this station as managed by this mod
+					set_ship_flag = military_station_fortifier_flag
+					
+					# Set a timed flag to block upgrading
+					set_timed_ship_flag = 
+					{
+						flag = military_station_fortifier_timeout_flag
+						days = @days_between_upgrades
+					}
+					
+					else = {
+						# Check managed military stations for possible upgrade
+						if = {
+							limit = {
+								has_ship_flag = military_station_fortifier_flag
+								NOT  = {
+									has_ship_flag = military_station_fortifier_timeout_flag
+								}
+							}
+							
+							# Upgrade
+							ship_event = {
+								id = military_station_fortifier.2
+							}
+							
+							# Set a timed flag to block upgrading
+							set_timed_ship_flag = 
+							{
+								flag = military_station_fortifier_timeout_flag
+								days = @days_between_upgrades
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Increase fortification of military station (HIDDEN)
+# Called by military_station_fortifier.1
+ship_event = {
+	id = military_station_fortifier.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	# Skip when upgraded fully
+	trigger = {
+		NOT = {
+			has_modifier = military_station_fortifier_level_10
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_modifier = military_station_fortifier_level_1
+					has_modifier = military_station_fortifier_level_2
+					has_modifier = military_station_fortifier_level_3
+					has_modifier = military_station_fortifier_level_4
+					has_modifier = military_station_fortifier_level_5
+					has_modifier = military_station_fortifier_level_6
+					has_modifier = military_station_fortifier_level_7
+					has_modifier = military_station_fortifier_level_8
+					has_modifier = military_station_fortifier_level_9
+					has_modifier = military_station_fortifier_level_10
+				}
+			}
+			
+			add_modifier = {
+				modifier = military_station_fortifier_level_1
+				days = -1
+			}
+			
+			else = {
+				if = {
+					limit = {
+						has_modifier = military_station_fortifier_level_1
+					}
+					
+					remove_modifier = military_station_fortifier_level_1
+					
+					add_modifier = {
+						modifier = military_station_fortifier_level_2
+						days = -1
+					}
+					
+					else = {
+						if = {
+							limit = {
+								has_modifier = military_station_fortifier_level_2
+							}
+							
+							remove_modifier = military_station_fortifier_level_2
+							
+							add_modifier = {
+								modifier = military_station_fortifier_level_3
+								days = -1
+							}
+							
+							else = {
+								if = {
+									limit = {
+										has_modifier = military_station_fortifier_level_3
+									}
+									
+									remove_modifier = military_station_fortifier_level_3
+									
+									add_modifier = {
+										modifier = military_station_fortifier_level_4
+										days = -1
+									}
+									
+									else = {
+										if = {
+											limit = {
+												has_modifier = military_station_fortifier_level_4
+											}
+											
+											remove_modifier = military_station_fortifier_level_4
+											
+											add_modifier = {
+												modifier = military_station_fortifier_level_5
+												days = -1
+											}
+											
+											else = {
+												if = {
+													limit = {
+														has_modifier = military_station_fortifier_level_5
+													}
+													
+													remove_modifier = military_station_fortifier_level_5
+													
+													add_modifier = {
+														modifier = military_station_fortifier_level_6
+														days = -1
+													}
+													
+													else = {
+														if = {
+															limit = {
+																has_modifier = military_station_fortifier_level_6
+															}
+															
+															remove_modifier = military_station_fortifier_level_6
+															
+															add_modifier = {
+																modifier = military_station_fortifier_level_7
+																days = -1
+															}
+															
+															else = {
+																if = {
+																	limit = {
+																		has_modifier = military_station_fortifier_level_7
+																	}
+																	
+																	remove_modifier = military_station_fortifier_level_7
+																	
+																	add_modifier = {
+																		modifier = military_station_fortifier_level_8
+																		days = -1
+																	}
+																	
+																	else = {
+																		if = {
+																			limit = {
+																				has_modifier = military_station_fortifier_level_8
+																			}
+																			
+																			remove_modifier = military_station_fortifier_level_8
+																			
+																			add_modifier = {
+																				modifier = military_station_fortifier_level_9
+																				days = -1
+																			}
+																			
+																			else = {
+																				if = {
+																					limit = {
+																						has_modifier = military_station_fortifier_level_9
+																					}
+																					
+																					remove_modifier = military_station_fortifier_level_9
+																					
+																					add_modifier = {
+																						modifier = military_station_fortifier_level_10
+																						days = -1
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+tb_infrastructure_hydrohab = {
+	cost = { 
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_food_add = 1
+	}
+}
+
+tb_infrastructure_mininghab = {
+	cost = { 
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_minerals_add = 1
+	}
+}
+
+tb_infrastructure_solarhab = {
+	cost = { 
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	
+	adjacency_bonus = {
+		tile_building_resource_energy_add = 1
+	}
+}

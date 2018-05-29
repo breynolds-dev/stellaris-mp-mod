@@ -1,0 +1,712 @@
+habitat_1 = {
+	entity = ""
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	
+	build_time = 3600
+	build_cost = {
+		minerals = 5000
+		energy = 2500
+		influence = 250
+	}
+
+	potential = {
+		not = { is_ai = yes }
+		OR = {
+			has_technology = tech_orbitalhabitats_2
+			has_ascension_perk = ap_voidborn
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					has_planet_flag = pf_habitat
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+			custom_tooltip = {
+				fail_text = "requires_survey_not_habitable"
+				is_surveyed = {
+					who = prev.from
+					status = yes
+				}
+				habitable_planet = no
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_minor_planetary_body"
+				NOR = {
+					is_asteroid = yes
+					is_moon = yes
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+		modifier = {
+			factor = 0
+			from = {
+			has_country_flag = cf_building_habitat
+			}
+		}
+	}
+	
+	on_build_start = {
+		from = {
+			set_country_flag = cf_building_habitat
+		}
+	}
+	on_build_cancel = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+	}
+	
+	on_build_complete = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 45
+			orbit_distance_offset = 9.899
+			size = 25
+			has_ring = no
+			
+			init_effect = {
+				set_name = "HABITAT_PLANET_NAME"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				while = {
+					limit = {
+						any_tile = { has_blocker = yes }
+					}
+					random_tile = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes
+					}
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no
+						has_building = no
+						num_adjacent_tiles > 3
+					}
+					clear_deposits = yes
+					set_blocker = tb_infrastructure_hydrohab
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no
+						has_building = no
+						num_adjacent_tiles > 2
+						not = {
+							any_neighboring_tile = {
+								has_blocker = yes
+							}
+						}
+					}
+					clear_deposits = yes
+					set_blocker = tb_infrastructure_mininghab
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no
+						has_building = no
+						num_adjacent_tiles > 2
+						not = {
+							any_neighboring_tile = {
+								has_blocker = yes
+							}
+						}
+					}
+					clear_deposits = yes
+					set_blocker = tb_infrastructure_solarhab
+				}
+				copy_orbital_tile = fromfrom.planet
+				set_planet_flag = megastructure
+				set_planet_flag = pf_habitat
+				set_planet_flag = habitat
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			set_planet_flag = pf_habitat
+		}
+		remove_megastructure = fromfrom
+	}
+}
+
+habitat_solar_farm = {
+	entity = ""
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	build_time = 720
+	build_cost = {
+		minerals = 1500
+		energy = 1000
+		influence = 50
+	}
+	construction_blocks_others = no
+
+	potential = {
+		OR = {
+			AND = {
+				has_technology = tech_ship_armor_2
+				has_technology = tech_fusion_power
+				has_technology = tech_shields_2
+				has_technology = tech_power_hub_1
+			}
+			has_ascension_perk = ap_voidborn
+			has_technology = tech_orbitalhabitats
+		}
+		not = { is_ai = yes }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_solar_structure"
+			AND = {
+				not = { has_star_flag = dyson_sphere_built }
+				not = {
+					solar_system = {
+						any_planet = {
+							has_planet_flag = pf_solarhab
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+		modifier = {
+			factor = 0
+			from = {
+			has_country_flag = cf_building_habitat
+			}
+		}
+	}
+	
+	on_build_start = {
+		from = {
+			set_country_flag = cf_building_habitat
+		}
+	}
+	on_build_cancel = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+	}
+	
+	on_build_complete = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 45
+			orbit_distance_offset = 45
+			size = 9
+			has_ring = no
+			
+			init_effect = {
+				set_name = "HABITAT_PLANET_NAME"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				while = {
+					limit = {
+						any_tile = { has_blocker = yes }
+					}
+					random_tile = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes
+					}
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no
+						has_building = no
+						num_adjacent_tiles > 3
+						not = {
+							any_neighboring_tile = {
+								has_blocker = yes
+							}
+						}
+					}
+					clear_deposits = yes
+					set_blocker = tb_infrastructure_solarhab
+				}
+				copy_orbital_tile = fromfrom.planet
+				set_planet_flag = megastructure
+				set_planet_flag = pf_solarhab
+				set_planet_flag = habitat
+				every_tile = {
+					limit = {
+						not = { has_blocker = yes }
+					}
+					random_list = {
+						50 = {
+							add_deposit = d_energy_deposit
+						}
+						25 = {
+							add_deposit = d_rich_energy_deposit
+						}
+						25 = {}
+					}
+				}
+				add_modifier = {
+					modifier = solar_farm
+					days = -1
+				}
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			set_planet_flag = pf_solarhab
+			set_planet_flag = pf_habitat				
+		}
+		set_star_flag = dyson_sphere_built
+		remove_megastructure = fromfrom
+	}
+}
+
+habitat_mining_outpost = {
+	entity = ""
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	build_time = 720
+	build_cost = {
+		minerals = 1500
+		energy = 1000
+		influence = 50
+	}
+	construction_blocks_others = no
+
+	potential = {
+		not = { is_ai = yes }
+		OR = {
+			has_ascension_perk = ap_voidborn
+			has_technology = tech_orbitalhabitats
+			AND = {
+				has_technology = tech_mineral_processing_1
+				has_technology = tech_fusion_power
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_habitat"
+				not = { has_planet_flag = pf_habitat }
+				not = { is_planet_class = pc_habitat }
+			}
+			custom_tooltip = {
+				fail_text = "requires_survey_not_habitable_or_mining_colony"
+				is_surveyed = {
+					who = prev.from
+					status = yes
+				}
+				
+				OR = {
+					habitable_planet = no
+					AND = {
+						is_colony = yes
+						OR = {
+							is_planet_class = pc_barren
+							is_planet_class = pc_asteroid
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_ring_deposit_asteroid"
+				OR = {
+					has_ring = yes
+					is_planet_class = pc_barren
+					is_planet_class = pc_asteroid
+					orbital_deposit_tile = {
+						has_resource = {
+							type = minerals
+							amount > 0
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+		modifier = {
+			factor = 0
+			from = {
+			has_country_flag = cf_building_habitat
+			}
+		}
+	}
+	
+	on_build_start = {
+		from = {
+			set_country_flag = cf_building_habitat
+		}
+	}
+	on_build_cancel = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+	}
+	
+	on_build_complete = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 45
+			orbit_distance_offset = 12.899
+			size = 9
+			has_ring = no
+			
+			init_effect = {
+				set_name = "HABITAT_PLANET_NAME"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				while = {
+					limit = {
+						any_tile = { has_blocker = yes }
+					}
+					random_tile = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes
+					}
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no
+						has_building = no
+						num_adjacent_tiles > 3
+						not = {
+							any_neighboring_tile = {
+								has_blocker = yes
+							}
+						}
+					}
+					clear_deposits = yes
+					set_blocker = tb_infrastructure_mininghab
+				}
+				copy_orbital_tile = fromfrom.planet
+				set_planet_flag = megastructure
+				set_planet_flag = pf_mininghab
+				set_planet_flag = habitat
+				every_tile = {
+					limit = {
+						not = { has_blocker = yes }
+					}
+					random_list = {
+						50 = {
+							add_deposit = d_mineral_deposit
+						}
+						50 = {}
+					}
+				}
+				add_modifier = {
+					modifier = mining_habitat
+					days = -1
+				}	
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			set_planet_flag = pf_mininghab
+			set_planet_flag = pf_habitat			
+		}
+		remove_megastructure = fromfrom
+	}
+}
+
+habitat_hydroponics_outpost = {
+	entity = ""
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	build_time = 720
+	build_cost = {
+		minerals = 1500
+		energy = 1000
+		influence = 50
+	}
+	construction_blocks_others = no
+
+	potential = {
+		not = { is_ai = yes }
+		not = { has_authority = auth_machine_intelligence }
+		not = { has_authority = auth_ancient_machine_intelligence }
+		OR = {
+			has_ascension_perk = ap_voidborn
+			has_technology = tech_orbitalhabitats
+			AND = {
+				has_technology = tech_gene_crops
+				has_technology = tech_fusion_power
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_dyson_sphere_or_solar_farm"
+			not = { has_star_flag = dyson_sphere_built }
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_habitat"
+				not = { has_planet_flag = pf_habitat }
+				not = { is_planet_class = pc_habitat }
+			}
+			custom_tooltip = {
+				fail_text = "requires_survey_biomass_source"
+				is_surveyed = {
+					who = prev.from
+					status = yes
+				}				
+				OR = {
+					is_planet_class = pc_alpine
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tropical
+					is_planet_class = pc_continental
+					is_planet_class = pc_gaia
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_not_star"
+				is_star = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+		modifier = {
+			factor = 0
+			from = {
+				has_country_flag = cf_building_habitat
+			}
+		}
+	}
+	
+	on_build_start = {
+		from = {
+			set_country_flag = cf_building_habitat
+		}
+	}
+	on_build_cancel = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+	}
+	
+	on_build_complete = {
+		from = {
+			remove_country_flag = cf_building_habitat
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 45
+			orbit_distance_offset = 12.899
+			size = 9
+			has_ring = no
+			
+			init_effect = {
+				set_name = "HABITAT_PLANET_NAME"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				while = {
+					limit = {
+						any_tile = { has_blocker = yes }
+					}
+					random_tile = {
+						limit = { has_blocker = yes }
+						remove_blocker = yes
+					}
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no
+						has_building = no
+						num_adjacent_tiles > 3
+						not = {
+							any_neighboring_tile = {
+								has_blocker = yes
+							}
+						}
+					}
+					clear_deposits = yes
+					set_blocker = tb_infrastructure_hydrohab
+				}
+				copy_orbital_tile = fromfrom.planet
+				set_planet_flag = megastructure
+				set_planet_flag = pf_hydroponicshab
+				set_planet_flag = habitat
+				every_tile = {
+					limit = {
+						not = { has_blocker = yes }
+					}
+					random_list = {
+						25 = {
+							add_deposit = d_farmland_deposit
+						}
+						75 = {}
+					}
+				}
+				add_modifier = {
+					modifier = hydroponics_habitat
+					days = -1
+				}	
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+			set_planet_flag = pf_hydroponicshab
+			set_planet_flag = pf_habitat			
+		}
+		remove_megastructure = fromfrom
+	}
+}

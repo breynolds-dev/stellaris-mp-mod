@@ -1,0 +1,12 @@
+##########################################################################
+# Action Triggers for Military Station Fortifier
+#
+# Written by ScepraX
+##########################################################################
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		military_station_fortifier.1
+	}
+}

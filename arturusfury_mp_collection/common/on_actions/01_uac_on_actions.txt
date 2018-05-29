@@ -1,0 +1,5 @@
+on_leader_spawned = {
+	events = {
+		utopia_ascension_enhancements.1
+	}
+}

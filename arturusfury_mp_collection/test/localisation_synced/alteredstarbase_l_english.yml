@@ -1,0 +1,23 @@
+﻿l_default:
+ alteredstarbase_accelerator_t0:0 "Field accelerator tier 0"
+ alteredstarbase_accelerator_t1:0 "Field accelerator tier 1"
+ alteredstarbase_accelerator_t2:0 "Field accelerator tier 2"
+ alteredstarbase_accelerator_t3:0 "Field accelerator tier 3"
+ alteredstarbase_accelerator_t4:0 "Field accelerator tier 4"
+ alteredstarbase_accelerator_t5:0 "Field accelerator tier 5"
+ 
+ alteredstarbase_accelerator:0 "Field accelerator"
+ alteredstarbase_accelerator_DESC:0 "Field accelerator"
+ 
+ alteredstarbase_aura_accelerator:0 "Field accelerator aura" 
+
+ alteredstarbase_tech_accelerator_t1:0 "$alteredstarbase_accelerator_t1$"
+ alteredstarbase_tech_accelerator_t1_desc:0 "$alteredstarbase_accelerator_t1$"
+ alteredstarbase_tech_accelerator_t2:0 "$alteredstarbase_accelerator_t2$"
+ alteredstarbase_tech_accelerator_t2_desc:0 "$alteredstarbase_accelerator_t2$"
+ alteredstarbase_tech_accelerator_t3:0 "$alteredstarbase_accelerator_t3$"
+ alteredstarbase_tech_accelerator_t3_desc:0 "$alteredstarbase_accelerator_t3$"
+ alteredstarbase_tech_accelerator_t4:0 "$alteredstarbase_accelerator_t4$"
+ alteredstarbase_tech_accelerator_t4_desc:0 "$alteredstarbase_accelerator_t4$"
+ alteredstarbase_tech_accelerator_t5:0 "$alteredstarbase_accelerator_t5$"
+ alteredstarbase_tech_accelerator_t5_desc:0 "$alteredstarbase_accelerator_t5$"

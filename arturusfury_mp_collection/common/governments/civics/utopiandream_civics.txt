@@ -1,0 +1,7 @@
+civic_orbital_ambitions = {
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	random_weight = {
+		base = 0 # Player only
+	}
+}

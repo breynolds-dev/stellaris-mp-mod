@@ -1,0 +1,456 @@
+namespace = almxenofauna
+
+planet_event = {
+	id = almxenofauna.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_pukachi
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_neutropooper
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_headhug
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_psipenguin
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_merglin
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_beast1
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_beast2
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_beast6
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_beast7
+					amount > 0
+				}
+			}
+		}
+		not = {
+			any_tile = {
+				has_resource = {
+					type = sr_fauna_beast8
+					amount > 0
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			30 = { }
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_alpine
+							is_planet_class = pc_tundra
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_beast1
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_tropical
+							is_planet_class = pc_continental
+							is_planet_class = pc_savannah
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_beast2
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_desert
+							is_planet_class = pc_savannah
+							is_planet_class = pc_alpine
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_beast8
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_savannah
+							is_planet_class = pc_tropical
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_beast7
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						AND = {
+							OR = {
+								is_planet_class = pc_desert
+								is_planet_class = pc_savannah
+								is_planet_class = pc_arid
+								is_planet_class = pc_continental
+							}
+							any_tile = {
+								has_resource = {
+									type = food
+									amount > 0
+								}
+							}
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_beast6
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_ocean
+							is_planet_class = pc_arctic
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_psipenguin
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_tropical
+							is_planet_class = pc_savannah
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_merglin
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			3 = {
+				if = {
+					limit = {
+						NOR = {
+							is_planet_class = pc_nuked
+							is_planet_class = pc_barren
+							is_planet_class = pc_asteroid
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_pukachi
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_nuked
+							is_planet_class = pc_barren
+							is_planet_class = pc_asteroid
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_headhug
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+			7 = {
+				if = {
+					limit = {
+						NOR = {
+							is_planet_class = pc_nuked
+							is_planet_class = pc_barren
+							is_planet_class = pc_asteroid
+						}
+					}
+					from = {
+						clear_deposits = yes
+						add_deposit = d_sr_fauna_neutropooper
+					}
+					planet_event = { id = almxenofauna.2 }
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = almxenofauna.2
+	title = "Interesting XenoFauna Found"
+	desc = "A XenoFauna lab has discovered some interesting alien animals that might be useful in some way."
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_laboratory_sound
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Gotta get them all!"
+	}
+}
+
+planet_event = {
+	id = almxenofauna.3
+	hide_window = yes
+
+	is_triggered_only = yes
+	location = root
+
+	trigger = {
+		from = {
+			has_building = "building_xenofauna_breed"
+		}
+	}
+
+	immediate = {
+		from = {
+			random_neighboring_tile = {
+				limit = {
+					has_pukachi_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_pukachi_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_pukachi"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_psipenguin_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_psipenguin_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_psipenguin"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_headhug_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_headhug_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_headhug"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_merglin_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_merglin_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_merglin"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_npooper_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_neutropooper_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_npooper"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_emeraldtiger_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_beast2_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_emeraldtiger"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_kinkragon_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_beast7_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_kinkragon"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_lumbercat_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_beast6_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_lumbercat"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_rocknosher_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_beast1_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_rocknosher"
+				}
+			}
+			random_neighboring_tile = {
+				limit = {
+					has_monarcheagle_deposit_1 = yes
+				}
+				clear_deposits = yes
+				add_deposit = d_sr_fauna_beast8_2
+				if = {
+					limit = {
+						nor = {
+							has_building = yes
+							has_blocker = yes
+						}
+					}
+					set_building = "building_xenofauna_breed_monarcheagle"
+				}
+			}
+		}
+	}
+}

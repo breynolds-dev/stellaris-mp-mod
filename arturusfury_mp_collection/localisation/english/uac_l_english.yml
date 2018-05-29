@@ -1,0 +1,26 @@
+﻿l_english:
+ #Robotic Psi traits
+ trait_psi_receptors:0 "Psi Receptors"
+ trait_psi_receptors_desc:0 "§LArtificial psionic conduits that allow machines to be interfaced with psionically, though it has no capability of its own.§!\n"
+ trait_psi_emitters:0 "Psi Emitters"
+ trait_psi_emitters_desc:0 "§LArtifical two-way psionic interfaces that allow 'thinking' machines to create and communicate on psionic networks.§!\n"
+
+ #Gestalt Psionic Techs
+ tech_gestalt_psionic_theory:0 "Psionic Theory"
+ tech_gestalt_psionic_theory_desc:1 "The mind is in many ways a reflection of the universe itself, a microcosmos. All species may not reach this insight, but their minds are tools greater than any other."
+ tech_gestalt_telepathy:0 "Telepathy"
+ tech_gestalt_telepathy_desc:1 "Once fully adapted to the basics of Psionics, the mind is capable of connecting to other individuals, becoming something greater."
+ tech_gestalt_precognition_interface:0 "Precognition Interface"
+ tech_gestalt_precognition_interface_desc:1 "Advances in the field of Psionics suggest the possibility of creating combat computers capable of reading and analysing the impulses of telepathic operatives before they are cognitively processed."
+ tech_gestalt_psi_jump_drive_1:0 "Psi Jump Drive"
+ tech_gestalt_psi_jump_drive_1_desc:1 "The Psi Jump Drive harnesses the psi energies emitted by the crew to force the vessel through the very fabric of reality, instantly "jumping" vast distances."
+
+ #Gestalt Robotics Techs
+ tech_gestalt_robotic_workers:0 "Robotic Workers"
+ tech_gestalt_robotic_workers_desc:0 "These robotic work units are perfect for menial labor tasks. They are hard-working and capable of following simple vocal instructions, but should not be expected to climb stairs."
+ tech_gestalt_droid_workers:0 "Droids"
+ tech_gestalt_droid_workers_desc:0 "Upgraded robotic workers, these units have an expanded movement range equal to that of most organics. Their neural processors have also been greatly improved."
+ tech_gestalt_synthetic_workers:0 "Synthetics"
+ tech_gestalt_synthetic_workers_desc:0 "Highly advanced robots that are stronger, faster and more durable than the vast majority of organics. With their upgraded neural processors they are fully capable of independent operations."
+ tech_gestalt_synthetic_leaders:0 "Synthetic Personality Matrix"
+ tech_gestalt_synthetic_leaders_desc:0 "Equipped with a personality, synthetics will finally be able to interact socially on equal terms with the rest of our citizens. Some units may even assume leadership roles."

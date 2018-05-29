@@ -1,0 +1,21 @@
+trait_cybernetic = {
+	cost = 0
+
+	initial = no
+	randomized = no
+	modification = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	species_potential_add = {
+		from = {
+			has_ascension_perk = ap_synthetic_evolution
+		}
+	}
+
+	modifier = {
+		pop_environment_tolerance = 0.20
+		army_damage_mult = 0.1
+		leader_age = 40
+	}
+}

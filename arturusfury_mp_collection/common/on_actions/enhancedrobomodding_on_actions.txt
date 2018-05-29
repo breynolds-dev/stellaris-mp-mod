@@ -1,0 +1,16 @@
+on_tech_increased = {
+	events = {
+		enhancedrobomodding.1
+		enhancedrobomodding.2
+	}
+}
+
+on_megastructure_built = {
+	events = {
+		enhancedrobomodding.3
+		enhancedrobomodding.4
+		enhancedrobomodding.5
+		enhancedrobomodding.6
+		enhancedrobomodding.7
+	}
+}

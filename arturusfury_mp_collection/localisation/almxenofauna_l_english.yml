@@ -1,0 +1,92 @@
+﻿l_english:
+
+#File change wake up steam
+ building_xenofauna_studies:0 "XenoFauna Studies"
+ building_xenofauna_studies_desc:0 "Locates, identifies, categorises and studies alien animal life on the planet. Some of which might be very useful when domesticated or as sources of food."
+
+ building_medical_xenofauna_labs:0 "XenoFauna Medical Applications"
+ building_medical_xenofauna_labs_desc:0 "This research facility studies, breeds and develops medical uses for alien animals, such as the Pukachi.\n\n§RCan only be built on a deposit of Pukachi.§!"
+ sr_fauna_pukachi:0 "XenoFauna (Pukachi)"
+ sr_fauna_pukachi_desc:1 "This vicious little creature vomits a substance that boosts life-force when applied to the skin. Requires training. Likes to sleep in the egg it hatched out of. Sulks a lot."
+
+ building_npoop_processing:0 "XenoFauna Fuel Applications"
+ building_npoop_processing_desc:0 "This facility studies, breeds and develops various fuel and energy production applications for alien animals, such as the n'Pooper.\n\n§RCan only be built on a deposit of n'Poopers.§!"
+ sr_fauna_neutropooper:0 "XenoFauna (n'Pooper)"
+ sr_fauna_neutropooper_desc:1 "This friendly little thing has a voracious appetite and is able to consume ten times its body weight every five minutes. Not surprisingly it defecates an extremely dense pellet that is a potent fuel source."
+ 
+ building_hostile_xenofauna_labs:0 "Hostile XenoFauna Containment"
+ building_hostile_xenofauna_labs_desc:0 "This highly secure facility studies, modifies and breeds particularly hostile alien creatures, such as the Headhug.\n\n§RCan only be built on a deposit of Headhugs.§!"
+ sr_fauna_headhug:0 "XenoFauna (Headhug)"
+ sr_fauna_headhug_desc:1 "Warning: Do not attach to face. Avoid contact with the creature's blood. In fact, just avoid any contact without appropriate supervision and safety measures. Completely untrainable but can be weaponised."
+ 
+ building_psi_xenofauna_labs:0 "Psionic XenoFauna Research"
+ building_psi_xenofauna_labs_desc:0 "This facility studies, modifies, breeds and utilises alien creatures that exhibit psychic properties, such as the Psiguin.\n\n§RCan only be built on a deposit of Psiguins.§!"
+ sr_fauna_psipenguin:0 "XenoFauna (Psiguin)"
+ sr_fauna_psipenguin_desc:1 "An aquatic flightless bird with the odd ability to cause those in their vicinity to have access to psychic abilities and to then enhance the strength of their power. The creatures also seem to be telepathic themselves and can co-operate very efficiently in the pursuit of fish."
+ 
+ building_engineering_xenofauna_apps:0 "XenoFauna Engineering Applications"
+ building_engineering_xenofauna_apps_desc:0 "This facility studies, modifies, breeds and utilises alien creatures that exhibit properties useful for engineering, such as the Merglin.\n\n§RCan only be built on a deposit of Merglins.§!"
+ sr_fauna_merglin:0 "XenoFauna (Merglin)"
+ sr_fauna_merglin_desc:1 "These small monkeyish bears are surprisingly intelligent but thankfully docile. They have the uncanny ability to intuitively identify weaknesses in tech and to then effectively sabotage it in often spectacularly explosive ways. They can also strip down and rebuild any tech rapidly as a group, as well as incorporate innovative improvements that would never occur to our engineers."
+ 
+ building_engineering_xenofauna_apps_2:0 "XenoFauna Engineering Applications"
+ building_engineering_xenofauna_apps_2_desc:0 "This facility studies, modifies, breeds and utilises alien creatures that exhibit properties useful for engineering, such as the Rocknosher.\n\n§RCan only be built on a deposit of Rocknoshers.§!"
+ sr_fauna_beast1:0 "XenoFauna (Rocknosher)"
+ sr_fauna_beast1_desc:1 "Large, tusked mammals that create subterranean networks of tunnels by digging, and when obstructed, by smashing and then consuming large quantities of rock."
+ 
+ building_military_xenofauna_apps:0 "XenoFauna Security Applications"
+ building_military_xenofauna_apps_desc:0 "This facility studies, modifies and trains alien creatures useful for military and security applications, such as the Emerald Tiger.\n\n§RCan only be built on a deposit of Emerald Tigers.§!"
+ sr_fauna_beast2:0 "XenoFauna (Emerald Tiger)"
+ sr_fauna_beast2_desc:1 "These big cats hunt in large packs with an almost militaristic precision and hierarchy. They can sense potential deviance that might reduce the pack effectiveness and are quick to eliminate it with harsh discipline."
+ 
+ building_psi_xenofauna_labs_2:0 "Psionic XenoFauna Research"
+ building_psi_xenofauna_labs_2_desc:0 "This facility studies, modifies, breeds and utilises alien creatures that exhibit psychic properties, such as the Monarch Eagle.\n\n§RCan only be built on a deposit of Monarch Eagles.§!"
+ sr_fauna_beast8:0 "XenoFauna (Monarch Eagle)"
+ sr_fauna_beast8_desc:1 "Regal, predatory, large birds with some limited empathic capabilities."
+ 
+ building_labour_xenofauna_apps:0 "XenoFauna Labour Applications"
+ building_labour_xenofauna_apps_desc:0 "This facility studies, modifies, breeds and utilises alien creatures that exhibit properties useful for labour, such as the Lumbercat.\n\n§RCan only be built on a deposit of Lumbercats.§!"
+ sr_fauna_beast6:0 "XenoFauna (Lumbercat)"
+ sr_fauna_beast6_desc:1 "Very big cats that lack grace and are extremely docile and are best suited as beasts of burden."
+ 
+ building_medical_xenofauna_labs_2:0 "XenoFauna Medical Applications"
+ building_medical_xenofauna_labs_2_desc:0 "This research facility studies, breeds and develops medical uses for alien animals, such as the Kinkragon.\n\n§RCan only be built on a deposit of Kinkragon.§!"
+ sr_fauna_beast7:0 "XenoFauna (Kinkragon)"
+ sr_fauna_beast7_desc:1 "These small, friendly reptiles exhale a gas that reduces inhibitions and stimulates pleasure centers."
+ 
+ building_xenofauna_breed:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_desc:1 "This facility increases the amount of XenoFauna we can exploit.\n\n§RCan only be built ADJACENT to a deposit of XenoFauna.§!"
+ 
+ building_xenofauna_breed_headhug:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_headhug_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_npooper:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_npooper_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_pukachi:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_pukachi_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_psipenguin:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_psipenguin_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_merglin:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_merglin_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_rocknosher:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_rocknosher_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_emeraldtiger:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_emeraldtiger_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_monarcheagle:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_monarcheagle_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_lumbercat:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_lumbercat_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ building_xenofauna_breed_kinkragon:0 "XenoFauna Breeding Center"
+ building_xenofauna_breed_kinkragon_desc:1 "This facility increases the amount of XenoFauna we can exploit."
+ 
+ requires_headhug_deposit: "§RCan only be built on a deposit of Headhugs.§!"
+ requires_npooper_deposit: "§RCan only be built on a deposit of n'Poopers.§!"
+ requires_pukachi_deposit: "§RCan only be built on a deposit of Pukachi.§!"
+ requires_psipenguin_deposit: "§RCan only be built on a deposit of Psiguins.§!"
+ requires_merglin_deposit: "§RCan only be built on a deposit of Merglins.§!"
+ requires_rocknosher_deposit: "§RCan only be built on a deposit of Rocknoshers.§!"
+ requires_emeraldtiger_deposit: "§RCan only be built on a deposit of Emerald Tigers.§!"
+ requires_monarcheagle_deposit: "§RCan only be built on a deposit of Monarch Eagles.§!"
+ requires_lumbercat_deposit: "§RCan only be built on a deposit of Lumbercats.§!"
+ requires_kinkragon_deposit: "§RCan only be built on a deposit of Kinkragons.§!"
+ 
+ requires_xenofauna_deposit: "§RCan only be built ADJACENT to a deposit of XenoFauna.§!"

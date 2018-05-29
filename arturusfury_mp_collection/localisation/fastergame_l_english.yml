@@ -1,0 +1,26 @@
+﻿l_english:
+
+ tech_fastergame_techboost:0 "Faster Gameplay Mod Tech Boost"
+ tech_fastergame_techboost_desc:0 "Gives a 50% bonus to all research."
+ tech_fastergame_shipboost:0 "Faster Gameplay Mod Ship Boost"
+ tech_fastergame_shipboost_desc:0 "Gives a 50% bonus to ship building speed."
+ tech_fastergame_armyboost:0 "Faster Gameplay Mod Army Boost"
+ tech_fastergame_armyboost_desc:0 "Gives a 25% bonus to army building speed."
+ tech_fastergame_colonyboost:0 "Faster Gameplay Mod Colonizing Boost"
+ tech_fastergame_colonyboost_desc:0 "Gives a 50% bonus to colony development."
+ tech_fastergame_growthboost:0 "Faster Gameplay Mod Pop Growth Boost"
+ tech_fastergame_growthboost_desc:0 "Gives a 50% bonus to pop growth speed."
+ tech_fastergame_robotbuildboost:0 "Faster Gameplay Mod Robot Build Boost"
+ tech_fastergame_robotbuildboost_desc:0 "Gives a 50% bonus to robot build speed."
+ tech_fastergame_buildboost:0 "Faster Gameplay Mod Building Boost"
+ tech_fastergame_buildboost_desc:0 "Gives a 50% bonus to planet improvement construction speed."
+ tech_fastergame_megaboost:0 "Faster Gameplay Mod Megastructure Building Boost"
+ tech_fastergame_megaboost_desc:0 "Gives a 50% bonus to Megastructure construction speed."
+ tech_fastergame_starbaseboost:0 "Faster Gameplay Mod Starbase Building Boost"
+ tech_fastergame_starbaseboost_desc:0 "Gives a 50% bonus to starbase construction speed (and modules)."
+
+  niri_system_initializer_NAME:0 "Niri System"
+  niri_system_initializer_DESC:0 "A system with a large Homeworld and a Gaia planet orbiting a gas giant."
+
+  ithin_system_initializer_NAME:0 "Ithin System"
+  ithin_system_initializer_DESC:0 "A very complex set of sytems"
