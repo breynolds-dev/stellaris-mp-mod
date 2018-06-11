@@ -149,7 +149,7 @@ planet_event = {
 					}
 					from = {
 						clear_deposits = yes
-						add_deposit = d_sr_fauna_beast7
+						add_deposit = d_fauna_beast_kinkdragon
 					}
 					planet_event = { id = almxenofauna.2 }
 				}
@@ -392,7 +392,7 @@ planet_event = {
 					has_kinkragon_deposit_1 = yes
 				}
 				clear_deposits = yes
-				add_deposit = d_sr_fauna_beast7_2
+				add_deposit = d_fauna_beast_kinkdragon_two
 				if = {
 					limit = {
 						nor = {

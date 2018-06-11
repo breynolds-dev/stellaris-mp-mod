@@ -1,207 +1,31 @@
-
-#####
+################################################################################
 # Starbase Buildings Extended
-#####
+################################################################################
 
-galactic_command_center = {
-	icon = "GFX_starbase_defense_grid_supercomputer"
-	construction_days = 580
-	
-	potential = {
-		exists = owner
-		owner = { has_technology = tech_command_matrix }
-	}	
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starfortress"
-			has_starbase_size >= starbase_starfortress
-		}
-	}
-
-	cost = {
-		minerals = 1500
-	}
-	
-	upkeep_resources = {
-		energy = 20
-	}	
-	
-	station_modifier = {
-		ship_weapon_range_mult = 0.40
-		ship_weapon_damage = 0.10
-		ship_sensor_range_add = 2
-		starbase_defense_platform_capacity_add = 10
-	}
-	
-	country_modifier = {
-		country_naval_cap_mult = 0.05
-	}
-	
-	show_in_tech = "tech_command_matrix"
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 20
-	}
-}
-
-research_hub = {
-	icon = "GFX_spaceport_module_navigators_guild"
-	construction_days = 250
-	
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-
-	cost = {
-		minerals = 260
-	}
-	
-	upkeep_resources = {
-		energy = 2
-	}	
-	
-	produced_resources = {
-		physics_research = 5
-		society_research = 5
-		engineering_research = 5
-	}
-	
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-space_embassy = {
-	icon = "GFX_spaceport_module_crew_quarters"
-	construction_days = 180
-	
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-
-	cost = {
-		minerals = 160
-	}
-	
-	upkeep_resources = {
-		energy = 3
-	}	
-	
-	country_modifier = {
-		max_embassies = 10
-		edict_length_mult = 0.05
-		country_integration_cooldown_mult = 0.05
-		country_resettlement_cost_mult = -0.05
-		country_starbase_influence_cost_mult = -0.05
-		country_claim_influence_cost_mult = -0.05
-		starbase_upgrade_cost_mult = -0.05
-	}
-
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-defense_station_shipyard = {
-	icon = "GFX_starbase_shipyard"
-	construction_days = 260
-
-	cost = {
-		minerals = 500
-	}
-	
-	upkeep_resources = {
-		energy = 5
-	}	
-	
-	station_modifier = {
-		starbase_defense_platform_capacity_add = 15
-		starbase_defensive_war_ship_build_speed_mult = 0.05
-	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 50
-	}
-}
-
-high_security_military_compound = {
-	icon = "GFX_starbase_deep_space_black_site"
-	construction_days = 380
-
-	cost = {
-		minerals = 320
-	}
-	
-	upkeep_resources = {
-		energy = 4
-	}	
-	
-	station_modifier = {
-		starbase_defense_platform_capacity_add = 10
-	}
-	
-	country_modifier = {
-		country_border_friction_mult = -0.05
-		country_core_sector_system_cap = 2
-		country_sector_cap_add = 2
-		country_starbase_capacity_add = 5
-		country_starbase_influence_cost_mult = 0.05	
-	}		
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 50
-	}
-}
-
-superior_naval_logistics_office = {
+naval_logistics_office = {
 	icon = "GFX_starbase_naval_logistics"
-	construction_days = 460
-	
+	construction_days = 360
+
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_interstellar_fleet_traditions }
-	}	
-	
+	}
+
 	possible = {
 		has_starbase_module = anchorage
 	}
-	
+
 	cost = {
-		minerals = 400
+		minerals = 200
 	}
-	
+
 	upkeep_resources = {
-		energy = 3
+		energy = 2
 	}
-	
+
+	custom_tooltip = sm_naval_logistics_office_desc_modifier
 	show_in_tech = "tech_interstellar_fleet_traditions"
-	
-	country_modifier = {
-		country_naval_cap_mult = 0.10
-		
-	}	
-	
-	orbit_modifier = {
-		ship_orbit_upkeep_mult = -0.15
-	}
-	
+
 	ai_build_at_chokepoint = no
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
@@ -216,155 +40,59 @@ superior_naval_logistics_office = {
 	}
 }
 
-communications_office = {
-	icon = "GFX_starbase_communication_jammer"
-	construction_days = 230
-
-	cost = {
-		minerals = 120
-		energy = 200
-	}
-	
-	upkeep_resources = {
-		energy = 2
-	}	
-	
-	station_modifier = {
-		starbase_shipyard_build_speed_mult = 0.05
-	}
-	
-	country_modifier = {
-		country_resettlement_cost_mult = -0.05
-		country_starbase_influence_cost_mult = -0.05
-		country_claim_influence_cost_mult = -0.05
-	}	
-	
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-weapon_system_upgrade_mk1 = {
-	icon = "GFX_spaceport_synchronized_defenses"
-	construction_days = 110
+superior_naval_logistics_office = {
+	icon = "GFX_starbase_naval_logistics"
+	construction_days = 460
 
 	potential = {
 		exists = owner
-	}		
-	
+		owner = { has_technology = tech_interstellar_fleet_traditions }
+	}
+
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
+		has_starbase_module = anchorage
 	}
-	
+
 	cost = {
-		minerals = 110
+		minerals = 400
 	}
-	
-	station_modifier = {
-		ship_fire_rate_mult = 0.05
-		ship_weapon_range_mult = 0.05
-		ship_hull_mult = 0.05
-		ship_shield_mult = 0.05
-	}
-	
-	upkeep_resources = {
-		energy = 1
-	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 10
-	}
-}
 
-weapon_system_upgrade_mk2 = {
-	icon = "GFX_spaceport_synchronized_defenses"
-	construction_days = 220
-
-	potential = {
-		exists = owner
-	}		
-	
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-	
-	cost = {
-		minerals = 220
-	}
-	
-	station_modifier = {
-		ship_fire_rate_mult = 0.10
-		ship_weapon_range_mult = 0.10
-		ship_hull_mult = 0.10
-		ship_shield_mult = 0.10
-	}
-	
-	upkeep_resources = {
-		energy = 2
-	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 10
-	}
-}
-
-weapon_system_upgrade_mk3 = {
-	icon = "GFX_spaceport_synchronized_defenses"
-	construction_days = 330
-
-	potential = {
-		exists = owner
-	}		
-	
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-	
-	cost = {
-		minerals = 330
-	}
-	
-	station_modifier = {
-		ship_fire_rate_mult = 0.15
-		ship_weapon_range_mult = 0.15
-		ship_hull_mult = 0.15
-		ship_shield_mult = 0.15
-	}
-	
 	upkeep_resources = {
 		energy = 3
 	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
+
+	show_in_tech = "tech_interstellar_fleet_traditions"
+
+	country_modifier = {
+		country_naval_cap_mult = 0.10
+	}
+
+	orbit_modifier = {
+		ship_orbit_upkeep_mult = -0.15
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 10
+		weight = 200
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = anchorage
+				count < 3
+			}
+		}
 	}
 }
 
 resource_storage_site = {
 	icon = "GFX_spaceport_module_resource_silo"
 	construction_days = 260
-	
+
 	cost = {
 		minerals = 400
 	}
-	
+
 	country_modifier = {
 		max_minerals = 5000
 		max_energy = 5000
@@ -377,127 +105,39 @@ resource_storage_site = {
 	}
 }
 
-energy_storage_bay = {
-	icon = "GFX_starbase_trading_hub"
-	construction_days = 280
-	
-	cost = {
-		minerals = 600
-	}
-	
-	country_modifier = {
-		max_energy = 10000
-	}
-
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-energy_capacitator_bay_mk1 = {
-	icon = "GFX_starbase_trading_hub"
-	construction_days = 160
-	
-	cost = {
-		minerals = 100
-	}
-	
-	upkeep_resources = {
-		minerals = 4
-	}
-	
-	produced_resources = {
-		energy = 4
-	}
-
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-energy_capacitator_bay_mk2 = {
-	icon = "GFX_starbase_trading_hub"
-	construction_days = 260
-	
-	cost = {
-		minerals = 200
-	}
-	
-	upkeep_resources = {
-		minerals = 8
-	}
-	
-	produced_resources = {
-		energy = 8
-	}
-
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-energy_capacitator_bay_mk3 = {
-	icon = "GFX_starbase_trading_hub"
-	construction_days = 380
-	
-	cost = {
-		minerals = 300
-	}
-	
-	upkeep_resources = {
-		minerals = 12
-	}
-	
-	produced_resources = {
-		energy = 12
-	}
-
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
 starbase_university = {
 	icon = "GFX_spaceport_module_fleet_academy"
 	construction_days = 380
-	
+
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_interstellar_fleet_traditions }
-	}	
-	
+	}
+
 	possible = {
 		has_starbase_module = shipyard
 	}
-	
+
 	ship_modifier = {
 		ship_starting_experience_add = 250
 	}
-	
+
 	cost = {
 		minerals = 250
 	}
-	
+
 	upkeep_resources = {
 		energy = 3
 	}
-	
+
 	country_modifier = {
 		country_leader_cap = 2
 		country_sector_cap_add = 2
 		leader_cost = -0.05
 	}
-	
+
 	show_in_tech = "tech_interstellar_fleet_traditions"
-	
+
 	ai_build_at_chokepoint = no
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
@@ -515,7 +155,7 @@ starbase_university = {
 civillian_sector = {
 	icon = "GFX_spaceport_module_crew_quarters"
 	construction_days = 120
-	
+
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_starport"
@@ -526,11 +166,11 @@ civillian_sector = {
 	cost = {
 		minerals = 80
 	}
-	
+
 	upkeep_resources = {
 		energy = 1
-	}	
-	
+	}
+
 	country_modifier = {
 		building_time_mult = -0.05
 		planet_unrest_add = -10
@@ -548,7 +188,7 @@ civillian_sector = {
 large_civillian_sector = {
 	icon = "GFX_spaceport_module_crew_quarters"
 	construction_days = 240
-	
+
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_starport"
@@ -559,11 +199,11 @@ large_civillian_sector = {
 	cost = {
 		minerals = 260
 	}
-	
+
 	upkeep_resources = {
 		energy = 4
-	}	
-	
+	}
+
 	country_modifier = {
 		building_time_mult = -0.10
 		planet_unrest_add = -20
@@ -578,179 +218,40 @@ large_civillian_sector = {
 	}
 }
 
-sublight_manipulator = {
-	icon = "GFX_spaceport_module_atmospheric_manipulator"
-	construction_days = 180
-	
-	potential = {
-		exists = owner
-		owner = { has_technology = tech_hyper_drive_2 }
-	}	
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-
-	cost = {
-		minerals = 200
-	}
-	
-	upkeep_resources = {
-		energy = 2
-	}
-
-	system_modifier = {
-		ship_speed_mult = 0.20
-	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 10
-	}
-}
-
-sublight_manipulator_mk2 = {
-	icon = "GFX_spaceport_module_atmospheric_manipulator"
-	construction_days = 260
-	
-	potential = {
-		exists = owner
-		owner = { has_technology = tech_hyper_drive_2 }
-	}	
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-
-	cost = {
-		minerals = 400
-	}
-	
-	upkeep_resources = {
-		energy = 4
-	}
-
-	system_modifier = {
-		ship_speed_mult = 0.45
-	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 10
-	}
-}
-
-resource_production_committee_hub = {
-	icon = "GFX_starbase_hangar_bay"
-	construction_days = 180
-	
-	potential = {
-		exists = owner
-	}
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_colonized_planet"
-			solar_system = {
-				OR = {
-					any_planet = {
-						is_colony = yes
-					}
-				}
-			}
-		}
-	}
-	
-	cost = {
-		minerals = 200
-	}
-	
-	produced_resources = {
-		energy = 4
-	}
-	
-	system_modifier = {
-		pop_resource_output = 0.05
-	}
-	
-	ai_build_at_chokepoint = no
-	ai_weight = {
-		weight = 10
-	}
-}
-
 sensor_station = {
 	icon = "GFX_spaceport_module_navigators_guild"
-	construction_days = 360
-	
-	cost = {
-		minerals = 200
-	}
-	
-	potential = {
-		exists = owner
-		owner = { has_technology = tech_sensors_2 }
-	}	
-	
-	station_modifier = {
-		ship_sensor_range_add = 5
-	}
-	
-	upkeep_resources = {
-		energy = 5
-	}
-	
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = no
-	ai_weight = {
-		weight = 40
-	}	
-	
-	show_in_tech = "tech_sensors_2"
-}
-
-sensor_station_mk2 = {
-	icon = "GFX_spaceport_module_navigators_guild"
 	construction_days = 580
-	
+
 	cost = {
 		minerals = 400
 	}
-	
+
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_sensors_2 }
-	}	
-	
+	}
+
 	station_modifier = {
 		ship_sensor_range_add = 8
 	}
-	
+
 	upkeep_resources = {
 		energy = 8
 	}
-	
+
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = no
 	ai_weight = {
 		weight = 70
-	}	
-	
+	}
+
 	show_in_tech = "tech_sensors_2"
 }
 
 deep_space_research_staion = {
 	icon = "GFX_starbase_deep_space_black_site"
 	construction_days = 260
-	
+
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_starport"
@@ -761,13 +262,13 @@ deep_space_research_staion = {
 	cost = {
 		minerals = 1500
 	}
-	
+
 	upkeep_resources = {
 		energy = 35
-	}	
-	
+	}
+
 	country_modifier = {
-		all_technology_research_speed = 0.10
+		all_technology_research_speed = 0.15
 		num_tech_alternatives_add = 1
 	}
 
@@ -778,10 +279,83 @@ deep_space_research_staion = {
 	}
 }
 
-high_security_military_research_staion = {
-	icon = "GFX_starbase_deep_space_black_site"
+# Defensive Buildings ##########################################################
+galactic_command_center = {
+	icon = "GFX_starbase_defense_grid_supercomputer"
+	construction_days = 580
+
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_command_matrix }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starfortress"
+			has_starbase_size >= starbase_starfortress
+		}
+	}
+
+	cost = {
+		minerals = 1500
+	}
+
+	upkeep_resources = {
+		energy = 20
+	}
+
+	station_modifier = {
+		ship_weapon_range_mult = 0.40
+		ship_weapon_damage = 0.10
+		ship_sensor_range_add = 2
+		starbase_defense_platform_capacity_add = 10
+	}
+
+	country_modifier = {
+		country_naval_cap_mult = 0.05
+	}
+
+	show_in_tech = "tech_command_matrix"
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 20
+	}
+}
+
+defense_station_shipyard = {
+	icon = "GFX_starbase_shipyard"
 	construction_days = 260
-	
+
+	cost = {
+		minerals = 500
+	}
+
+	upkeep_resources = {
+		energy = 5
+	}
+
+	station_modifier = {
+		starbase_defense_platform_capacity_add = 15
+		starbase_defensive_war_ship_build_speed_mult = 0.05
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 50
+	}
+}
+
+weapon_system_upgrade_mk1 = {
+	icon = "GFX_spaceport_synchronized_defenses"
+	construction_days = 110
+
+	potential = {
+		exists = owner
+	}
+
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_starport"
@@ -790,92 +364,97 @@ high_security_military_research_staion = {
 	}
 
 	cost = {
-		minerals = 280
-	}
-	
-	upkeep_resources = {
-		energy = 10
-	}	
-	
-	country_modifier = {
-		country_starbase_capacity_add = 2
-		country_command_limit_add = 2
-		country_starbase_influence_cost_mult = -0.10
-		pop_ethic_militarist_attraction_mult = 0.10
+		minerals = 110
 	}
 
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
+	station_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.05
+		ship_hull_mult = 0.05
+		ship_shield_mult = 0.05
+	}
+
+	upkeep_resources = {
+		energy = 1
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
 	ai_weight = {
 		weight = 10
 	}
 }
 
-physics_research_station = {
-	icon = "GFX_spaceport_module_navigators_guild"
-	construction_days = 200
-	
+weapon_system_upgrade_mk2 = {
+	icon = "GFX_spaceport_synchronized_defenses"
+	construction_days = 220
+
+	potential = {
+		exists = owner
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
 	cost = {
-		minerals = 200
+		minerals = 220
 	}
-	
+
+	station_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.10
+		ship_hull_mult = 0.10
+		ship_shield_mult = 0.10
+	}
+
 	upkeep_resources = {
-		energy = 8
+		energy = 2
 	}
-	
-	produced_resources = {
-		physics_research = 10
-	}
-	
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
 	ai_weight = {
 		weight = 10
-	}	
+	}
 }
 
-society_research_station = {
-	icon = "GFX_spaceport_module_navigators_guild"
-	construction_days = 200
-	
-	cost = {
-		minerals = 200
-	}
-	
-	upkeep_resources = {
-		energy = 8
-	}
-	
-	produced_resources = {
-		society_research = 10
-	}
-	
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}	
-}
+weapon_system_upgrade_mk3 = {
+	icon = "GFX_spaceport_synchronized_defenses"
+	construction_days = 330
 
-engineering_research_station = {
-	icon = "GFX_spaceport_module_navigators_guild"
-	construction_days = 200
-	
+	potential = {
+		exists = owner
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
 	cost = {
-		minerals = 200
+		minerals = 330
 	}
-	
+
+	station_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_range_mult = 0.15
+		ship_hull_mult = 0.15
+		ship_shield_mult = 0.15
+	}
+
 	upkeep_resources = {
-		energy = 8
+		energy = 3
 	}
-	
-	produced_resources = {
-		engineering_research = 10
-	}
-	
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
 	ai_weight = {
 		weight = 10
-	}	
+	}
 }

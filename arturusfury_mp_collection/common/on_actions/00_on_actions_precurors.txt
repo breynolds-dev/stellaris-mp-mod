@@ -1,0 +1,69 @@
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+
+	}
+}
+
+# No scope, like on_game_start
+#on_bi_yearly_pulse = {
+#	events = {
+#	}
+#}
+
+# No scope, like on_game_start
+#on_five_year_pulse = {
+#	events = {
+#	}
+#}
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
+
+	}
+}
+
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		precursor.11111
+	}
+}
+
+on_game_start_country = {
+	events = {
+
+	}
+}
+
+on_become_advanced_empire = {
+	events = {
+		
+	}
+}
+
+# Triggers when pressing begin in the intro window
+# This = country to press begin
+on_press_begin = {
+	events = {
+		
+	}
+}
+
+# A country has gained a surveyed status on a planet. Happens after "on_survey" if a science ship surveyed a planet.
+# Root = Planet
+# From = Country
+# FromFrom = Fleet of the science ship that surveyed it, if any
+on_planet_surveyed = {
+	events = {
+		precursor.11112
+	}
+}

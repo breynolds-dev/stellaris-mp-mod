@@ -1,4 +1,0 @@
-NGameplay = {
-	MIN_TRADE_DEAL_LENGTH_YEARS = 5		#Min length of trade deal in years
-	MAX_TRADE_DEAL_LENGTH_YEARS = 100	#Max length of trade deal in years
-}

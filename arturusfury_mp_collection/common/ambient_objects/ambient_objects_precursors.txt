@@ -1,0 +1,224 @@
+#Vultaum Debris
+ambient_object = {
+	name = "pre_vultaum_debris"
+	entity = "debris_small_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_vultaum_debris_tooltip"
+}
+
+#Vultaum Station
+ambient_object = {
+	name = "pre_vultaum_station"
+	entity = "ancient_precursor_starbase_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_vultaum_station_tooltip"
+}
+
+#Vultaum Satellite
+ambient_object = {
+	name = "pre_vultaum_satellite"
+	entity = "probe_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_vultaum_satellite_tooltip"
+}
+
+#Yuht Station
+ambient_object = {
+	name = "pre_yuht_station"
+	entity = "ancient_precursor_station1_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_yuht_station_tooltip"
+}
+
+#Yuht Debris
+ambient_object = {
+	name = "pre_yuht_debris"
+	entity = "debris_small_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_yuht_debris_tooltip"
+}
+
+#Yuht Pod
+ambient_object = {
+	name = "pre_yuht_pod"
+	entity = "cargo_container_old_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_yuht_pod_tooltip"
+}
+
+#Yuht Satellite
+ambient_object = {
+	name = "pre_yuht_satellite"
+	entity = "probe_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_yuht_satellite_tooltip"
+}
+
+#Yuht Cruiser
+ambient_object = {
+	name = "pre_yuht_cruiser"
+	entity = "ancient_precursor_cruiser3_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_yuht_cruiser_tooltip"
+}
+
+#Yuht Colony Ship
+ambient_object = {
+	name = "pre_yuht_colonizer"
+	entity = "ancient_precursor_colonizer_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_yuht_colonizer_tooltip"
+}
+
+#League Starbase
+ambient_object = {
+	name = "pre_league_starbase"
+	entity = "ancient_precursor_starbase_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_league_starbase_tooltip"
+}
+
+#League Station
+ambient_object = {
+	name = "pre_league_station"
+	entity = "ancient_precursor_station2_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_league_station_tooltip"
+}
+
+#League Cruiser
+ambient_object = {
+	name = "pre_league_cruiser"
+	entity = "ancient_precursor_cruiser1_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_league_cruiser_tooltip"
+}
+
+#League Debris
+ambient_object = {
+	name = "pre_league_debris"
+	entity = "debris_small_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_league_debris_tooltip"
+}
+
+#League Satellite
+ambient_object = {
+	name = "pre_league_satellite"
+	entity = "probe_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_league_satellite_tooltip"
+}
+
+#League Battlefield
+ambient_object = {
+	name = "pre_league_battlefield"
+	entity = "precursor_battlefield_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_league_battlefield_tooltip"
+}
+
+#Irassian Debris
+ambient_object = {
+	name = "pre_irassian_debris"
+	entity = "debris_small_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_irassian_debris_tooltip"
+}
+
+#Irassian Starbase
+ambient_object = {
+	name = "pre_irassian_starbase"
+	entity = "ancient_precursor_starbase4_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_irassian_starbase_tooltip"
+}
+
+#Irassian Station
+ambient_object = {
+	name = "pre_irassian_station"
+	entity = "ancient_precursor_station4_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_irassian_station_tooltip"
+}
+
+#Irassian Cruiser
+ambient_object = {
+	name = "pre_irassian_cruiser"
+	entity = "ancient_precursor_cruiser2_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_irassian_cruiser_tooltip"
+}
+
+#Irassian Battlefield
+ambient_object = {
+	name = "pre_irassian_battlefield"
+	entity = "irassian_battlefield_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_irassian_battlefield_tooltip"
+}
+
+#Cybrex Battlefield
+ambient_object = {
+	name = "pre_cybrex_battlefield"
+	entity = "precursor_battlefield_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_cybrex_battlefield_tooltip"
+}
+
+#Cybrex Warforms
+ambient_object = {
+	name = "pre_cybrex_warforms"
+	entity = "cybrex_battlefield_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_cybrex_battlefield_tooltip"
+}
+
+#Cybrex Debris
+ambient_object = {
+	name = "pre_cybrex_debris"
+	entity = "debris_small_01_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_cybrex_debris_tooltip"
+}
+
+#Cybrex Starbase
+ambient_object = {
+	name = "pre_cybrex_starbase"
+	entity = "ancient_precursor_starbase3_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_cybrex_starbase_tooltip"
+}
+
+#Cybrex Station
+ambient_object = {
+	name = "pre_cybrex_station"
+	entity = "ancient_precursor_station3_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "pre_cybrex_station_tooltip"
+}

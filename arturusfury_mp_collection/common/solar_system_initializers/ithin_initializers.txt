@@ -16,6 +16,11 @@ ithin_system_initializer = {
 	flags = { empire_home_system }
 
 	init_effect = {
+		spawn_megastructure = {
+			type = "gateway_ruined"
+			random_pos = yes
+			orbit_angle = 360
+		}
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
 			every_neighbor_system = {

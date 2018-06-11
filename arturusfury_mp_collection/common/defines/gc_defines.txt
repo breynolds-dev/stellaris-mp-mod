@@ -1,3 +1,0 @@
-NGameplay = {
-	TI_CORE_SCALE = 0.0
-}

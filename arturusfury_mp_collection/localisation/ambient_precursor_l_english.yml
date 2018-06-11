@@ -1,0 +1,76 @@
+﻿l_english:
+ ####################################
+ # Precursor Ambient Objects
+ ####################################
+ pre_vultaum_debris:0 "Vultaum Debris"
+ pre_vultaum_debris_tooltip:0 "Drifting remains of an ancient Vultaum structure. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_vultaum_station:0 "Derelict Vultaum Station"
+ pre_vultaum_station_tooltip:0 "The empty shell of an ancient Vultaum structure. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_vultaum_satellite:0 "Ancient Vultaum Satellite"
+ pre_vultaum_satellite_tooltip:0 "The forlorn derelict of a Vultaum satellite. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_yuht_station:0 "Ruined Yuht Station"
+ pre_yuht_station_tooltip:0 "Shattered remnant of a station build by the Yuht. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_yuht_debris:0 "Yuht Debris"
+ pre_yuht_debris_tooltip:0 "Drifting scraps of ancient Yuht construction. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_yuht_satellite:0 "Inactive Yuht Satellite"
+ pre_yuht_satellite_tooltip:0 "Unmanned satellite built by the Yuht, and small by their standards. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_yuht_cruiser:0 "Derelict Yuht Cruiser"
+ pre_yuht_cruiser_tooltip:0 "Eerie remains of a large Yuht vessel. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_yuht_colonizer:0 "Forgotten Yuht Colonizer"
+ pre_yuht_colonizer_tooltip:0 "A derelict colony ship built by the ancient Yuht. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_yuht_pod:0 "Abandoned Yuht Container"
+ pre_yuht_pod_tooltip:0 "Decaying containers of ancient Yuht origin. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_league_starbase:0 "Destroyed League Starbase"
+ pre_league_starbase_tooltip:0 "A shattered starbase, built by the First League. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_league_station:0 "Ruined League Station"
+ pre_league_station_tooltip:0 "Crippled husk of a station once maintained by the First League. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_league_debris:0 "First League Debris"
+ pre_league_debris_tooltip:0 "Drifting remains of an ancient First League structure. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_league_satellite:0 "First League Satellite"
+ pre_league_satellite_tooltip:0 "The forlorn derelict of a First League satellite. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_league_battlefield:0 "Ancient League Wreckage"
+ pre_league_battlefield_tooltip:0 "Twisted hulks of precursor starships, some of them built by the First League. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_league_cruiser:0 "Forgotten League Cruiser"
+ pre_league_cruiser_tooltip:0 "Silent shell of a cruiser built by the First League. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_irassian_starbase:0 "Destroyed Irassian Starbase"
+ pre_irassian_starbase_tooltip:0 "A shattered starbase, built by the Irassian Concordat. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_irassian_station:0 "Ruined Irassian Station"
+ pre_irassian_station_tooltip:0 "Mournful ruin of a station built by the Irassian Concordat. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_irassian_debris:0 "Irassian Debris"
+ pre_irassian_debris_tooltip:0 "Drifting remains of an ancient Irassian Concordat structure. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_irassian_battlefield:0 "Ancient Irassian Battlefield"
+ pre_irassian_battlefield_tooltip:0 "Scraps of battered precursor starships, some of them built by the Irassian Concordat. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_irassian_cruiser:0 "Forgotten Irassian Cruiser"
+ pre_irassian_cruiser_tooltip:0 "Silent shell of a cruiser built by the Irassian Concordat. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_cybrex_starbase:0 "Destroyed Cybrex Starbase"
+ pre_cybrex_starbase_tooltip:0 "A shattered starbase, once operated by the Cybrex. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_cybrex_station:0 "Ruined Cybrex Station"
+ pre_cybrex_station_tooltip:0 "Derelict station built by the Cybrex . Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_cybrex_debris:0 "Cybrex Debris"
+ pre_cybrex_debris_tooltip:0 "Drifting remains of an ancient Cybrex structure. Nothing of material value remains, but a skilled archaeologist could learn much from this site."
+ 
+ pre_cybrex_warforms:0 "Destroyed Cybrex Warforms"
+ pre_cybrex_battlefield:0 "Ancient Cybrex Battlefield"
+ pre_cybrex_battlefield_tooltip:0 "Scraps of destroyed precursor starships, damage patterns indicate that the Cybrex participated in this battle. Nothing of material value remains, but a skilled archaeologist could learn much from this site."

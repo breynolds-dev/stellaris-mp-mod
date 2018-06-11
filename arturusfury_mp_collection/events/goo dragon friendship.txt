@@ -1,0 +1,35 @@
+namespace = goodragonfriendship
+
+
+country_event = {
+	id = gwen_goodragonfriendship.1
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = gray_goo }
+			save_event_target_as = gwen_goo_dragon_Freinds
+		}
+		every_country = {
+			limit = { is_country_type = ldragon_country }
+			save_event_target_as = gwen_goo_dragon_Freind2
+			set_faction_hostility = {
+				set_hostile = no
+				#set_neutral = yes
+				set_friendly = yes
+				target = event_target:gwen_goo_dragon_Freinds
+			}
+		}
+		every_country = {
+			limit = { is_country_type = gray_goo }
+			set_faction_hostility = {
+				set_hostile = no
+				#set_neutral = yes
+				set_friendly = yes
+				target = event_target:gwen_goo_dragon_Freind2
+			}
+		}
+	}
+}

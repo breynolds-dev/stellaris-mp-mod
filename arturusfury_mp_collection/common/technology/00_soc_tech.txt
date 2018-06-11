@@ -3447,7 +3447,7 @@ tech_psionic_theory = {
 	}
 
 	weight_modifier = {
-		factor = 0.5
+		factor = 1
 		modifier = {
 			factor = 0.5
 			NOR = {
@@ -3491,7 +3491,7 @@ tech_psionic_theory = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 1
 			AND = {
 				OR = {
 					has_ethic = "ethic_materialist"

@@ -192,7 +192,7 @@ PixelShader =
 					
 			float vAlphaMin = 0.5f + 0.5f * vCamDistFactor;
 			
-			float vEdgeWidth = 0.025f + 0.35f * vCamDistFactor / 2;
+			float vEdgeWidth = 0.025f + 0.35f * vCamDistFactor * 0.6;
 			const float vEdgeSharpness = 100.0f;			
 			float vBlackBorderWidth = vEdgeWidth * 0.25f;
 			const float vBlackBorderSharpness = 25.0f;
@@ -200,9 +200,9 @@ PixelShader =
 			//vAlphaOuterEdge makes the outermost edge smoother
 			float vAlphaOuterEdge = smoothstep( vMid + vEpsilon, vMid - vEpsilon, vDist + vOffset );
 			//vAlphaEdge is the saturated part at the outer edge
-			float vAlphaEdge = saturate( (vDist-vMid + vEdgeWidth)*vEdgeSharpness ) / 2;
+			float vAlphaEdge = saturate( (vDist-vMid + vEdgeWidth)*vEdgeSharpness );
 			//vAlphaFill is the soft gradient inside the blobs
-			float vAlphaFill = max( vAlphaMin, saturate( vMid + (vDist-0.25f + vEdgeWidth*1.0f)*2.0f ) * 0.75f ) / 2;
+			float vAlphaFill = max( vAlphaMin, saturate( vMid + (vDist-0.25f + vEdgeWidth*1.0f)*2.0f ) * 0.75f );
 
 			float4 vColor = vAlphaEdge *  SecondaryColor + ( 1 - vAlphaEdge ) * PrimaryColor;
 
@@ -261,7 +261,7 @@ PixelShader =
 			}
 			vValue = saturate( vValue );
 			
-			float3 vColor = float3( 1.f, 1.f, 1.f );
+			float3 vColor = float3( 0.5f, 0.5f, 0.5f );
 			float3 Selected = float3( 1.f, 1.f, 1.0f );
 			
 			vValue += vSelected * ( sin( vTime * 3 ) * 0.15f + 0.15f );

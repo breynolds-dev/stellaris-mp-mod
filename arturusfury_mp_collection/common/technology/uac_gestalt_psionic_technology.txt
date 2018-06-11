@@ -60,17 +60,17 @@ tech_gestalt_psionic_theory = {
 	is_rare = yes
 	weight = @tier3weight1
 	is_reverse_engineerable = no
-	
+
 	gateway = psionics
-	
+
 	potential = {
 		has_ethic = ethic_gestalt_consciousness
 	}
-	
+
 	#modifier = {
 	#	country_resource_unity_mult = 0.05
 	#}
-	
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
@@ -105,7 +105,7 @@ tech_gestalt_psionic_theory = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 5 #very rare tech
 		modifier = {
@@ -124,15 +124,15 @@ tech_gestalt_telepathy = {
 	area = society
 	tier = 3
 	category = { psionics }
-	is_rare = yes	
+	is_rare = yes
 	prerequisites = { "tech_gestalt_psionic_theory" }
 	weight = @tier3weight3
 	is_reverse_engineerable = no
-	
+
 	potential = {
 		has_ethic = ethic_gestalt_consciousness
 	}
-	
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
@@ -180,7 +180,7 @@ tech_gestalt_telepathy = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 5 #very rare tech
 		modifier = {
@@ -202,9 +202,9 @@ tech_gestalt_precognition_interface = {
 	prerequisites = { "tech_gestalt_telepathy" }
 	weight = @tier4weight2
 	is_reverse_engineerable = no
-	
+
 	# unlocks precognitive interface-component, combat-computer granting evasion to ships
-	
+
 	#prereqfor_desc = {
 	#	hide_prereq_for_desc = component
 	#	custom = {
@@ -212,11 +212,11 @@ tech_gestalt_precognition_interface = {
 	#		desc = "TECH_UNLOCK_COMBAT_COMPUTER_PRECOG_DESC"
 	#	}
 	#}
-	
+
 	potential = {
 		has_ethic = ethic_gestalt_consciousness
 	}
-	
+
 	weight_modifier = {
 		factor = 0.5
 		modifier = {
@@ -264,7 +264,7 @@ tech_gestalt_precognition_interface = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 5 #very rare tech
 		modifier = {
@@ -290,22 +290,22 @@ tech_gestalt_psi_jump_drive_1 = {
 	weight = @tier5weight2
 	is_dangerous = yes
 	is_reverse_engineerable = no
-	
+
 	#feature_flags = {
 	#	jump_method
 	#}
-	
+
 	#prereqfor_desc = {
 	#	component = {
 	#		title = "TECH_UNLOCK_PSI_JUMPDRIVE_1_TITLE"
 	#		desc = "TECH_UNLOCK_PSI_JUMPDRIVE_1_DESC"
 	#	}
 	#}
-	
+
 	potential = {
 		has_ethic = ethic_gestalt_consciousness
 	}
-	
+
 	weight_modifier = {
 		factor = 0.1
 		modifier = {
@@ -332,6 +332,6 @@ tech_gestalt_psi_jump_drive_1 = {
 					has_trait = "leader_trait_maniacal"
 				}
 			}
-		}		
+		}
 	}
 }

@@ -1,0 +1,11 @@
+
+on_game_start = {
+	events = {
+		gwen_goodragonfriendship.1
+	}
+}
+on_yearly_pulse = {
+	events = {
+		gwen_goodragonfriendship.1
+	}
+}
