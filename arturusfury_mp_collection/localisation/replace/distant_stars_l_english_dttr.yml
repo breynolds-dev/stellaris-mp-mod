@@ -1,0 +1,10 @@
+﻿l_english:
+
+ tech_lgate_activation_desc:0 "The L-Gates defy our current understanding of subspace mechanics. This must be remedied before they can be opened for travel. $tech_lgate_activation_desc_dttr$"
+ tech_repeatable_lcluster_clue_desc:0 "Intensive study within the fields of nanomachinery and subspace phenomena will eventually yield a new §Y$clue$§! into the $lgate_disabled$ mystery. $tech_repeatable_lcluster_clue_desc_dttr$"
+ tech_experimental_subspace_navigation_desc:0 "Solitary Science Ships can break out of the naturally-occurring hyperlanes and attempt to navigate to known but otherwise unreachable destinations. $tech_experimental_subspace_navigation_desc_dttr$"
+ tech_mine_aldar_desc:0 "Volatile Aldar is only found laced in more common ores. Successfully extracting Aldar crystals from these mineral matrices - without sustaining significant damage to equipment and operators - requires advanced auto-tactile machinery. $tech_mine_aldar_desc_dttr$"
+ tech_nanite_repair_system_desc:0 "A highly effective hull auto-repair system comprised of billions of microscopic nanomachines was found among the smoking remains of the Scavenger, and has been repurposed for our uses. Whether the Scavenger pilfered this system from an ancient derelict, or was originally constructed with it remains unknown. $tech_nanite_repair_system_desc_dttr$"
+ tech_neuroregeneration_desc:0 "When tailored to a species' genome, this form of tissue engineering has intensive neuroregenerative properties, significantly increasing the development of neurons, axons, and synapses in its recipient. $tech_neuroregeneration_desc_dttr$"
+
+ 

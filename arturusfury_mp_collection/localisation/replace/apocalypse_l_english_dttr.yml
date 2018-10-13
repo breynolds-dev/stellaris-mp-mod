@@ -1,0 +1,13 @@
+﻿l_english:
+
+ tech_ftl_inhibitor_desc:1 "Gravity well projectors can be used to create localized pockets of space where safe entry into hyperspace is impossible. The immense power requirements and the size of the projectors prohibits their use on anything smaller than a starbase. $tech_ftl_inhibitor_desc_dttr$"
+
+ tech_pk_cracker_desc:0 "$PLANET_KILLER_CRACKER_DESC$ $tech_pk_cracker_desc_dttr$"
+
+ tech_pk_shielder_desc:0 "$PLANET_KILLER_SHIELDER_DESC$ $tech_pk_shielder_desc_dttr$"
+
+ tech_pk_neutron_desc:0 "$PLANET_KILLER_NEUTRON_DESC$ $tech_pk_neutron_desc_dttr$"
+
+ tech_pk_godray_desc:1 "An arcane catalyst amplifying certain psionic wavelengths, capable of inducing hallucinations (religious experiences) in biological brains, and severe disruption (brain death) in electronic ones. $tech_pk_godray_desc_dttr$"
+
+ tech_pk_nanobots_desc:0 "$PLANET_KILLER_NANOBOTS$ $tech_pk_nanobots_desc_dttr$"

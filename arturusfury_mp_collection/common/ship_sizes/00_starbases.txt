@@ -56,7 +56,7 @@ starbase_outpost = {
 	icon_frame = 1
 
 	upkeep_override = {
-		energy = 1
+		energy = 0
 		minerals = 0
 	}
 }
@@ -115,7 +115,7 @@ starbase_starport = {
 	icon_frame = 2
 
 	upkeep_override = {
-		energy = 2
+		energy = 1
 		minerals = 0
 	}
 }
@@ -176,7 +176,7 @@ starbase_starhold = {
 	icon_frame = 3
 
 	upkeep_override = {
-		energy = 3
+		energy = 2
 		minerals = 0
 	}
 }
@@ -239,7 +239,7 @@ starbase_starfortress = {
 	icon_frame = 4
 
 	upkeep_override = {
-		energy = 4
+		energy = 3
 		minerals = 0
 	}
 }
@@ -308,7 +308,7 @@ starbase_citadel = {
 	icon_frame = 5
 
 	upkeep_override = {
-		energy = 5
+		energy = 4
 		minerals = 0
 	}
 }
