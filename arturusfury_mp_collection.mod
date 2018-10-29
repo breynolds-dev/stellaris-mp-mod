@@ -4,4 +4,4 @@ tags={
 	"Gameplay"
 }
 remote_file_id="1396603761"
-supported_version="2.1.0"
+supported_version="2.1.*"
