@@ -1,0 +1,44 @@
+mod_esapnsc_battlecruiser = {	
+	ship_weapon_range_mult = 0.1
+	ship_hitpoints_mult = 0.2
+	ship_armor_mult = -0.15
+	ship_combat_speed_mult = 0.35
+	ship_evasion_mult = 0.2
+}
+
+mod_esap_battleship = {	
+	ship_weapon_range_mult = 0.20
+	ship_hitpoints_mult = 0.20
+	ship_armor_mult = 0.10
+}
+
+mod_esapnsc_Carrier = {	
+	ship_weapon_range_mult = 0.50
+	ship_hitpoints_mult = -0.10
+	ship_armor_mult = -0.10
+	ship_sensor_range_mult = 0.5
+}
+
+mod_esapnsc_Dreadnought = {	
+	ship_weapon_range_mult = 0.30
+	ship_hitpoints_mult = 0.25
+	ship_armor_mult = 0.15
+	ship_weapon_damage = 0.2
+	ship_weapon_firerate_mult = -0.3
+}
+
+mod_esapnsc_Superdreadnought = {	
+	ship_weapon_range_mult = 0.35
+	ship_hitpoints_mult = 0.30
+	ship_armor_mult = 0.15
+	ship_weapon_damage = 0.3
+	ship_weapon_firerate_mult = -0.45
+}
+
+mod_esapnsc_flagship = {	
+	ship_weapon_range_mult = 0.50
+	ship_hitpoints_mult = 0.35
+	ship_armor_mult = 0.15
+	ship_weapon_damage = 0.5
+	ship_weapon_firerate_mult = -0.6
+}

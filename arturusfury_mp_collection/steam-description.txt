@@ -10,7 +10,9 @@ This is mostly a collection of mods with slight alterations to make a multiplaye
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=902937691]Ascension Enhancements[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=701739734]Color Coded Pop Status Icons[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1381214767]Colored Map Icons[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1435832483]Detailed Tech Tooltips Reloaded[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1149888293]Enhanced Robomodding[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1474704219]Ethics Colors[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1407858645]Flat Galaxy[/url]
 [*] Galaxy Centers
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1313147672]Glavius's No Diplomatic Spam[/url]
@@ -25,7 +27,11 @@ This is mostly a collection of mods with slight alterations to make a multiplaye
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1290047689]Simple Leader Skill Icons[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=731594634]Spectra Flag Colors[/url]
 [*] Starbase Buildings Extended ( No Longer on Steam Workshop )
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1440941890]Starbase Extended 2.0[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1202232833]Stellar Resources[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1335088131]Stellaris Against Humanity[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1395636866]T's Force Spawn Ai (and Fallen Empire) Galaxy[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1468051384]Trinary Dyson Sphere[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=707297106]Unique Systems Spawn 100%[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1317493750]Utopian Dream[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1395238253]XenoFauna[/url]

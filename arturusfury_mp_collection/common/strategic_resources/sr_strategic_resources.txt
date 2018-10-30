@@ -1,0 +1,287 @@
+## xxx
+#sr_ = {
+#	AI_category = strategic_resource
+#	prerequisites = { "tech_" }
+#	tradable = yes
+#	is_rare = yes
+#	is_global = yes
+#	
+#	modifier = {
+#		xxx
+#	}
+#}
+
+# Tachyonic Particles
+sr_tachyon = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_tachyon" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		ship_interstellar_speed_mult = 0.25
+		ship_windup_mult = -0.15
+	}
+}
+
+##################################################
+
+# Green Tiberium
+sr_tiberium_green = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_tiberium_green" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.05
+	}
+}
+
+# Blue Tiberium
+sr_tiberium_blue = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_tiberium_blue" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.10
+	}
+}
+
+# Liquid Tiberium
+sr_tiberium_liquid = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_tiberium_liquid" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_energy_mult = 0.10
+	}
+}
+
+##################################################
+
+# Iron
+sr_iron = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_intrasystem_mining" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		planet_building_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.1
+	}
+}
+
+# Copper
+sr_copper = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_intrasystem_mining" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		planet_building_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.1
+	}
+}
+
+# Aluminum
+sr_aluminum = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_intrasystem_mining" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		planet_building_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.1
+	}
+}
+
+# Helium-3
+sr_helium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_intrasystem_mining" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_energy_mult = 0.01
+	}
+}
+
+##################################################
+
+# Silver
+sr_silver = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining1" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		leader_age = 5
+	}
+}
+
+# Tungsten
+sr_tungsten = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining1" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		weapon_type_kinetic_weapon_damage_mult = 0.05
+	}
+}
+
+# Plutonium
+sr_plutonium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining1" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_energy_mult = 0.02
+		weapon_type_energy_weapon_damage_mult = 0.05
+	}
+}
+
+##################################################
+
+# zinc
+sr_zinc = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining2" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		planet_building_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.1		
+	}
+}
+
+# Gold
+sr_gold = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining2" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		pop_citizen_happiness = 0.02
+	}
+}
+
+
+# Uranium
+sr_uranium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining2" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_energy_mult = 0.03
+	}
+}
+
+##################################################
+
+# cobalt
+sr_cobalt = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining3" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		planet_building_cost_mult = -0.05
+		planet_building_build_speed_mult = 0.1
+	}
+}
+
+# Platinum
+sr_platinum = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining3" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		pop_citizen_happiness = 0.03
+	}
+}
+
+# Titanium
+sr_titanium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining3" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_minerals_mult = 0.01
+		ship_armor_mult = 0.1
+	}
+}
+
+# Thorium
+sr_thorium = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining3" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_energy_mult = 0.04
+	}
+}
+
+# Antimatter
+sr_antimatter = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_planetoid_mining3" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		country_resource_energy_mult = 0.05
+	}
+}

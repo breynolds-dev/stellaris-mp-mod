@@ -5,6 +5,10 @@
 #################
 
 ap_enigmatic_engineering = {
+	on_enabled = {
+		custom_tooltip = "allow_spy_orb"
+	}
+
 	potential = {
 		host_has_dlc = "Apocalypse"
 		NOT = {
@@ -137,306 +141,6 @@ ap_colossus = {
 }
 
 #################
-# ASCENSION PATHS
-#################
-
-@ap_engineered_evolution_POINTS = 3
-@ap_engineered_evolution_COST_MULT = -0.25
-ap_engineered_evolution = {
-	on_enabled = {
-		add_research_option = tech_gene_seed_purification
-		hidden_effect = {
-			country_event = { id = utopia.2700 }
-		}
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_1"
-			num_ascension_perks > 0
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_gene_tailoring"
-			OR = {
-				has_technology = tech_gene_tailoring
-				has_authority = auth_machine_intelligence
-			}
-		}
-	}
-	modifier = {
-		description = ap_engineered_evolution_modifier_desc
-		description_parameters = {
-			POINTS = @ap_engineered_evolution_POINTS
-			COST_MULT = @ap_engineered_evolution_COST_MULT
-		}
-
-		BIOLOGICAL_species_trait_points_add = @ap_engineered_evolution_POINTS
-
-		modify_species_cost_mult = @ap_engineered_evolution_COST_MULT
-	}
-	
-	potential = {
-		host_has_dlc = "Utopia"
-		NOT = {
-			has_ascension_perk = ap_engineered_evolution
-		}
-	}
-	
-	ai_weight = {
-		factor = 10
-		modifier = {
-			factor = 0
-			num_owned_planets < 10
-		}
-	}
-}
-
-@ap_evolutionary_mastery_POINTS = 3
-@ap_evolutionary_mastery_COST_MULT = -0.25
-ap_evolutionary_mastery = {
-	on_enabled = {
-		add_research_option = tech_genetic_resequencing
-		hidden_effect = {
-			country_event = { id = utopia.2703 }
-		}
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_3"
-			num_ascension_perks > 2
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_glandular_acclimation"
-			OR = {
-				has_technology = tech_glandular_acclimation
-				#TODO: Add MI tech requirement
-				has_authority = auth_machine_intelligence
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_ap_engineered_evolution"
-			has_ascension_perk = ap_engineered_evolution
-		}
-	}
-	modifier = {
-		description = ap_evolutionary_mastery_modifier_desc
-		description_parameters = {
-			POINTS = @ap_evolutionary_mastery_POINTS
-			COST_MULT = @ap_evolutionary_mastery_COST_MULT
-		}
-
-		BIOLOGICAL_species_trait_points_add = @ap_evolutionary_mastery_POINTS
-
-		modify_species_cost_mult = @ap_evolutionary_mastery_COST_MULT
-	}
-	
-	potential = {
-		host_has_dlc = "Utopia"
-		NOT = {
-			has_ascension_perk = ap_evolutionary_mastery
-		}
-	}
-	
-	ai_weight = {
-		factor = 100
-	}
-}
-
-ap_the_flesh_is_weak = {
-	on_enabled = {
-		custom_tooltip = "flesh_is_weak_tooltip"
-		hidden_effect = {
-			country_event = { id = utopia.2500 }
-		}
-	}
-	modifier = {
-		pop_robot_upkeep_mult = -0.10
-		pop_robot_build_speed_mult = 0.33
-	}	
-	possible = {
-		#custom_tooltip = {
-		#	fail_text = "synthetic_empire_synthetic_ascension"
-		#	NOT = { has_trait = trait_mechanical }
-		#}
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_1"
-			num_ascension_perks > 0
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_droid_workers"
-			OR = {
-				has_technology = tech_droid_workers
-				has_technology = tech_gestalt_droid_workers
-			}
-		}
-	}
-	
-	potential = {
-		host_has_dlc = "Utopia"
-		NOT = {
-			has_ascension_perk = ap_the_flesh_is_weak
-		}
-		is_mechanical_empire = no		
-	}
-	
-	ai_weight = {
-		factor = 20
-		modifier = {
-			factor = 0.1
-			NOR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
-		}
-		modifier = {
-			factor = 0
-			num_owned_planets < 10
-		}
-	}
-}
-
-ap_synthetic_evolution = {
-	on_enabled = {
-		custom_tooltip = "synthetic_evolution_tooltip"
-		hidden_effect = {
-			country_event = { id = utopia.2550 }
-		}
-	}
-	modifier = {
-		pop_robot_upkeep_mult = -0.10
-		ROBOT_species_trait_points_add = 1
-	}		
-	possible = {
-		#custom_tooltip = {
-		#	fail_text = "synthetic_empire_synthetic_ascension"
-		#	NOT = { has_trait = trait_mechanical }
-		#}
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_3"
-			num_ascension_perks > 2
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_synthetic_workers"
-			OR = {
-				has_technology = tech_synthetic_workers
-                has_technology = tech_gestalt_synthetic_workers
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_synthetic_leaders"
-			OR = {
-				has_technology = tech_synthetic_leaders
-				has_technology = tech_gestalt_synthetic_leaders
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_ap_the_flesh_is_weak"
-			has_ascension_perk = ap_the_flesh_is_weak
-		}
-		custom_tooltip = {
-			fail_text = "requires_finished_cybernetics_project"
-			NOT = { has_special_project = FLESH_IS_WEAK_PROJECT }
-		}
-	}
-	
-	potential = {
-		host_has_dlc = "Utopia"
-		NOT = {
-			has_ascension_perk = ap_synthetic_evolution
-			has_authority = "auth_machine_intelligence"
-		}
-		is_mechanical_empire = no
-	}
-	
-	ai_weight = {
-		factor = 100
-	}
-}
-
-ap_mind_over_matter = {
-	on_enabled = {
-		custom_tooltip = "mind_over_matter_tooltip"
-		hidden_effect = {
-			country_event = { id = utopia_ascension_enhancements.2 }
-		}
-		if = {
-			limit = {
-				has_ethic = ethic_gestalt_consciousness
-			}
-				add_research_option = tech_gestalt_telepathy
-			else = {
-				add_research_option = tech_telepathy
-			}
-		}
-
-	}
-	possible = {	
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_1"
-			num_ascension_perks > 0
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_psionic_theory"
-			OR = {
-				has_technology = tech_psionic_theory
-				has_technology = tech_gestalt_psionic_theory
-			}
-		}
-	}
-	
-	potential = {
-		host_has_dlc = "Utopia"
-		NOT = {
-			has_ascension_perk = ap_mind_over_matter
-		}
-	}
-	
-	ai_weight = {
-		factor = 20
-		modifier = {
-			factor = 0.1
-			NOR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
-		}		
-		modifier = {
-			factor = 0
-			num_owned_planets < 10
-		}
-	}
-}
-
-ap_transcendence = {
-	on_enabled = {
-		custom_tooltip = "transcendence_tooltip"
-		hidden_effect = {
-			country_event = { id = utopia_ascension_enhancements.3 }
-		}
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_3"
-			num_ascension_perks > 2
-		}
-		custom_tooltip = {
-			fail_text = "requires_ap_mind_over_matter"
-			has_ascension_perk = ap_mind_over_matter
-		}
-	}
-	
-	potential = {
-		host_has_dlc = "Utopia"
-		NOT = {
-			has_ascension_perk = ap_transcendence
-		}
-	}
-	
-	ai_weight = {
-		factor = 100
-	}
-}
-
-#################
 # GENERIC ASCENSION PERKS
 #################
 
@@ -453,13 +157,14 @@ ap_world_shaper = {
 	}
 
 	modifier = {
-		terraform_speed_mult = 0.5
-		terraforming_cost_mult = -0.25
+		terraform_speed_mult = 1
+		terraforming_cost_mult = -0.50
 	}
 	
 	on_enabled = {
 		custom_tooltip = "allow_gaia"
 		custom_tooltip = "allow_genesis_initiator"
+		custom_tooltip = "allow_ring_world"
 	}
 	
 	potential = {
@@ -485,10 +190,13 @@ ap_galactic_force_projection = {
 			num_ascension_perks > 1
 		}
 	}
+	on_enabled = {
+		custom_tooltip = "ap_galactic_force_projection_tooltip"
+}
 	modifier = {
-		country_naval_cap_add = 80
+		country_naval_cap_add = 100
 		country_naval_cap_mult = 0.2
-		country_command_limit_add = 20					 
+		country_command_limit_add = 50					 
  		ship_fire_rate_mult = 0.1
 		ship_home_territory_fire_rate_mult = -0.1
 	}
@@ -585,6 +293,25 @@ ap_interstellar_dominion = {
 }
 
 ap_grasp_the_void = {
+	on_enabled = {
+		give_technology = {
+			tech = tech_gateway_activation
+			message = no
+		}
+		
+		give_technology = {
+			tech = tech_wormhole_stabilization	
+			message = no
+		}
+			
+		if = {
+			limit = { 
+				NOT = { has_technology = tech_gateway_construction }
+			}
+			add_research_option = tech_gateway_construction
+		}
+	}
+	
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_1"
@@ -593,8 +320,10 @@ ap_grasp_the_void = {
 	}
 
 	modifier = {
+		tradition_cost_num_systems_mult = -0.75
 		country_starbase_influence_cost_mult = -0.1
 		country_starbase_capacity_add = 7
+		ship_speed_mult = 0.33
 	}
 	
 	potential = {
@@ -724,40 +453,6 @@ ap_technological_ascendancy = {
 			factor = 3
 			has_ethic = ethic_fanatic_materialist
 		}
-	}
-}
-
-ap_one_vision = {
-	modifier = {
-		country_resource_unity_mult = 0.2
-		pop_government_ethic_attraction = 0.2
-	}
-	
-	potential = {
-		NOT = {
-			has_ascension_perk = ap_one_vision
-			has_authority = "auth_machine_intelligence"
-		}
-	}
-	
-	ai_weight = {
-		factor = 10
-		modifier = {
-			factor = 2
-			has_ethic = ethic_authoritarian
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_authoritarian
-		}
-		modifier = {
-			factor = 2
-			has_ethic = ethic_spiritualist
-		}
-		modifier = {
-			factor = 3
-			has_ethic = ethic_fanatic_spiritualist
-		}		
 	}
 }
 
@@ -1052,10 +747,7 @@ ap_master_builders = {
 
 ap_galactic_wonders = {
 	on_enabled = {
-		custom_tooltip = "allow_spy_orb"
-		custom_tooltip = "allow_think_tank"
 		custom_tooltip = "allow_dysons_sphere"
-		custom_tooltip = "allow_ring_world"									 
 	}
 	
 	possible = {

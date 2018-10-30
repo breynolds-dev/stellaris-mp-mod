@@ -1,0 +1,20 @@
+spriteTypes = 
+{	
+	spriteType = 
+	{
+		name = "GFX_evt_mega_shipyard"
+		texturefile = "gfx/event_pictures/c_precursor_shipyards_old.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes	
+	}
+	spriteType = 
+	{
+		name = "GFX_mega_shipyard"
+		textureFile = "gfx/interface/planetview/mega_shipyard.dds"
+	}
+	spriteType = 
+	{
+		name = "GFX_spaceport_module_mega_shipyard_uplink"
+		texturefile = "gfx/interface/icons/modules/sb_mega_shipyard_uplink.dds"
+	}
+}

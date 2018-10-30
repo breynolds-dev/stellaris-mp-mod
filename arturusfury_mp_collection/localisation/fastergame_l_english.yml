@@ -19,8 +19,26 @@
  tech_fastergame_starbaseboost:0 "Faster Gameplay Mod Starbase Building Boost"
  tech_fastergame_starbaseboost_desc:0 "Gives a 50% bonus to starbase construction speed (and modules)."
 
-  niri_system_initializer_NAME:0 "Niri System"
-  niri_system_initializer_DESC:0 "A system with a large Homeworld and a Gaia planet orbiting a gas giant."
+niri_system_initializer_NAME:0 "Niri System"
+niri_system_initializer_DESC:0 "A system with a large Homeworld and a Gaia planet orbiting a gas giant."
 
-  ithin_system_initializer_NAME:0 "Ithin System"
-  ithin_system_initializer_DESC:0 "A very complex set of sytems"
+ithin_system_initializer_NAME:0 "Ithin System"
+ithin_system_initializer_DESC:0 "A very complex set of sytems"
+
+tds_requires_no_black_hole_neutron_star_pulsar:0 "$TRIGGER_FAIL$Cannot build Dyson Spheres around Black Holes, Neutron Stars, Brown Dwarf or Pulsars."
+
+mega_shipyard:0 "Mega Shipyard"
+ mega_shipyard_DESC:0 "One of the most powerful shipyards ever built in this galaxy. Able to sustain the command of the mightiest empires by building massive armadas in a few months."
+ mega_shipyard_MEGASTRUCTURE_DETAILS:0 "A giant shipyard able to rapidly construct huge armadas once linked to the starbase of the system with a special module."
+ 
+ edict_active_mega_shipyard:0 "§GActivate Mega Shipyard§!"
+ edict_active_mega_shipyard_desc:0 "Order construction of a massive armada by the Mega Shipyard."
+ 
+ ms_complete:0 "Mega Shipyard Completed"
+ ms_complete_desc:0 "Finaly after years of works and a huge amount of minerals spent our Mega Shipyard is finaly completed. All the galaxy is already aware of the amazing achievment that we just completed, they probably already know that they will be no match for the amazing amount of military ships that we will be able to produce without limit. To begin with our navy capacity has seriously increased but we also have another good news, our engineers managed to build a new material which once added to every single ship of our navy will reduce their upkeeps by 50%. With such a bonus we don't have to feat the consequences anymore of having such an huge armada in our navy."
+  
+ sm_megashipyard_module:0 "Mega Shipyard Uplink"
+ sm_megashipyard_module_desc:0 "A uplink module designed to create a connection between the starbase and the megashipyard."
+
+ ap_galactic_force_projection_tooltip:0 "Can build a §HMegashipyard§! Megastructure."
+ ap_grasp_the_void_tooltip:0 "Wormhole and gateway activation techs provided."

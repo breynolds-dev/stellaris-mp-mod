@@ -1,0 +1,9 @@
+on_ship_built = {
+	events = {
+		esapnsc.1
+		esapnsc.2
+		esapnsc.3
+		esapnsc.4
+		esapnsc.5
+	}
+}

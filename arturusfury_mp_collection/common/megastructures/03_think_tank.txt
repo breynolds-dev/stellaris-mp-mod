@@ -27,7 +27,7 @@ think_tank_0 = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_galactic_wonders
+		has_ascension_perk = ap_technological_ascendancy
 	}
 
 	possible = {
@@ -46,10 +46,6 @@ think_tank_0 = {
 				}
 			}
 		}
-    custom_tooltip = {
-        fail_text = "requires_no_existing_megastructure"
-        NOT = { has_star_flag = think_tank_built }
-    }
 	}
 
 	placement_rules = {
@@ -151,7 +147,7 @@ think_tank_1 = {
 	}
 
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_technological_ascendancy }
 	}
 
 	monthly_production = {
@@ -184,7 +180,7 @@ think_tank_2 = {
 	}
 
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_technological_ascendancy }
 	}
 
 	monthly_production = {
@@ -217,7 +213,7 @@ think_tank_3 = {
 	}
 
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_technological_ascendancy }
 	}
 
 	monthly_production = {

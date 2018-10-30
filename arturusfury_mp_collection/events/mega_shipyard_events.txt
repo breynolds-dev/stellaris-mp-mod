@@ -1,0 +1,13 @@
+namespace = MegaShipyardEvent
+
+country_event = 
+{
+	id = "MegaShipyardEvent.1"
+	title = ms_complete
+	desc = ms_complete_desc
+	picture = GFX_evt_mega_shipyard
+	show_sound = event_ringworld_build_complete
+	location = FROM	
+	is_triggered_only = yes	
+	option = { name = EXCELLENT }
+}

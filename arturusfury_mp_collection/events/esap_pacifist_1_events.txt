@@ -1,0 +1,1600 @@
+namespace = esap_pacifist_1
+
+event = {
+	id = esap_pacifist_1.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			has_ascension_perk = ap_esap_pacifism_1
+		}	
+	}
+	
+	immediate = {
+		every_country = {
+			limit =  {
+				has_ascension_perk = ap_esap_pacifism_1			
+			}
+			country_event = { id = esap_pacifist_1.3 }
+			country_event = { id = esap_pacifist_1.2 }
+		}
+	}
+}
+		
+event = {
+	id = esap_pacifist_1.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			has_ascension_perk = ap_esap_pacifism_1
+		}	
+	}
+	
+	immediate = {
+		if = {
+			limit = { Or = { energy < 66 num_pops < 1 } }
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 132 num_pops < 2 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_1"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 198 num_pops < 3 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_2"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 264 num_pops < 4 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_3"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 330 num_pops < 5 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_4"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 396 num_pops < 6 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_5"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 462 num_pops < 7 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_6"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 528 num_pops < 8 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_7"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 594 num_pops < 9 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_8"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 660 num_pops < 10 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_9"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 726 num_pops < 11 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_10"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 792 num_pops < 12 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_11"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 858 num_pops < 13 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_12"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 924 num_pops < 14 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_13"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 990 num_pops < 15 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_14"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1056 num_pops < 16 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_15"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1122 num_pops < 17 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_16"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1188 num_pops < 18 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_17"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1254 num_pops < 19 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_18"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1320 num_pops < 20 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_19"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1452 num_pops < 22 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_20"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1584 num_pops < 24 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_21"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1716 num_pops < 26 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_22"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1848 num_pops < 28 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_23"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 1980 num_pops < 30 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_24"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2112 num_pops < 32 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_25"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2244 num_pops < 34 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_26"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2376 num_pops < 36 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_27"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2508 num_pops < 38 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_28"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2640 num_pops < 40 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_29"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2772 num_pops < 42 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_30"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 2904 num_pops < 44 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_31"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3036 num_pops < 46 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_32"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3168 num_pops < 48 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_33"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3300 num_pops < 50 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_34"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3432 num_pops < 52 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_35"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3564 num_pops < 54 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_36"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3696 num_pops < 56 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_37"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3828 num_pops < 58 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_38"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 3960 num_pops < 60 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_39"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 4290 num_pops < 65 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_40"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 4620 num_pops < 70 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_41"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 4950 num_pops < 75 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_42"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 5280 num_pops < 80 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_43"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 5610 num_pops < 85 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_44"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 5940 num_pops < 90 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_45"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 6270 num_pops < 95 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_46"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 6600 num_pops < 100 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_47"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 6930 num_pops < 105 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_48"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 7260 num_pops < 110 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_49"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 7590 num_pops < 115 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_50"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 7920 num_pops < 120 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_51"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 8250 num_pops < 125 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_52"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 8580 num_pops < 130 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_53"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 8910 num_pops < 135 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_54"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 9240 num_pops < 140 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_55"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 9570 num_pops < 145 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_56"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 9900 num_pops < 150 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_57"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 10230 num_pops < 155 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_58"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 10560 num_pops < 160 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_59"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 11220 num_pops < 170 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_60"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 11880 num_pops < 180 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_61"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 12540 num_pops < 190 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_62"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 13200 num_pops < 200 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_63"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 13860 num_pops < 210 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_64"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 14520 num_pops < 220 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_65"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 15180 num_pops < 230 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_66"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 15840 num_pops < 240 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_67"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 16500 num_pops < 250 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_68"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 17160 num_pops < 260 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_69"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 17820 num_pops < 270 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_70"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 18480 num_pops < 280 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_71"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 19140 num_pops < 290 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_72"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 19800 num_pops < 300 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_73"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 20460 num_pops < 310 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_74"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 21120 num_pops < 320 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_75"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 21780 num_pops < 330 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_76"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 22440 num_pops < 340 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_77"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 23100 num_pops < 350 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_78"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 23760 num_pops < 360 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_79"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 25080 num_pops < 380 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_80"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 26400 num_pops < 400 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_81"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 27720 num_pops < 420 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_82"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 29040 num_pops < 440 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_83"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 30360 num_pops < 460 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_84"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 31680 num_pops < 480 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_85"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 33000 num_pops < 500 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_86"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 34320 num_pops < 520 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_87"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 35640 num_pops < 540 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_88"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 36960 num_pops < 560 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_89"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 38280 num_pops < 580 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_90"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 39600 num_pops < 600 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_91"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 40920 num_pops < 620 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_92"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 42240 num_pops < 640 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_93"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 43560 num_pops < 660 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_94"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 44880 num_pops < 680 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_95"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 46200 num_pops < 700 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_96"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 47520 num_pops < 720 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_97"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 48840 num_pops < 740 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_98"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 50160 num_pops < 760 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_99"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 52800 num_pops < 800 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_100"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 55440 num_pops < 840 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_101"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 58080 num_pops < 880 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_102"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 60720 num_pops < 920 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_103"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 63360 num_pops < 960 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_104"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 66000 num_pops < 1000 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_105"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 68640 num_pops < 1040 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_106"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 71280 num_pops < 1080 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_107"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 73920 num_pops < 1120 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_108"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 76560 num_pops < 1160 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_109"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 79200 num_pops < 1200 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_110"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 81840 num_pops < 1240 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_111"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 84480 num_pops < 1280 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_112"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 87120 num_pops < 1320 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_113"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 89760 num_pops < 1360 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_114"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 92400 num_pops < 1400 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_115"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 95040 num_pops < 1440 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_116"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 97680 num_pops < 1480 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_117"
+				days = -1
+			}
+			break = yes
+		}
+		if = {
+			limit = { Or = { energy < 100320 num_pops < 1520 } }
+			add_modifier = {
+				modifier = "mod_pacifist_1_118"
+				days = -1
+			}
+			break = yes
+		}
+		add_modifier = {
+			modifier = "mod_pacifist_1_119"
+			days = -1
+		}
+		break = yes
+	}
+}
+
+country_event = {
+	id = esap_pacifist_1.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {		
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_1 }
+			 remove_modifier = "mod_pacifist_1_1"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_2 }
+			 remove_modifier = "mod_pacifist_1_2"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_3 }
+			 remove_modifier = "mod_pacifist_1_3"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_4 }
+			 remove_modifier = "mod_pacifist_1_4"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_5 }
+			 remove_modifier = "mod_pacifist_1_5"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_6 }
+			 remove_modifier = "mod_pacifist_1_6"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_7 }
+			 remove_modifier = "mod_pacifist_1_7"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_8 }
+			 remove_modifier = "mod_pacifist_1_8"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_9 }
+			 remove_modifier = "mod_pacifist_1_9"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_10 }
+			 remove_modifier = "mod_pacifist_1_10"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_11 }
+			 remove_modifier = "mod_pacifist_1_11"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_12 }
+			 remove_modifier = "mod_pacifist_1_12"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_13 }
+			 remove_modifier = "mod_pacifist_1_13"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_14 }
+			 remove_modifier = "mod_pacifist_1_14"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_15 }
+			 remove_modifier = "mod_pacifist_1_15"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_16 }
+			 remove_modifier = "mod_pacifist_1_16"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_17 }
+			 remove_modifier = "mod_pacifist_1_17"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_18 }
+			 remove_modifier = "mod_pacifist_1_18"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_19 }
+			 remove_modifier = "mod_pacifist_1_19"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_20 }
+			 remove_modifier = "mod_pacifist_1_20"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_21 }
+			 remove_modifier = "mod_pacifist_1_21"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_22 }
+			 remove_modifier = "mod_pacifist_1_22"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_23 }
+			 remove_modifier = "mod_pacifist_1_23"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_24 }
+			 remove_modifier = "mod_pacifist_1_24"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_25 }
+			 remove_modifier = "mod_pacifist_1_25"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_26 }
+			 remove_modifier = "mod_pacifist_1_26"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_27 }
+			 remove_modifier = "mod_pacifist_1_27"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_28 }
+			 remove_modifier = "mod_pacifist_1_28"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_29 }
+			 remove_modifier = "mod_pacifist_1_29"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_30 }
+			 remove_modifier = "mod_pacifist_1_30"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_31 }
+			 remove_modifier = "mod_pacifist_1_31"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_32 }
+			 remove_modifier = "mod_pacifist_1_32"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_33 }
+			 remove_modifier = "mod_pacifist_1_33"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_34 }
+			 remove_modifier = "mod_pacifist_1_34"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_35 }
+			 remove_modifier = "mod_pacifist_1_35"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_36 }
+			 remove_modifier = "mod_pacifist_1_36"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_37 }
+			 remove_modifier = "mod_pacifist_1_37"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_38 }
+			 remove_modifier = "mod_pacifist_1_38"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_39 }
+			 remove_modifier = "mod_pacifist_1_39"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_40 }
+			 remove_modifier = "mod_pacifist_1_40"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_41 }
+			 remove_modifier = "mod_pacifist_1_41"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_42 }
+			 remove_modifier = "mod_pacifist_1_42"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_43 }
+			 remove_modifier = "mod_pacifist_1_43"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_44 }
+			 remove_modifier = "mod_pacifist_1_44"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_45 }
+			 remove_modifier = "mod_pacifist_1_45"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_46 }
+			 remove_modifier = "mod_pacifist_1_46"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_47 }
+			 remove_modifier = "mod_pacifist_1_47"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_48 }
+			 remove_modifier = "mod_pacifist_1_48"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_49 }
+			 remove_modifier = "mod_pacifist_1_49"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_50 }
+			 remove_modifier = "mod_pacifist_1_50"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_51 }
+			 remove_modifier = "mod_pacifist_1_51"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_52 }
+			 remove_modifier = "mod_pacifist_1_52"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_53 }
+			 remove_modifier = "mod_pacifist_1_53"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_54 }
+			 remove_modifier = "mod_pacifist_1_54"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_55 }
+			 remove_modifier = "mod_pacifist_1_55"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_56 }
+			 remove_modifier = "mod_pacifist_1_56"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_57 }
+			 remove_modifier = "mod_pacifist_1_57"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_58 }
+			 remove_modifier = "mod_pacifist_1_58"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_59 }
+			 remove_modifier = "mod_pacifist_1_59"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_60 }
+			 remove_modifier = "mod_pacifist_1_60"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_61 }
+			 remove_modifier = "mod_pacifist_1_61"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_62 }
+			 remove_modifier = "mod_pacifist_1_62"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_63 }
+			 remove_modifier = "mod_pacifist_1_63"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_64 }
+			 remove_modifier = "mod_pacifist_1_64"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_65 }
+			 remove_modifier = "mod_pacifist_1_65"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_66 }
+			 remove_modifier = "mod_pacifist_1_66"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_67 }
+			 remove_modifier = "mod_pacifist_1_67"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_68 }
+			 remove_modifier = "mod_pacifist_1_68"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_69 }
+			 remove_modifier = "mod_pacifist_1_69"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_70 }
+			 remove_modifier = "mod_pacifist_1_70"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_71 }
+			 remove_modifier = "mod_pacifist_1_71"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_72 }
+			 remove_modifier = "mod_pacifist_1_72"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_73 }
+			 remove_modifier = "mod_pacifist_1_73"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_74 }
+			 remove_modifier = "mod_pacifist_1_74"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_75 }
+			 remove_modifier = "mod_pacifist_1_75"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_76 }
+			 remove_modifier = "mod_pacifist_1_76"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_77 }
+			 remove_modifier = "mod_pacifist_1_77"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_78 }
+			 remove_modifier = "mod_pacifist_1_78"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_79 }
+			 remove_modifier = "mod_pacifist_1_79"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_80 }
+			 remove_modifier = "mod_pacifist_1_80"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_81 }
+			 remove_modifier = "mod_pacifist_1_81"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_82 }
+			 remove_modifier = "mod_pacifist_1_82"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_83 }
+			 remove_modifier = "mod_pacifist_1_83"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_84 }
+			 remove_modifier = "mod_pacifist_1_84"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_85 }
+			 remove_modifier = "mod_pacifist_1_85"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_86 }
+			 remove_modifier = "mod_pacifist_1_86"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_87 }
+			 remove_modifier = "mod_pacifist_1_87"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_88 }
+			 remove_modifier = "mod_pacifist_1_88"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_89 }
+			 remove_modifier = "mod_pacifist_1_89"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_90 }
+			 remove_modifier = "mod_pacifist_1_90"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_91 }
+			 remove_modifier = "mod_pacifist_1_91"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_92 }
+			 remove_modifier = "mod_pacifist_1_92"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_93 }
+			 remove_modifier = "mod_pacifist_1_93"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_94 }
+			 remove_modifier = "mod_pacifist_1_94"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_95 }
+			 remove_modifier = "mod_pacifist_1_95"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_96 }
+			 remove_modifier = "mod_pacifist_1_96"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_97 }
+			 remove_modifier = "mod_pacifist_1_97"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_98 }
+			 remove_modifier = "mod_pacifist_1_98"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_99 }
+			 remove_modifier = "mod_pacifist_1_99"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_100 }
+			 remove_modifier = "mod_pacifist_1_100"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_101 }
+			 remove_modifier = "mod_pacifist_1_101"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_102 }
+			 remove_modifier = "mod_pacifist_1_102"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_103 }
+			 remove_modifier = "mod_pacifist_1_103"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_104 }
+			 remove_modifier = "mod_pacifist_1_104"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_105 }
+			 remove_modifier = "mod_pacifist_1_105"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_106 }
+			 remove_modifier = "mod_pacifist_1_106"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_107 }
+			 remove_modifier = "mod_pacifist_1_107"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_108 }
+			 remove_modifier = "mod_pacifist_1_108"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_109 }
+			 remove_modifier = "mod_pacifist_1_109"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_110 }
+			 remove_modifier = "mod_pacifist_1_110"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_111 }
+			 remove_modifier = "mod_pacifist_1_111"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_112 }
+			 remove_modifier = "mod_pacifist_1_112"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_113 }
+			 remove_modifier = "mod_pacifist_1_113"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_114 }
+			 remove_modifier = "mod_pacifist_1_114"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_115 }
+			 remove_modifier = "mod_pacifist_1_115"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_116 }
+			 remove_modifier = "mod_pacifist_1_116"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_117 }
+			 remove_modifier = "mod_pacifist_1_117"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_118 }
+			 remove_modifier = "mod_pacifist_1_118"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_119 }
+			 remove_modifier = "mod_pacifist_1_119"
+			 break = yes 
+		}
+		if = {
+			 limit = { has_modifier = mod_pacifist_1_120 }
+			 remove_modifier = "mod_pacifist_1_120"
+			 break = yes 
+		}
+	}
+}

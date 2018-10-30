@@ -21,7 +21,7 @@ spy_orb_0 = {
 	}
 
 	potential = {
-		has_ascension_perk = ap_galactic_wonders
+		has_ascension_perk = ap_enigmatic_engineering
 	}
 
 	possible = {
@@ -151,7 +151,7 @@ spy_orb_1 = {
 	}
 
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_enigmatic_engineering }
 	}
 
 	sensor_range = 20
@@ -176,7 +176,7 @@ spy_orb_2 = {
 		energy = 60
 	}
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_enigmatic_engineering }
 	}
 	sensor_range = 40
 	hyperlane_range = 60
@@ -201,7 +201,7 @@ spy_orb_3 = {
 		energy = 80
 	}
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_enigmatic_engineering }
 	}
 	sensor_range = 60
 	hyperlane_range = 90
@@ -225,7 +225,7 @@ spy_orb_4 = {
 		energy = 100
 	}
 	possible = {
-		from = { has_ascension_perk = ap_galactic_wonders }
+		from = { has_ascension_perk = ap_enigmatic_engineering }
 	}
 
 	# effect implementation in game_rules (has_full_sensor_range)
