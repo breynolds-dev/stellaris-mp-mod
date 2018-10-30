@@ -1,0 +1,457 @@
+@gboost = 0.50
+@doublegboost = 1.0
+@supergboost = 2.0
+
+tech_fastergame_starbaseboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		starbase_shipyard_build_speed_mult = @gboost
+		starbase_building_build_speed_mult = @doublegboost
+		starbase_module_build_speed_mult = @doublegboost
+	}
+}
+
+tech_fastergame_megaboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		megastructure_build_speed_mult = @supergboost
+	}
+}
+
+tech_fastergame_techboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		all_technology_research_speed = @gboost
+	}
+}
+
+tech_fastergame_shipboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		spaceport_ship_build_speed_mult = @gboost
+	}
+}
+
+tech_fastergame_colonyboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		planet_colony_development_speed_mult = @gboost
+		terraform_speed_mult = @doublegboost
+	}
+}
+
+tech_fastergame_growthboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		pop_growth_speed = @gboost
+	}
+}
+
+tech_fastergame_robotbuildboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		pop_robot_build_speed_mult = @gboost
+	}
+}
+
+tech_fastergame_buildboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		building_time_mult = -0.25
+		planet_clear_blocker_time_mult = -0.25
+	}
+}
+
+tech_fastergame_armyboost = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+
+	modifier = {
+		planet_army_build_speed_mult = 0.25
+	}
+}
+
+tech_mega_engineering = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 5
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_starbase_5" "tech_battleships" "tech_zero_point_power" }
+	weight = @tier5weight3
+	is_rare = yes
+	start_tech = yes
+
+	feature_flags = {
+		megaengineering
+	}
+
+	modifier = {
+		max_minerals = 20000
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 0.5
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_voidborn
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_master_builders
+		}
+		modifier = {
+			factor = 20
+			has_any_megastructure_in_empire = yes
+		}
+	}
+
+	ai_weight = {
+		factor = 1.25 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# #####################################
+# Psionic Theory Override
+# #####################################
+tech_psionic_theory = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { psionics }
+	is_rare = yes
+	weight = @tier3weight1
+	is_reverse_engineerable = no
+
+	gateway = psionics
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+	modifier = {
+		country_resource_unity_mult = 0.05
+	}
+
+	weight_modifier = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			NOR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = 1
+			AND = {
+				OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+				}
+				NOT = {
+					research_leader = {
+						area = society
+						has_trait = "leader_trait_expertise_psionics"
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+
+# #####################################
+# Alien Pet Overrides for Xenofauna
+# #####################################
+tech_alien_life_studies = {
+	cost = @tier1cost2
+	area = society
+	tier = 1
+	category = { biology }
+	weight = @tier1weight2
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				any_owned_planet = {
+					any_tile = {
+						has_resource = {
+							type = sr_alien_pets
+							amount > 0
+						}
+					}
+				}
+			}
+
+		}
+		modifier = {
+			factor = 3.0
+			any_owned_planet = {
+				any_tile = {
+					has_resource = {
+						type = sr_alien_pets
+						amount > 0
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = first_alien_life }
+		}
+	}
+}
+
+# #####################################
+# Terraforming Overrides
+# #####################################
+tech_ecological_adaptation = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { new_worlds }
+	prerequisites = { "tech_terrestrial_sculpting" }
+	weight = @tier3weight2
+
+	feature_flags = {
+		terraform_inhabited
+	}
+
+	modifier = {
+		max_energy = 5000
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_expansion_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 3
+			has_ascension_perk = ap_world_shaper
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+#Climate Transformation
+tech_climate_restoration = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { new_worlds }
+	prerequisites = { "tech_terrestrial_sculpting" }
+	weight = @tier4weight1
+
+	# unlocks additional terraforming-options
+
+	modifier = {
+		max_energy = 5000
+	}
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_NUKED_CHANGE_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_NUKED_CHANGE_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_expansion_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+		modifier = {
+			factor = 3
+			has_ascension_perk = ap_world_shaper
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
