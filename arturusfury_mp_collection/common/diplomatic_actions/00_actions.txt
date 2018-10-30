@@ -125,7 +125,7 @@ action_make_rival = {
 	requires_actor_independence = no
 	requires_recipient_independence = no
 	should_show_auto_accept_message_recipient = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 
 	potential = {
 		hidden_trigger = {
@@ -185,7 +185,7 @@ action_end_rivalry = {
 	requires_actor_independence = no
 	requires_recipient_independence = no
 	should_show_auto_accept_message_recipient = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 
 	potential = {
 		hidden_trigger = {
@@ -211,7 +211,7 @@ action_form_defensive_pact = {
 	requires_actor_peace = yes
 	requires_recipient_peace = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	AI_acceptance_base_value = -50
 	possible = {
 		custom_tooltip = {
@@ -281,7 +281,7 @@ action_break_defensive_pact = {
 # Usable by regular empires only. Not possible while in a federation. Raises trust over time.
 action_form_non_aggression_pact = {
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	AI_acceptance_base_value = -50
 	possible = {
 		custom_tooltip = {
@@ -334,7 +334,7 @@ action_form_non_aggression_pact = {
 # Break an existing non-aggression pact, harms relations and sets a 10 year truce.
 action_break_non_aggression_pact = {
 	auto_accepted = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	should_show_auto_accept_message_recipient = yes
 }
 
@@ -342,7 +342,7 @@ action_break_non_aggression_pact = {
 # Usable by regular empires only. Not possible while in a federation. Raises trust over time.
 action_guarantee_independence = {
 	auto_accepted = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	requires_recipient_independence = yes
 	requires_actor_independence = yes
 
@@ -436,7 +436,7 @@ action_guarantee_independence = {
 # Break an existing guarantee, harms relations and sets a 10 year truce.
 action_break_guarantee = {
 	auto_accepted = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	should_show_auto_accept_message_recipient = yes
 	requires_recipient_independence = no
 }
@@ -525,7 +525,7 @@ action_break_support = {
 # Usable by regular empires only. Raises trust over time.
 action_form_migration_pact = {
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	requires_actor_independence = no
 	requires_recipient_independence = no
 	AI_acceptance_base_value = -50
@@ -574,7 +574,7 @@ action_form_migration_pact = {
 # Break an existing migration pact, harms relations.
 action_break_migration_pact = {
 	auto_accepted = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	should_show_auto_accept_message_recipient = yes
 	requires_actor_independence = no
 	requires_recipient_independence = no
@@ -587,7 +587,7 @@ action_offer_federation_association_status = {
 	requires_recipient_peace = no
 	requires_alliance_vote = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	AI_acceptance_base_value = -50
 	possible = {
 		custom_tooltip = {
@@ -647,7 +647,7 @@ action_revoke_federation_association_status = {
 	requires_alliance_vote = yes
 	requires_unanimous_vote = no
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	AI_acceptance_base_value = -50
 }
 
@@ -708,7 +708,7 @@ action_end_federation_association_status = {
 	requires_actor_peace = no
 	requires_recipient_peace = no
 	show_to_alliance_members = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 }
 
 # Creates a federation between two empires or invites an empire to an existing federation. Requires unanimous vote from the federation, if one exists already.
@@ -922,7 +922,7 @@ action_open_borders = {
 	requires_actor_independence = no
 	requires_recipient_independence = no
 	should_show_auto_accept_message_recipient = yes
-	#should_notify_all_communications = yes
+	#should_notify_all_communications = no
 
 	possible = {
 		custom_tooltip = {
@@ -978,7 +978,7 @@ action_close_borders = {
 	requires_actor_independence = no
 	requires_recipient_independence = no
 	should_show_auto_accept_message_recipient = yes
-	#should_notify_all_communications = yes
+	#should_notify_all_communications = no
 
 	possible = {
 		can_control_access_for = from
@@ -992,7 +992,7 @@ action_demand_vassalization = {
 	requires_actor_peace = yes
 	requires_recipient_peace = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	requires_recipient_independence = no
 	AI_acceptance_base_value = -50
 
@@ -1081,7 +1081,7 @@ action_demand_protectorate = {
 	requires_actor_peace = yes
 	requires_recipient_peace = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	requires_recipient_independence = no
 	AI_acceptance_base_value = -50
 
@@ -1158,7 +1158,7 @@ action_demand_tributary = {
 	requires_actor_peace = yes
 	requires_recipient_peace = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	requires_recipient_independence = no
 	AI_acceptance_base_value = -50
 
@@ -1285,7 +1285,7 @@ action_ask_to_become_vassalized = {
 	requires_actor_peace = yes
 	requires_recipient_peace = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	AI_acceptance_base_value = -50
 	possible = {
 		custom_tooltip = {
@@ -1338,7 +1338,7 @@ action_ask_to_become_protectorate = {
 	requires_actor_peace = yes
 	requires_recipient_peace = yes
 	diplo_view_acceptance_icon = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	AI_acceptance_base_value = -50
 	possible = {
 		custom_tooltip = {
@@ -1487,7 +1487,7 @@ action_ask_to_become_signatory = {
 action_release_subject = {
 	requires_recipient_independence = no
 	auto_accepted = yes
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 	should_show_auto_accept_message_recipient = yes
 }
 
@@ -1518,5 +1518,5 @@ action_integrate_subject = {
 action_cancel_subject_integration = {
 	auto_accepted = yes
 	requires_recipient_independence = no
-	should_notify_all_communications = yes
+	should_notify_all_communications = no
 }

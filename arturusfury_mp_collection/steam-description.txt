@@ -13,13 +13,17 @@ This is mostly a collection of mods with slight alterations to make a multiplaye
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1149888293]Enhanced Robomodding[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1407858645]Flat Galaxy[/url]
 [*] Galaxy Centers
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1313147672]Glavius's No Diplomatic Spam[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1396818821]L-Gate: Goo and Dragon 100% Spawn[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1318299775]Military Station Fortifier 2[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1248790999]More Leader Levels[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1142142725]No Default Paradox Species[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1200778581]Longer Trade Deals[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1331855174]Panda's Auto Explore[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1445328980]R27 Animated Portraits[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=752695446]Researcher Trait 'Fix'[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1290047689]Simple Leader Skill Icons[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=731594634]Spectra Flag Colors[/url]
 [*] Starbase Buildings Extended ( No Longer on Steam Workshop )
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1395636866]T's Force Spawn Ai (and Fallen Empire) Galaxy[/url]
 [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=707297106]Unique Systems Spawn 100%[/url]

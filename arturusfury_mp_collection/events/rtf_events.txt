@@ -1,0 +1,49 @@
+namespace = rtf
+
+#### LEADER LEVEL UP EVENTS ####
+
+#Gatekeeper fired from on_action on_leader_level_up
+country_event = {
+	id = rtf.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					leader_class = scientist
+					num_traits < 3
+					OR = {
+						is_researching_area = society
+						is_researching_area = engineering
+						is_researching_area = physics
+					}
+					NOT = {
+						has_leader_flag = has_gained_level_trait
+					}
+				}
+				random_list = {
+					90 = { }
+					10 = {
+						modifier = {
+							factor = 1.5
+							has_level = 3
+						}
+						modifier = {
+							factor = 2.5
+							has_level = 4
+						}						
+						modifier = {
+							factor = 5
+							has_level > 4
+						}
+						rtf_add_random_leader_trait = yes
+						set_leader_flag = has_gained_level_trait
+					}
+				}
+				
+			}			
+		}
+	}
+}

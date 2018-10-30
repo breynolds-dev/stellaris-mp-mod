@@ -1,0 +1,302 @@
+﻿### Star Wars Generic
+
+StarWarsGeneric = {
+
+	#selectable = yes
+
+	ship_names = {
+
+		generic = {
+			"Black Maw" Life-Ender Trident Confidence Acclamate Ambassador Barrager Bane Comet Derranged Decorated	Elegant Eager Gamera Harbinger Herald Indomitable Orion Cyclone
+			Hurricane Lifebringer Animosity "Star Fury" Malak Revan Huttsbane Justicar Wolf Alpha Avenger Armageddon "Black Ghost" Crater Dementor Doom
+			Enterprise Eliminator Eternity Executioner Fortitude Kraken Dragonstar Guardian Resolution "Rising Fury" Fury Unstoppable Impervious Judgment Justice
+		}
+
+		corvette = {
+			Avius Baldrin Arcadia Biston Benten Baret Crix Coon Dargus Derryn Dular Eyelark Fox Ferris Garner Gila Goldfinger Gorath Gorgo Hawk Irene Viper "Monkey Lizard"
+			"Steel Aurora" Ares Pelican Lucky Striker Impatient Jyke
+		}
+		
+		destroyer = {
+			Artemis Galactica Neptune Icarus "Stellar Flare" Aero Beryl Berenger Barakis Barrette Cornhall Callus Delta Destructive "Day Star" "Death Hound"
+			Eckstein Foxtrox Feral Fire Firkran Fallback Garret Ghost Gulf Gault Gor Horrendous Horus Huntress Horror Infinity Irate Nexus Valor Kryptoria Phalanx
+			Experience Marduk Jeering
+		}
+		
+		cruiser = {
+			Lion Lancer Life-Ender Trident Confidence Acclamate Annihilate Articulate Ambassador Barrager Bane Comet Cybercon Cardon Conqueror Derranged "Death Mark" Decorated
+			Elegant Element Eager Eagle Faithful Falkirk Gamera "Heavy Fire" "High Caliber" Harbinger Herald Indomitable Orion Inquisitor Cyclone Liberator
+			Bear "Ice Cat" Wampa Hurricane Lifebringer Rebellious Animosity "Star Fury" Malak Revan Huttsbane Justicar Wolf Victory
+		}
+		
+		battleship = {
+			Alpha Avenger Anaconda Armageddon "Black Ghost" Barris Carbonite Crater Centurion Colussus Chimaera Confidence Crusader Dementor Devastator Definer Defiler Doom
+			Enterprise Eliminator Eternity Executioner Fortitude Gargantua Gigantor Goliath Rebellious Titan Kraken Carnage Dragonstar Reliant Warrior Gargoyle
+			Guardian Vindicator Resolution "Rising Fury" Kyber Unstoppable Impervious Imperial Judgment Justice 
+		}
+
+		titan = {
+			Resurgent Secutor Bellator Corellian Eclipse Harrower Kandosii Vengeance Executor Sovereign
+		}
+
+		colussus = {
+			"Ascendant Spear" "Centerpoint Station" Conqueror "Dark Reaper" Darksaber Darkstaff "Death Star" Desolator Devastation "Dovin Basal" "Eye of Palpatine" "Hammer Station" 
+			"Kumauri Battleship" Malevolence "Mass Shadow Generator" "Star Forge" Starkiller "Sun Razer" Tarkin "World Devastator"
+		}
+
+		science = {
+			Anomaly Bartholemew Dorne Eckeridge Explorer "Far Star" "Far Gone" Galaxy Aurora Traveler Adventurer Detector "Millenium Falcon" "Ebon Hawk" Outrider
+		}
+		
+		colonizer = {
+			Genesis "Mandate of Truth" Founder "Beacon of Hope" Access "Bringers of a New Era" Nomad "Maiden Voyage" "A New Beginning" Refugee
+		}
+		
+		constructor = {
+			Operation Developer Assister Builder Repetitive
+		}
+
+		transport = {
+			"Troop Transport"
+		}
+
+		mining_station = { }
+		research_station = { }
+		observation_station = { }
+	}
+
+	ship_class_names = {
+		generic = { }
+		
+		corvette = {
+			Agave Axis Baldrin CR70 CR90 Crusader Cutlass Defender Guardian Hammerhead "I'Friil Ma-Nat" Lianna Light Marauder Paladin PB-950 Raider Thranta Vigil
+		#Officially, the following names are Frigate-Class space ships, however as such a class does not exist yet in vanilla, they are being assigned to the Corvette-Class.
+			Ardent Assault Axehead Bongo CC-7700 CC-9600 Centax Class-C Corona DP-20 "EF76 Nebulon-B" Interceptor Iskallon Kossak Lancer Mansk MC30c Munificent Nargi Nebulon-B2 Nebulon-C Nebulon-K
+			Pelta Praetorian Razor Sabaoth Sacheen Scimitar ShaShore "Star Galleon" Starbolt Stella Tapani Tarrada Tri-Scythe Ubrikkian Vakbeor Wavecrest WR-542 Zebulon-B
+		}
+		
+		destroyer = {
+			Adz Auxilia Delta Feral Infinity Neptune Nexus Phalanx Providence Terminus Valor
+		#Officially, the following names are Light Cruiser-Class space ships, however as the Star Wars Ships mod by elratie has most of these listed as destroyers, they will go here instead.
+			Arquitens Bayonet Carrack Dissident MC40a Prosperity Pursuit Warden
+		}
+		
+		cruiser = {
+		#Officially, this list will include Interdictor, Cruiser, Heavy Cruiser, and even some select Battlecruiser and Star Destroyer classes, in that order.
+			CC-7700/E "Detainer CC-2200" "Immobilizer 418" Interdictor Vua'spar
+			Armadia "Battle Horn" Belarus Beta Broadside Captor Consular Diamond Gozanti Hammerhead HC-556 HC-A1A Lantillian Liberator Munifex Namana Paskla Peacemaker Phraetiss Proficient Qektoth Quasar
+			Republic Sandonian Strike Surronian Trenchant Vainglorious
+			Acclamator Ajuur Dauntless Dragon Enforcer Invincible Majestic Maxima-A Subjugator Togorian
+			Centurion Gladiator Nova "Victory I" Vindicator
+		}
+		
+		battleship = {
+		#Officially, this list will include select Heavy and Battle Cruisers, Star Destroyer classes, and some "Galactic" (just cuz the list was kinda short) names of my own, in that order.
+			Alliegance Atgeir Bulwark Maelstrom Mediator Praetor Procurator 
+			Aggressor Bakura "Imperial I" Imperious Nebula Pellaeon Rejuvenator Sorannan Tector Turbulent Venator
+			Guardian Retribution Starhammer Starhunter Whirlwind
+		}
+
+		titan = {
+		#Officially, this list will include select Star Destroyers, Dreadnought, and Super Star Destroyer classes, in that order.
+			Resurgent Secutor
+			Bellator Corellian Eclipse Harrower Kandosii Vengeance
+			Executor Sovereign
+		}
+
+		colussus = {
+			"Ascendant Spear" "Centerpoint Station" Conqueror "Dark Reaper" Darksaber Darkstaff "Death Star" Desolator Devastation "Dovin Basal" "Eye of Palpatine" "Hammer Station" 
+			"Kumauri Battleship" Malevolence "Mass Shadow Generator" "Star Forge" Starkiller "Sun Razer" Tarkin "World Devastator"
+		}
+		
+		science = {
+			"A-24 Sleuth" Astrogator CR-90 Faraway Pathfinder Skywatcher Surveyor Xanter "Z-10 Seeker"
+		}
+		
+		colonizer = {
+			BC-714 "CSS-1 Corellian" Helot MB-C1 RHTT-6 "Star Courier" "Star Seeder" TZ-2 Vagaari Wanderer YX-1980
+		}
+		
+		constructor = {
+			AEA-500 AP-300 "Calipsan 560" E-2 Garman "Kinro 9747" "Stellar Mag V" "VA-13 Sweeper" Y-8
+		}
+
+		transport = {
+			Action BD-27 "BT-7 Thunderclap" Firefly GR-75 "ILH-KK Citadel" Kubrai "Mark I" Porter Seltiss "Star Galleon" "Super Transport" Tra'kad TZ-86 YZ-2500
+		}
+		
+		military_station_small = {
+			"Defense Platform"
+		}
+		
+		ion_cannon = {
+			Mega V-150 V-200
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Black Fleet" "Byss Defense Fleet" "Charis Fleet" "Coruscant Defense Fleet" "Emperor's Fleet" "Inner Fleet" "Outer-Rim Imperial Fleet" "Lumiya's Fleet"
+			"Shadow Hand Fleet" "Solaest Fleet" "Thrawn's Fleet" "Zaarin's Fleet"
+		}
+		sequential_name = "%O% Fleet"
+	}
+	
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Stormtroopers"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Storm Commandos"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Slave Auxiliaries"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Troopers"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Super Battle Droids"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Battle Droids"
+		}
+		
+		android_army = {
+			sequential_name = "%O% Droid Commandos"
+		}
+		
+		android_defense_army = {
+			sequential_name = "%O% Defense Droid Commandos"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Force-Sensitives"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Undead Troopers"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Death Troopers"
+		}
+		
+		occupation_army = {
+			sequential_name = "%O% Riot Control Stormtroopers"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Security Battle Droids"
+		}
+
+		android_occupation_army = {
+			sequential_name = "%O% Skytroopers"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Alashan Altawar Anobis Bakura Barlok Bastion Belderone Bonadan Boonta Brentaal "Cato Neimoidia" Celanon Centares Commenor "Concord Dawn" Dentaal 
+				Derellium Dorin Dressel Duros Ertegas Exocron Gand Gree Halowan Harridan Hosko Iego Ione Iridonia Jabiim Kadavo Kesh Kintan Lanteeb 
+				Lantillies Lianna "Little Kessel" "Lotho Minor" Mandallia Mirial "Nal Hutta" "Nar Shaddaa" Necropolis "Ord Radama" Ossus "Pembric II" Phorliss Polmanar 
+				"Raxus Prime" Roon Ruusan Serenno Serroco Stewjon Suurja Svivren Talravin Telos Thustra Vinsoth Vortex Wukkar Yalara "Zelos II" Zeltros Zolan
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				Abafar "Bar Neth" Baros Breeka Byss Cotellier Da'nor Daminia "Dromund Fels" "Du Mai" Escaber Florrum Geonosis Hjaff Jakku Jubilar Kamar Korriban Ladarra Mandalore
+				Molavar N'zoth "Ord Cestus" Ordo Pitann "Qi Lozar" Ryloth Samaria Socorro Stoga Tatooine Vanqor Yinchorr Zirulast
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				Argovia Arkanis Bavva Biivren Bith Bogden Borga Caamas Chorax Colla Corulag Dagobah Dandrian Delrakkin "Dromund Kaas" Elerion Falleen Felucia Gulma Hakara Jagomir Jerrilek Kashyyyk 
+				Krevas Lotide Mimban "Orn Kios" Phaseera Phindar Quesh Rishi Rodia Taris "Tantive IV" "Taral V" Telerath Taul Toydaria "Ulda Frav" Umbara Vendara Vestar "Wor Tandell" Xo "Yavin IV" Ylesia Zakuul Z'trop
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				Aleen Aridus "Ammon IV" Blenjeel Kiffu Lannik Malachor Nagi Rattatak Saleucami Sarrish Trandosha Utapau Zaraksander Zygerria
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				Alderaan Anchoron Balmorra Bothawui Byblos Byss Cardooine Cerea Chandrila Concordia Corellia Hapes K'ath Kinyen Kuat Medriaas Mutanda Muugrah Muunilinst Naboo Neimoidia "New Plympto" 
+				Nubia Onderon Pallaxides Plagen Praesitlyn Qiilura Reytha Ruan Sacorria Taanab Talus Tython Ukio Vagran Vasch Weik Yablari
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				Alluuvia Aquaris Aqualaris Arrakan "Bestine IV" Cols Corlass Corsin "Da Soocha" Dac Danalbeth Doreen Dremulae Eriscot Fresia "Gra Ploven"
+				Illarreen Kaal Kabal Kamino Kodai Kothlis "Lombadu III" Mackar Manaan Minntooine "Mon Cala" Omereth Pelagon Perilix Praya Quila Rentor Sanctuary
+				Selonia Sembla Solanus Spira Troxar Varn Whinndor 
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				Arkania Belovia Caamor Cilare Dolomar Ensolica Fretaria Garnib Jebble Mordagon Nars Nelvaan Obroa-Skai Ojom Tholoth Vulpter Wrea Yelsain Yvara
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				Abyssissa Altrax "Ando Prime" Arkania Bakarr Bakura Belovia Belsavis Burcana "Cadomai Prime" Csilla Dolomar Dor Elke Eredin
+				Fangol Formac Gale Garnib Hoth Houll Ilum Inwil Javaal Karedda Karthrexia Keres "Khar Delba" Khorm Lanthrym Lur Mastala Megiddo
+				Misnor Mygeeto "Orto Plutonia" Polus "Raxus II" Rinn Rion Sajun Shuldene "Starkiller Base" Tantra Teshi Toloran Uluu Veladine
+				Zelvahn
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				Almania Cathar Dantooine Denebia Derellium Fallowan Gibbela Ilos Jamiron Lothal Mowgle Omman "Ord Mantell" Jangelle Shili Sriluur Togoria
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				"Althir III" "Artus Prime" Avidich Basteel Bodrin Ebra Esseles Galidraan Hypori Kalaan "Mon Gazza" Orax Ovanis R'alla Ralltiir Skye Sleheyron
+				Sneeve Thisspias Thule Tuulab Vaklin Ventooine "Yaga Minor"
+			}
+		}
+	}
+
+	character_names = {
+	
+		names1 = {
+			weight = 50
+			first_names_male = {
+				Anakin Arcann Almec Bail Ben Biggs Boba Brandon Cad Carth Cassian Davin Dooku Ezra Finn Gar Garm Gault Gaven Gavid Gial Gil Grathan Greedo Han Jango Jom Kanan Kes Kit Koth Kylo Lando Luke Lux Mace Maul Obi-Wan Owen Panaka Plo Poe Qui-Gon Raymus Rush Sion Sora Theron Thexan Tobi Valkorion Vitiate Wedge Wilhuff Zak Zandor
+			}
+			first_names_female = {
+				Aayla Adi Ahoska Alanna Asajj Barriss Bastila Beru Breha Jana Jaira Jessika Jyn Ketsu Lana Leia Luminara Nadia Padme Rey Riyo Sabine Satine Satele Senya Shaak Shara Star Steela Vailyn Vette Zannah Zam Zena
+			}
+			second_names = {
+				Antilles Amidala Andor Bane Barell Barris Bey Blaize Bonteri Branden Bridger Bulq Calrissian Carden Cardon Clovis Corren Dameron Darklighter Erso Fett Fel Fisto Gallia Grell Halcorr Halcyon Hardin Hawkens Jade Jarrus Jinn Kale Kara Kenobi Koon Leone Malak Malgus Organa Palpatine Russ Rohana Skywalker Solaris Solo Swiftflight Tano Tarkin Thorn Ti Tirall Typho Unduli Windu
+			}
+			regnal_first_names_male = {
+				Anakin Arcann Almec Bail Ben Biggs Boba Brandon Cad Carth Cassian Davin Dooku Ezra Finn Gar Garm Gault Gaven Gavid Gial Gil Grathan Greedo Han Jango Jom Kanan Kes Kit Koth Kylo Lando Luke Lux Mace Maul Obi-Wan Owen Panaka Plo Poe Qui-Gon Raymus Rush Sion Sora Theron Thexan Tobi Valkorion Vitiate Wedge Wilhuff Zak Zandor
+			}
+            regnal_first_names_female = {
+				Aayla Adi Ahoska Alanna Asajj Barriss Bastila Beru Breha Jana Jaira Jessika Jyn Ketsu Lana Leia Luminara Nadia Padme Rey Riyo Sabine Satine Satele Senya Shaak Shara Star Steela Vailyn Vette Zannah Zam Zena
+			}
+			regnal_second_names = {
+				Antilles Amidala Andor Bane Barell Barris Bey Blaize Bonteri Branden Bridger Bulq Calrissian Carden Cardon Clovis Corren Dameron Darklighter Erso Fett Fel Fisto Gallia Grell Halcorr Halcyon Hardin Hawkens Jade Jarrus Jinn Kale Kara Kenobi Koon Leone Malak Malgus Organa Palpatine Russ Rohana Skywalker Solaris Solo Swiftflight Tano Tarkin Thorn Ti Tirall Typho Unduli Windu
+			}
+		}
+	}
+}
