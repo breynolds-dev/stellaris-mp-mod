@@ -1,0 +1,122 @@
+
+# ##################
+# Terraformation
+# ##################
+
+#Climate Transformation
+tech_nanite_terraforming = {
+	cost = @tier5cost1
+	area = society
+	tier = 5
+	category = { new_worlds }
+	prerequisites = { "tech_climate_restoration" }
+	is_reverse_engineerable = no
+	weight = @tier5weight1
+	
+	# unlocks additional terraforming-options
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_NANITE_TERRAFORMING_TITLE"
+			desc = "TECH_UNLOCK_NANITE_TERRAFORMING_DESC"
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanodust
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_new_worlds"
+			}
+		}
+	}
+}
+
+# ##################
+# Nano Resources
+# ##################
+
+#Nano Dust
+tech_nano_dust = {
+	cost = 15000
+	area = society
+	tier = 5
+	category = { biology }
+	is_reverse_engineerable = no
+	weight = @tier5weight1
+	
+	gateway = biological
+	
+	modifier = { # add Nanodust
+		country_resource_sr_distar_nanodust_add = 2
+	}
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanodust
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+			researched_nano_dust = yes
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#Nano Scales
+tech_nano_scales = {
+	cost = 15000
+	area = society
+	tier = 5
+	category = { biology }
+	is_reverse_engineerable = no
+	weight = @tier5weight1
+	
+	gateway = biological
+	
+	modifier = { # add Nanodust
+		country_resource_sr_distar_nanoscale_add = 2
+	}
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoscale
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+			researched_nano_scales = yes
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}

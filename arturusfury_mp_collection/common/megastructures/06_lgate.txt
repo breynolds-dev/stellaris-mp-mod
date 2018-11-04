@@ -1,0 +1,52 @@
+# see README.txt for example
+
+# L-Gate
+lgate_base = {
+	entity = "gatebuilder_01_gateway_entity"
+	construction_entity = "gateway_portal_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	show_galactic_map_icon = no
+	
+	potential = {
+		has_technology = tech_lgate_construction
+	}
+
+	show_galactic_map_icon = no
+	build_time = 1800
+	build_cost = {
+		minerals = 20000
+		energy = 15000
+	}
+	construction_blocks_others = no
+
+	bypass_type = lgate
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+		fail_text = "requires_no_existing_gateway"
+			NOR = {
+				has_megastructure = lgate_base
+			}
+		}
+	}
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+			fail_text = "not_in_lcluster"
+			NOR = {
+				has_megastructure = lgate_base
+				has_star_flag = lcluster
+			}
+		}
+		} # use these for all non-star megastructures
+	}
+	on_build_complete = {
+		set_star_flag = lgate
+	}
+}

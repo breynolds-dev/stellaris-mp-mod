@@ -1,0 +1,215 @@
+# ##################
+# Ship Sizes
+# ##################
+
+tech_nanite_ships = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_battleships" }
+	is_reverse_engineerable = no
+	weight = @tier5weight1
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanocrystal
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	## unlock battleships	
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_NANITE_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_NANITE_CONSTRUCTION_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #higher factor due to battleship hull
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# ##################
+# Nanite upgrades
+# ##################
+
+tech_nanite_build_speed = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	is_reverse_engineerable = no
+	weight = @tier5weight2
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanocrystal
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.20
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_nanite_hull = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_nanite_ships" }
+	is_reverse_engineerable = no
+	weight = @tier5weight3
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoactuator
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	modifier = {
+		ship_hull_mult = 0.25
+		ship_armor_mult = 0.25
+		ship_hull_regen_add_static = 1
+		ship_armor_regen_add_static = 2
+	}
+	
+	ai_weight = {
+		factor = 3 # ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# Nanite Living Metal
+tech_nanite_living_metal = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = { materials }
+	prerequisites = { "tech_mine_living_metal" }
+	is_reverse_engineerable = no
+	weight = @tier5weight1
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoactuator
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+			researched_living_metal = yes
+		}
+	}
+	
+	modifier = { # add Living Metal
+		country_resource_sr_living_metal_add = 2
+	}
+}
+
+tech_nanocrystals = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = { materials }
+	is_reverse_engineerable = no
+	weight = @tier5weight1
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanocrystal
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+			researched_nanocrystals = yes
+		}
+	}
+	
+	modifier = { # add Living Metal
+		country_resource_sr_distar_nanocrystal_add = 2
+	}
+}
+
+# ##################
+# Starbases
+# ##################
+
+# ##################################
+# Nanite Starbases/stations upgrades
+# ##################################
+
+# Modular Engineering
+tech_nanite_modular_engineering = {
+	cost = @tier5cost3
+	area = engineering
+	category = { voidcraft }
+	tier = 5
+	prerequisites = { "tech_starbase_5" "tech_modular_engineering" }
+	is_rare = yes
+	weight = @tier5weight2
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoactuator
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	modifier = {
+		starbase_building_build_cost_mult = -0.25
+		starbase_module_build_cost_mult = -0.25
+		starbase_upgrade_cost_mult = -0.15
+		starbase_upgrade_speed_mult = 0.25
+	}
+	
+	ai_weight = {
+		factor = 100 #higher factor due to starbase upgrade
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

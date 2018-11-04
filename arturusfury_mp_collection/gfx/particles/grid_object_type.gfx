@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxparticle = {
+		name = "grid_particle"
+		type = "grid_particle"
+		scale = 1.0
+	}
+}

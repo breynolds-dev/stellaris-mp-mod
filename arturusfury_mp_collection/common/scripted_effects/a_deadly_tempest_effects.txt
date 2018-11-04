@@ -1,0 +1,61 @@
+
+create_nanite_shoal = {
+	create_ship = {
+		name = random
+		design = "NAME_Nanite_Mothership"
+		graphical_culture = "pirate_01"
+	}
+	while = {
+		count = 5
+		create_ship = {
+			name = random
+			design = "NAME_Nanite_Interdictor"
+			graphical_culture = "pirate_01"
+		}
+	}
+}
+
+create_nanite_shoal_1 = {
+	create_ship = {
+		name = random
+		design = "NAME_Nanite_Mothership"
+		graphical_culture = "pirate_01"
+	}
+	while = {
+		count = 20
+		create_ship = {
+			name = random
+			design = "NAME_Nanite_Interdictor"
+			graphical_culture = "pirate_01"
+		}
+	}
+}
+
+create_nanite_shoal_2 = {
+	create_ship = {
+		name = random
+		design = "NAME_Nanite_Mothership"
+		graphical_culture = "pirate_01"
+	}
+	while = {
+		count = 40
+		create_ship = {
+			name = random
+			design = "NAME_Nanite_Interdictor"
+			graphical_culture = "pirate_01"
+		}
+	}
+}
+
+create_nanite_warship = {
+	while = {
+		count = 1
+		create_ship = {
+			name = random
+			design = "NAME_Nanite_Warship"
+			prefix = no
+			graphical_culture = "pirate_01"
+		}
+	}
+}
+

@@ -1,0 +1,160 @@
+# ## physics technologies
+
+tech_nanoactuators = {
+	area = physics
+	tier = 5
+	cost = @tier4cost1
+	category = { computing }
+	prerequisites = { "tech_self_aware_logic" }
+	is_reverse_engineerable = no
+	weight = @tier4weight1
+	
+	modifier = {
+		all_technology_research_speed = 0.05
+	}
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoactuator
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+			researched_nanoactuators = yes
+		}
+	}
+	
+	modifier = { # add Nanoactuators
+		country_resource_sr_distar_nanoactuator_add = 2
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+# ##################
+# Shields and related techs
+# ##################
+
+tech_nanite_shield_rechargers = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_5" }
+	is_reverse_engineerable = no
+	weight = @tier5weight3
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoactuator
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	modifier = {
+		ship_shield_mult = 0.25
+	}
+	
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# ##################
+# Nanite lgate
+# ##################
+
+tech_lcluster_access = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	category = { particles }
+	is_rare = yes
+	is_reverse_engineerable = no
+	weight = @tier5cost2
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_L_GATE_ACCESS_TITLE"
+			desc = "TECH_UNLOCK_L_GATE_ACCESS_DESC"
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_global_flag = lgates_activated_globally
+		}
+		NOR = {
+			has_global_flag = active_gray_goo
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #FTL techs are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_lgate_construction = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { particles }
+	is_rare = yes
+	is_reverse_engineerable = no
+	weight = @tier5cost3
+	prerequisites = { "tech_gateway_construction" "tech_mega_engineering" }
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_L_GATE_TITLE"
+			desc = "TECH_UNLOCK_L_GATE_DESC"
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_country_strategic_resource = {
+				type = sr_distar_nanoactuator
+				amount > 0
+			}
+			has_modifier = dessanu_gift
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #FTL techs are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
