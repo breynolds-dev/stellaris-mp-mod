@@ -1,0 +1,109 @@
+weapon_component_template = {
+	type = instant
+	
+	key = "MAC_gun_L"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 150.0 max = 275.0 }
+	windup = { min = 5.0 max = 18.0 }
+	total_fire_time = 100
+	range = 100.0
+	accuracy = 0.90
+	power = -75
+	cost = 40.00
+	tracking = 0.5
+	armor_penetration = 0.20
+	shield_damage = 1.33
+	
+	icon = "GFX_ship_part_MAC_gun"
+	icon_frame = 1
+	prerequisites = { "MAC_gun_tech" }
+	component_set = "MAC_gun"
+	projectile_gfx = "kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_long_range }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	type = instant
+	
+	key = "50mm_cannon_S"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 0.5 max = 1.0 }
+	windup = { min = 0.1 max = 0.5 }
+	total_fire_time = 0.7
+	range = 40.0
+	accuracy = 0.75
+	power = -10
+	cost = 5.00
+	tracking = 0.80
+	armor_penetration = 0.20
+	
+	icon = "GFX_ship_part_50mm_cannon"
+	icon_frame = 1
+	prerequisites = { "50mm_cannon_tech" }
+	component_set = "50mm_cannon"
+	projectile_gfx = "mass_driver_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	type = instant
+	
+	key = "mini_mac_m"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 80 max = 105 }
+	windup = { min = 9 max = 12.5 }
+	total_fire_time = 70
+	range = 80.0
+	accuracy = 0.75
+	power = -35
+	cost = 30.00
+	tracking = 0.80
+	armor_penetration = 0.20
+	
+	icon = "GFX_ship_part_mini_mac"
+	icon_frame = 1
+	prerequisites = { "tech_mini_mac" }
+	component_set = "mini_mac"
+	projectile_gfx = "kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	type = instant
+	
+	key = "mini_mac_s"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 40 max = 55 }
+	windup = { min = 9 max = 12.5 }
+	total_fire_time = 70
+	range = 50.0
+	accuracy = 0.75
+	power = -25.0
+	cost = 25.00
+	tracking = 0.80
+	armor_penetration = 0.20
+	
+	icon = "GFX_ship_part_mini_mac"
+	icon_frame = 1
+	prerequisites = { "tech_mini_mac" }
+	component_set = "mini_mac"
+	projectile_gfx = "mass_driver_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		factor = 0
+	}
+}

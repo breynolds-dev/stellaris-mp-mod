@@ -1,0 +1,241 @@
+#Archer Missiles
+weapon_component_template = {
+
+	key = "archer_missile_l"
+
+	size = large
+	entity = "turret_missile_small_entity"
+	damage = { min = 80.0 max = 120.0 }
+	windup = { min = 2.0 max = 3.0 }
+	total_fire_time = 50
+	range = 120.0
+	accuracy = 1.00
+	missile_speed = 10.0
+	missile_evasion = 0.75
+	missile_health = 5.0
+
+	power = -60
+	cost = 35
+	shield_penetration = 0.75
+	hull_damage = 1.5
+	tracking = 0.70
+	
+	icon = "GFX_ship_part_archer_missile"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	prerequisites = { "archer_missile_tech" }
+	component_set = "archer"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+
+	key = "archer_missile"
+
+	size = medium
+	entity = "turret_missile_medium_entity"
+	damage = { min = 40.0 max = 60.0 }
+	windup = { min = 2.0 max = 3.0 }
+	total_fire_time = 50
+	range = 90.0
+	accuracy = 1.00
+	missile_speed = 10.0
+	missile_evasion = 0.75
+	missile_health = 10.0
+
+	power = -40
+	cost = 30
+	shield_penetration = 0.75
+	hull_damage = 1.5
+	tracking = 0.70
+	
+	icon = "GFX_ship_part_archer_missile"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	prerequisites = { "archer_missile_tech" }
+	component_set = "archer"
+	projectile_gfx = "medium_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+
+	key = "archer_missile_s"
+
+	size = small
+	entity = "turret_missile_small_entity"
+	damage = { min = 20.0 max = 30.0 }
+	windup = { min = 2.0 max = 3.0 }
+	total_fire_time = 50
+	range = 50.0
+	accuracy = 1.00
+	missile_speed = 10.0
+	missile_evasion = 0.75
+	missile_health = 5.0
+
+	power = -20
+	cost = 25
+	shield_penetration = 0.75
+	hull_damage = 1.5
+	tracking = 0.70
+	
+	icon = "GFX_ship_part_archer_missile"
+	icon_frame = 1
+	static_rotation = no
+	type = missile
+	
+	prerequisites = { "archer_missile_tech" }
+	component_set = "archer"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_long_range weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}
+#Plasma Missiles
+weapon_component_template = {
+	key = "plasma_missile_S"
+	size = small
+	entity = "turret_missile_small_entity"
+	damage = { min = 37.5 max = 40.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 50
+	range = 40.0
+	accuracy = 1.0
+	missile_speed = 10.0
+	missile_evasion = 0.75
+	missile_health = 5.0
+
+	power = -17.5
+	cost = 20
+	shield_damage = 0.5
+	armor_penetration = 0.5
+	tracking = 0.7
+	
+	icon = "GFX_ship_part_plasma_missile"
+	icon_frame = 1
+	type = missile
+	
+	prerequisites = { "plasma_missile_tech" }
+	component_set = "plasma_missile"
+	projectile_gfx = "tfw_pt1_small"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	key = "plasma_missile_M"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	damage = { min = 75.0 max = 80.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 50
+	range = 70.0
+	accuracy = 1.0
+	missile_speed = 10.0
+	missile_evasion = 0.75
+	missile_health = 5.0
+
+	power = -35.0
+	cost = 40
+	shield_damage = 0.5
+	armor_penetration = 0.5
+	tracking = 0.7
+	
+	icon = "GFX_ship_part_plasma_missile"
+	icon_frame = 1
+	type = missile
+	
+	prerequisites = { "plasma_missile_tech" }
+	component_set = "plasma_missile"
+	projectile_gfx = "tfw_pt1_medium"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+key = "plasma_missile_L"
+	size = large
+	entity = "turret_missile_large_entity"
+	damage = { min = 150.0 max = 160.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 50
+	range = 100.0
+	accuracy = 1.0
+	missile_speed = 10.0
+	missile_evasion = 0.75
+	missile_health = 5.0
+
+	power = -70.0
+	cost = 80
+	shield_damage = 0.5
+	armor_penetration = 0.5
+	tracking = 0.7
+	
+	icon = "GFX_ship_part_plasma_missile"
+	icon_frame = 1
+	type = missile
+	
+	prerequisites = { "plasma_missile_tech" }
+	component_set = "plasma_missile"
+	projectile_gfx = "tfw_pt1_large"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+	ai_weights = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	key = "shiva_nuke_G"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	
+	icon = "GFX_ship_part_shiva_nuke"
+	icon_frame = 1
+	type = missile
+	
+	damage = { min = 100.0 max = 500.0 }
+	windup = { min = 15.0 max = 20.0 }
+	total_fire_time = 50
+	range = 150.0
+	accuracy = 1.00
+	missile_speed = 5.0
+	missile_evasion = 0.5
+	missile_health = 20.0
+
+	power = -60
+	cost = 50
+	shield_penetration = 1
+	armour_damage = 1.25
+	hull_damage = 1.5
+	tracking = 0.20
+	
+	prerequisites = { "archer_missile_tech" }
+	component_set = "shiva_nuke"
+	projectile_gfx = "large_torpedo"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weights = {
+		factor = 0
+	}
+}
+
+
+
+	

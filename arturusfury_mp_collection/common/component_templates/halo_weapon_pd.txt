@@ -1,0 +1,56 @@
+weapon_component_template = {
+	key = "pulse_laser_pd_p"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	
+	damage = { min = 10 max = 25 }
+	windup = { min = 10 max = 11 }
+	total_fire_time = 10
+	range = 60.0
+	accuracy = 0.90
+	power = -10
+	cost = 35.00
+	tracking = 1
+	shield_damage = -1.00
+	
+	icon = "GFX_ship_part_pulse_laser"
+	icon_frame = 1
+	
+	prerequisites = { "tech_pulse_laser" }
+	component_set = "pulse_laser_pd"
+	type = point_defence
+	projectile_gfx = "pulse_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	key = "50mm_cannon_pd_p"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	
+	icon = "GFX_ship_part_50mm_cannon"
+	icon_frame = 1
+
+	damage = { min = 1 max = 2 }
+	windup = { min = 10 max = 11 }
+	total_fire_time = 0.7
+	range = 30.0
+	accuracy = 0.90
+	power = -10
+	cost = 25.00
+	tracking = 1
+	shield_damage = -1.00
+	
+	prerequisites = { "50mm_cannon_tech" }
+	component_set = "50mm_cannon_pd"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense }
+	ai_weights = {
+		factors = 0
+	}
+}

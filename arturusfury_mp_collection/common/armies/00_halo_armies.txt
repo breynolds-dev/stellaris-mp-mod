@@ -1,0 +1,988 @@
+elite_squad= {
+	damage = 1.05
+	health = 1.15
+	morale = 3.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "tech_alien_armies_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+brute_squad= {
+	damage = 1.05
+	health = 1.25
+	morale = 3.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "tech_alien_armies_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+grunt_squad= {
+	damage = 1.05
+	health = 0.9
+	morale = 3.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "tech_alien_armies_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+jackal_squad= {
+	damage = 1.15
+	health = 1.15
+	morale = 3.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "tech_alien_armies_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+drone_squad= {
+	damage = 1.05
+	health = 1.15
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "tech_alien_armies_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+wraith_squad= {
+	damage = 2.05
+	health = 2.15
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+ghost_squad= {
+	damage = 2.15
+	health = 2.00
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+banshee_squad= {
+	damage = 2.5
+	health = 2.25
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+blisterback_squad= {
+	damage = 2.35
+	health = 2.15
+	morale = 6.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+locust_squad= {
+	damage = 2.25
+	health = 2.15
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+revenant_squad= {
+	damage = 1.9
+	health = 1.9
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 50
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+spectre_squad= {
+	damage = 2.35
+	health = 2.25
+	morale = 6.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+shadow_squad= {
+	damage = 1.8
+	health = 2.55
+	morale = 6.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+chopper_squad= {
+	damage = 2.45
+	health = 2.05
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+hunter_squad= {
+	damage = 2.25
+	health = 2.35
+	morale = 7.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 2
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "tech_alien_armies_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+scarab= {
+	damage = 5.05
+	health = 5.15
+	morale = 10.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 120
+	maintenance = 0.75
+	icon_frame = 4
+	cost = {
+		minerals = 250
+	}
+	prerequisites = { "tech_alien_armies_3" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+arbiter= {
+	damage = 5.35
+	health = 5
+	morale = 10.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 120
+	maintenance = 0.75
+	icon_frame = 2
+	cost = {
+		minerals = 250
+	}
+	prerequisites = { "tech_alien_armies_3" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+marine_squad = {
+	damage = 0.95
+	health = 1.15
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "human_armies_tech_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+sniper_squad = {
+	damage = 1.2
+	health = 1.05
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "human_armies_tech_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+rocket_squad = {
+	damage = 1.35
+	health = 1.05
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "human_armies_tech_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+pelican_squad = {
+	damage = 0.95
+	health = 1.25
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "human_armies_tech_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+mg_warthog_team = {
+	damage = 1.15
+	health = 1.45
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "human_armies_tech_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+spartan_1_team = {
+	damage = 1.25
+	health = 1.35
+	morale = 4.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 30
+	maintenance = 0.25
+	icon_frame = 2
+	cost = {
+		minerals = 50
+	}
+	prerequisites = { "human_armies_tech_1" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+scorpian_brigade= {
+	damage = 2.15
+	health = 2.25
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+guass_warthog_team= {
+	damage = 2.05
+	health = 2.05
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+rocket_warthog_team= {
+	damage = 2.15
+	health = 2.05
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+hornet_squad= {
+	damage = 2.15
+	health = 2.25
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+wolverine_team= {
+	damage = 2.35
+	health = 2
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+cobra_team= {
+	damage = 2.25
+	health = 2.05
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+gremlin_team= {
+	damage = 2.45
+	health = 1.95
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+cyclops_team= {
+	damage = 2.15
+	health = 2.0
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+grizzly_team= {
+	damage = 2.15
+	health = 2.25
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+rhino_team= {
+	damage = 2.25
+	health = 2.35
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+mantis_team= {
+	damage = 2.35
+	health = 2.15
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+spartan_2_team= {
+	damage = 2.25
+	health = 2.3
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+spartan_3_team= {
+	damage = 2.3
+	health = 2.35
+	morale = 5.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 60
+	maintenance = 0.5
+	icon_frame = 4
+	cost = {
+		minerals = 100
+	}
+	prerequisites = { "human_armies_tech_2" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+mammoth= {
+	damage = 5.25
+	health = 5
+	morale = 10.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 120
+	maintenance = 0.75
+	icon_frame = 4
+	cost = {
+		minerals = 250
+	}
+	prerequisites = { "human_armies_tech_3" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}
+john_117= {
+	damage = 5.05
+	health = 5.25
+	morale = 10.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 1.00
+	assault = yes
+	time = 120
+	maintenance = 0.75
+	icon_frame = 2
+	cost = {
+		minerals = 250
+	}
+	prerequisites = { "human_armies_tech_3" }
+	potential = {
+		from = {
+			NOR = {
+				is_species = "ROBOT_POP_SPECIES_1"
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+				is_sentient = no
+			}
+		}
+	}
+}

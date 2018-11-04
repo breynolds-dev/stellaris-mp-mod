@@ -1,0 +1,270 @@
+country_edict = {
+	name = "age_of_conflict"
+	modifier = {
+		army_health = 0.05
+		army_damage_mult = 0.05
+		ship_fire_rate_mult = 0.05
+		ship_combat_speed_mult = 0.1
+		ship_shield_hp_mult = 0.05
+		ship_hitpoints_mult = 0.05
+		ship_armor_mult = 0.10
+		ship_shield_regen_add_perc = 0.2
+		all_technology_research_speed = -0.05
+	}
+	
+	influence_cost = 1
+	
+	potential = {
+	}
+		
+	allow = {
+		NOT = {
+			has_country_edict = age_of_discovery
+			has_country_edict = age_of_conversion
+			has_country_edict = age_of_reconciliation
+			has_country_edict = age_of_doubt
+			has_country_edict = age_of_reclaimation
+		}
+	}
+	
+	prerequisites { 
+		"tech_cov_edicts"
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+					
+			}
+		}		
+	}	
+}
+country_edict = {
+	name = "age_of_discovery"
+	modifier = {
+		science_ship_survey_speed  = 0.50
+		ship_anomaly_research_speed_mult = 0.20
+		ship_anomaly_generation_chance_mult = 0.10
+		ship_anomaly_fail_risk = -0.30
+		ship_anomaly_research_speed_mult = 0.35
+		ship_sensor_range_mult = 0.25
+		all_technology_research_speed = 0.10
+		num_tech_alternatives_add = 1
+		country_border_mult = 0.2
+		navy_size_mult = -0.1
+		ship_upkeep_mult = 0.10
+		max_minerals = -1000
+		max_energy = -1000
+	}
+
+	influence_cost = 1
+	
+	potential = {
+	}
+		
+	allow = {
+		NOT = {
+			has_country_edict = age_of_conflict
+			has_country_edict = age_of_conversion
+			has_country_edict = age_of_reconciliation
+			has_country_edict = age_of_doubt
+			has_country_edict = age_of_reclaimation
+		}
+	}
+	prerequisites { 
+		"tech_cov_edicts"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+	}	
+}
+country_edict = {
+	name = "age_of_conversion"
+	modifier = {
+		pop_happiness = 0.2
+		pop_other_species_happiness = 0.05
+		pop_environment_tolerance = 0.10
+		pop_xenophobia = -0.2
+		pop_government_ethic_attraction = 0.50
+		leader_influence_cost = 0.1
+		science_ship_survey_speed  = -0.20
+		ship_anomaly_fail_risk = 0.05
+		ship_upkeep_mult = 0.10
+	}
+
+	influence_cost = 1
+	
+	potential = {
+	}
+		
+	allow = {
+		NOT = {
+			has_country_edict = age_of_conflict
+			has_country_edict = age_of_discovery
+			has_country_edict = age_of_reconciliation
+			has_country_edict = age_of_doubt
+			has_country_edict = age_of_reclaimation
+		}
+	}
+	prerequisites { 
+		"tech_cov_edicts"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+	}	
+}
+country_edict = {
+	name = "age_of_reconciliation"
+	modifier = {
+		country_trade_attractiveness = 0.10
+		alliance_influence_cost = -0.5
+		max_embassies = 5
+		navy_size_mult = -0.1
+		pop_other_species_happiness = 0.05
+		country_resettlement_cost_mult = -0.15
+		rivalry_influence_gain = -0.2
+		pop_war_happiness = -0.25
+
+	}
+
+	influence_cost = 1
+	
+	potential = {
+	}
+	prerequisites { 
+		"tech_cov_edicts"
+	}
+		
+	allow = {
+		NOT = {
+			has_country_edict = age_of_conflict
+			has_country_edict = age_of_discovery
+			has_country_edict = age_of_conversion
+			has_country_edict = age_of_doubt
+			has_country_edict = age_of_reclaimation
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+	}	
+}
+country_edict = {
+	name = "age_of_doubt"
+	modifier = {
+		ship_auto_repair_add = 0.02
+		ship_reparation_speed_mult = 0.15
+		ship_speed_mult = 0.15
+		pop_happiness = 0.1
+		pop_government_ethic_attraction = 0.1
+		faction_happiness = 0.2
+		subject_integration_influence_cost = -0.1
+		building_time_mult = 0.2
+		pop_growth_req = 3.0
+
+	}
+
+	influence_cost = 1
+	
+	potential = {
+	}
+	prerequisites { 
+		"tech_cov_edicts"
+	}
+		
+	allow = {
+		NOT = {
+			has_country_edict = age_of_conflict
+			has_country_edict = age_of_discovery
+			has_country_edict = age_of_conversion
+			has_country_edict = age_of_reconciliation
+			has_country_edict = age_of_reclaimation
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+	}	
+}
+country_edict = {
+	name = "age_of_reclaimation"
+	modifier = {
+		terraforming_cost_mult = -0.25
+		planet_border_mult = 0.1
+		planet_colony_development_speed_mult = 0.25
+		planet_clear_blocker_time_mult = -0.75
+		planet_clear_blocker_cost_mult = -1
+		planet_sensor_range_mult = 0.25
+		building_time_mult = -0.25
+		megastructure_build_speed_mult = -0.1
+		pop_environment_tolerance = 0.1
+		pop_growth_speed = -0.05
+		pop_happiness = -0.05
+		max_minerals = -1000
+		max_energy = -1000
+		navy_size_mult = -0.1
+
+	}
+
+	influence_cost = 1
+	
+	potential = {
+	}
+	prerequisites { 
+		"tech_cov_edicts"
+	}
+		
+	allow = {
+		NOT = {
+			has_country_edict = age_of_conflict
+			has_country_edict = age_of_discovery
+			has_country_edict = age_of_conversion
+			has_country_edict = age_of_doubt
+			has_country_edict = age_of_reconciliation
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+	}	
+}

@@ -1,0 +1,88 @@
+weapon_component_template = {
+	key = "small_pulse_laser"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	damage = { min = 10 max = 25 }
+	windup = { min = 10 max = 11 }
+	total_fire_time = 10
+	range = 50.0
+	accuracy = 0.90
+	power = -10
+	cost = 35
+	tracking = 1
+	shield_damage = 1.33
+	
+	icon = "GFX_ship_part_pulse_laser"
+	icon_frame = 1
+	
+	prerequisites = { "tech_pulse_laser" }
+	component_set = "pulse_laser"
+	projectile_gfx = "uv_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	key = "medium_cov_plasma_cannon"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	damage = { min = 75 max = 125 }
+	windup = { min = 30 max = 31 }
+	total_fire_time = 70
+	range = 80.0
+	accuracy = 0.60
+	power = -30
+	cost = 50
+	tracking = 0.5
+	armor_penetration = 0.75
+	
+	
+	icon = "GFX_ship_part_cov_plasma_cannon"
+	icon_frame = 1
+	#color = { 1.0 0.1 1.0 1 }
+	
+	prerequisites = { "tech_cov_plasma_cannon" }
+	component_set = "cov_plasma_cannon"
+	projectile_gfx = "cov_plasma_cannon_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight ={
+		factor = 0
+	}
+}
+weapon_component_template = {
+	key = "large_cov_plasma_cannon"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+
+	damage = { min = 150 max = 250 }
+	windup = { min = 40 max = 41 }
+	total_fire_time = 70
+	range = 100.0
+	accuracy = 0.50
+	power = -60
+	cost = 100
+	tracking = 0.25
+	armor_penetration = 0.75
+	
+	
+	icon = "GFX_ship_part_cov_plasma_cannon"
+	icon_frame = 1
+	#color = { 1.0 0.1 1.0 1 }
+	
+	prerequisites = { "tech_cov_plasma_cannon" }
+	component_set = "cov_plasma_cannon"
+	projectile_gfx = "cov_plasma_cannon_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		factor = 0
+	}
+}

@@ -1,0 +1,54 @@
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 1000
+@tier3cost2 = 1300
+@tier3cost3 = 1600
+@tier3cost4 = 1900
+
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+tech_cov_plasma_cannon = {
+	cost = @tier2cost3
+	area = physics
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_alien_armies_2" }
+	weight = 80
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.05
+			NOT = {
+				OR = {				
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}

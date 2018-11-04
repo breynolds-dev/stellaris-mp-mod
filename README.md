@@ -13,6 +13,7 @@
     [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1407858645]Flat Galaxy[/url]
     [*] Galaxy Centers
     [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1313147672]Glavius's No Diplomatic Spam[/url]
+    [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=896167384]Halo Wars: Stellaris[/url]
     [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1555235455]Hexgrid Overlay[/url]
     [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1396818821]L-Gate: Goo and Dragon 100% Spawn[/url]
     [*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1318299775]Military Station Fortifier 2[/url]

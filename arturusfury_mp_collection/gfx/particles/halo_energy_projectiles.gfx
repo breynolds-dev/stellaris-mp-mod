@@ -1,0 +1,25 @@
+objectTypes = {
+	pdxparticle = {
+		name = "cov_plasma_idle_medium_entity"
+		type = "cov_plasma_idle"
+		
+		scale = 1.5
+	}
+	pdxparticle = { 
+		name = "cov_plasma_idle_large_entity"
+		type = "cov_plasma_idle"
+		
+		scale = 1.75
+	}
+	pdxparticle = {
+		name = "cov_plasma_idle_drop_medium_entity"
+		type = "cov_plasma_idle_drop"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "cov_plasma_idle_drop_large_entity"
+		type = "cov_plasma_idle_drop"
+		
+		scale = 1.75
+	}

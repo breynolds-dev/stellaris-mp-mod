@@ -1,0 +1,30 @@
+
+################## Weapon #############################
+category = {
+ name = "Weapon"
+ soundeffects = {
+		####### WEAPONS
+	
+	####### CLOSE
+	tfw_pt1_fire
+	tfw_pt1_hit
+	
+	
+	
+	####### FAR
+	tfw_distance_pt1_fire
+	tfw_distance_pt1_hit
+	
+ }
+ 
+ compressor = 
+ {
+ enabled = yes
+ pregain = 2.0
+ postgain = -4.0
+ ratio = 10.0
+ threshold = -15.0
+ attacktime = 0.030
+ releasetime = 1.2
+ }
+}

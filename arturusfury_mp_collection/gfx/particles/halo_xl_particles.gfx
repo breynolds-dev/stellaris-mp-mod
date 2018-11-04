@@ -1,0 +1,13 @@
+objectTypes = {
+	pdxparticle = {
+		name = "plasma_lance_windup_effect"
+		type = "plasma_lance_windup_effect"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "plasma_lance_muzzle_effect"
+		type = "plasma_lance_muzzle_effect"
+		
+		scale = 1.5
+	}

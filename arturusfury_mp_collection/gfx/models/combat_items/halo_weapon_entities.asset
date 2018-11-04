@@ -1,0 +1,165 @@
+#PLASMA_missiles##################################
+
+#MESH
+entity = {
+	name = "tfw_pt1_entity_small"
+	cull_radius = 1
+	#pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 node = exhaust particle = "tfw_pt1_idle_particle_small" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "tfw_pt1_idle_flame_particle_small" keep_particle = yes }
+	}
+	scale = 1.25
+}
+
+entity = {
+	name = "tfw_pt1_entity_medium"
+	cull_radius = 1
+	#pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 node = exhaust particle = "tfw_pt1_idle_particle_medium" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "tfw_pt1_idle_flame_particle_medium" keep_particle = yes }
+	}
+	scale = 1.25
+}
+
+entity = {
+	name = "tfw_pt1_entity_large"
+	cull_radius = 1
+	#pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 node = exhaust particle = "tfw_pt1_idle_particle_large" keep_particle = yes }
+		event = { time = 0 node = exhaust particle = "tfw_pt1_idle_flame_particle_large" keep_particle = yes }
+	}
+	scale = 1.25
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "tfw_pt1_muzzle_flash_entity_small"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "tfw_pt1_muzzle_particle_small" keep_particle = yes sound = { soundeffect = tfw_pt1_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "tfw_distance_pt1_fire" } }
+	}
+}
+
+entity = {
+	name = "tfw_pt1_muzzle_flash_entity_medium"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "tfw_pt1_muzzle_particle_medium" keep_particle = yes sound = { soundeffect = tfw_pt1_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "tfw_distance_pt1_fire" } }
+	}
+}
+
+entity = {
+	name = "tfw_pt1_muzzle_flash_entity_large"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "tfw_pt1_muzzle_particle_large" keep_particle = yes sound = { soundeffect = tfw_pt1_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "tfw_distance_pt1_fire" } }
+	}
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "tfw_pt1_hit_entity_small"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 node = "root" particle = "tfw_pt1_hit_effect_small" sound = { soundeffect = tfw_pt1_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "tfw_distance_pt1_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "tfw_pt1_hit_entity_medium"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 node = "root" particle = "tfw_pt1_hit_effect_medium" sound = { soundeffect = tfw_pt1_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "tfw_distance_pt1_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "tfw_pt1_hit_entity_large"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 node = "root" particle = "tfw_pt1_hit_effect_large" sound = { soundeffect = tfw_pt1_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "tfw_distance_pt1_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+#plasma lance wind up
+entity = {
+	name = "plasma_projector_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "plasma_lance_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "plasma_lance_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "plasma_lance_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+entity = {
+	name = "plasma_projector_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "plasma_lance_muzzle_effect" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+#cov plasma cannon
+
+entity = {
+	name = "cov_plasma_medium_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "cov_plasma_idle_medium_entity" keep_particle = yes }
+		event = { time = 0 particle = "cov_plasma_idle_drop_medium_entity" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "cov_plasma_large_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "cov_plasma_idle_large_entity" keep_particle = yes }
+		event = { time = 0 particle = "cov_plasma_idle_drop_large_entity" keep_particle = yes }
+	}
+}

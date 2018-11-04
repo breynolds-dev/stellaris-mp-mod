@@ -1,0 +1,65 @@
+spriteTypes{
+	spriteType = {
+		name = "GFX_ship_part_MAC_gun"
+		texturefile = "gfx/interface/icons/ship_parts/MAC_gun.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_archer_missile"
+		texturefile = "gfx/interface/icons/ship_parts/archer_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_plasma_missile"
+		texturefile = "gfx/interface/icons/ship_parts/plasma_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_50mm_cannon"
+		texturefile = "gfx/interface/icons/ship_parts/50mm_cannon.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_pulse_laser"
+		texturefile = "gfx/interface/icons/ship_parts/pulse_lasers.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_plasma_lance"
+		texturefile = "gfx/interface/icons/ship_parts/plasma_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_super_mac"
+		texturefile = "gfx/interface/icons/ship_parts/super_mac.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_broadsword"
+		texturefile = "gfx/interface/icons/ship_parts/broadsword.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_longsword"
+		texturefile = "gfx/interface/icons/ship_parts/longsword.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_banshee"
+		texturefile = "gfx/interface/icons/ship_parts/banshee.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_seraph"
+		texturefile = "gfx/interface/icons/ship_parts/seraph.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mini_mac"
+		texturefile = "gfx/interface/icons/ship_parts/mini_mac.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_cov_plasma_cannon"
+		texturefile = "gfx/interface/icons/ship_parts/covenant_plasma_cannon.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_titan_MAC"
+		texturefile = "gfx/interface/icons/ship_parts/CR03_MAC.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_titan_PP"
+		texturefile = "gfx/interface/icons/ship_parts/titan_PP.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_shiva_nuke"
+		texturefile = "gfx/interface/icons/ship_parts/shiva_nuke.dds"
+	}

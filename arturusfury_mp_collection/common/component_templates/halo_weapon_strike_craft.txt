@@ -1,0 +1,184 @@
+@attack_range = 8
+@launch_time = 1.5
+@fighter_speed = 3.5
+@bomber_speed = 3
+@count = 5
+@regen = 0.13
+
+
+strike_craft_component_template = {
+	key = "broad_sword_f"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "mass_driver_s"
+	power = -40
+	cost = 30
+	
+	count = @count
+	regeneration_per_day = 0.13
+	launch_time = @launch_time
+	
+	damage = { min = 1 max = 1.1 }
+	cooldown = 0.5
+	range = 15
+	accuracy = 1.0
+	
+	health = 6
+	armor = 2
+	shield = 0
+	tracking = 0.40
+	
+	speed = 3.6
+	rotation_speed = 0.1
+	acceleration = 0.6
+	evasion = 0.60
+	
+	shield_damage = 0.0
+	shield_penetration = 1
+	armor_penetration = 0.5
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_ship_part_broadsword"
+	icon_frame = 1
+	component_set = "broad_sword"
+	prerequisites = { "tech_broadsword" }
+	tags = { weapon_type_strike_craft }
+	ai_weight = {
+		factor = 0
+	}
+}
+strike_craft_component_template = {
+	key = "long_sword_b"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "mass_driver_m"
+	power = -50
+	cost = 35
+	
+	count = @count
+	regeneration_per_day = 0.13
+	launch_time = @launch_time
+	
+	damage = { min = 1.2 max = 1.5 }
+	cooldown = 0.6
+	range = 20
+	accuracy = 1.0
+	
+	health = 8
+	armor = 2
+	shield = 0
+	tracking = 0.40
+	
+	speed = 3.6
+	rotation_speed = 0.1
+	acceleration = 0.6
+	evasion = 0.60
+	
+	shield_damage = 0.0
+	shield_penetration = 1
+	armor_penetration = 0.5
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_ship_part_longsword"
+	icon_frame = 1
+	component_set = "long_sword"
+	prerequisites = { "tech_broadsword" }
+	tags = { weapon_type_strike_craft }
+	ai_weight = {
+		factor = 0
+	}
+}
+strike_craft_component_template = {
+	key = "banshee_f"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "uv_laser_s"
+	power = -70
+	cost = 70
+	
+	count = @count
+	regeneration_per_day = 0.13
+	launch_time = @launch_time
+	
+	damage = { min = 0.6 max = 1.0 }
+	cooldown = 0.5
+	range = 10
+	accuracy = 1.0
+	
+	health = 6
+	armor = 2
+	shield = 0
+	tracking = 0.40
+	
+	speed = 3.6
+	rotation_speed = 0.1
+	acceleration = 0.6
+	evasion = 0.60
+	
+	shield_damage = 1.0
+	shield_penetration = 0
+	armor_penetration = 0.5
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_ship_part_banshee"
+	icon_frame = 1
+	component_set = "banshee"
+	prerequisites = { "tech_banshee" }
+	tags = { weapon_type_strike_craft }
+	ai_weight = {
+		factor = 0
+	}
+}
+strike_craft_component_template = {
+	key = "seraph_b"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "uv_laser_m"
+	power = -70
+	cost = 70
+	
+	count = @count
+	regeneration_per_day = 0.13
+	launch_time = @launch_time
+	
+	damage = { min = 1.3 max = 1.5 }
+	cooldown = 0.7
+	range = 20
+	accuracy = 1.0
+	
+	health = 9
+	armor = 2
+	shield = 0
+	tracking = 0.40
+	
+	speed = 3.6
+	rotation_speed = 0.1
+	acceleration = 0.6
+	evasion = 0.60
+	
+	shield_damage = 0.0
+	shield_penetration = 1
+	armor_penetration = 0.5
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_ship_part_seraph"
+	icon_frame = 1
+	component_set = "seraph"
+	prerequisites = { "tech_banshee" }
+	tags = { weapon_type_strike_craft }
+	ai_weight = {
+		factor = 0
+	}
+}

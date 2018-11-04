@@ -1,0 +1,108 @@
+component_set = {
+	key = "MAC_gun"
+	
+	icon = "GFX_ship_part_MAC_gun"
+	icon_frame = 1	
+}
+component_set = {
+	key = "archer"
+	
+	icon = "GFX_ship_part_archer_missile"
+	icon_frame = 1
+}
+component_set = {
+	key = "plasma_missile"
+
+	icon = "GFX_ship_part_plasma_missile"
+	icon_frame = 1
+}
+component_set = {
+	key = "50mm_cannon"
+
+	icon = "GFX_ship_part_50mm_cannon"
+	icon_frame = 1
+}
+component_set = {
+	key = "pulse_laser"
+
+	icon = "GFX_ship_part_pulse_laser"
+	icon_frame = 1
+}
+component_set = {
+	key = "pulse_laser_pd"
+
+	icon = "GFX_ship_part_pulse_laser"
+	icon_frame = 1
+}
+component_set = {
+	key = "plasma_lance"
+	
+	icon = "GFX_ship_part_plasma_lance"
+	icon_frame = 1
+}
+component_set = {
+	key = "super_mac"
+	
+	icon = "GFX_ship_part_super_mac"
+	icon_frame = 1
+}
+component_set = {
+	key = "50mm_cannon_pd"
+
+	icon = "GFX_ship_part_50mm_cannon"
+	icon_frame = 1
+}
+component_set = {
+	key = "broad_sword"
+
+	icon = "GFX_ship_part_broadsword"
+	icon_frame = 1
+}
+component_set = {
+	key = "long_sword"
+
+	icon = "GFX_ship_part_longsword"
+	icon_frame = 1
+}
+component_set = {
+	key = "banshee"
+
+	icon = "GFX_ship_part_banshee"
+	icon_frame =1
+}
+component_set = {
+	key = "seraph"
+
+	icon = "GFX_ship_part_seraph"
+	icon_frame = 1
+}
+component_set = {
+	key = "mini_mac"
+
+	icon = "GFX_ship_part_mini_mac"
+	icon_frame = 1
+}
+component_set = {
+	key = "cov_plasma_cannon"
+	
+	icon = "GFX_ship_part_cov_plasma_cannon"
+	icon_frame = 1
+}
+component_set = {
+	key = "titan_MAC_T"
+	
+	icon = "GFX_ship_part_titan_MAC"
+	icon_frame = 1
+}
+component_set = {
+	key = "titan_PP_T"
+	
+	icon = "GFX_ship_part_titan_PP"
+	icon_frame = 1
+}
+component_set = {
+	key = "shiva_nuke"
+	
+	icon = "GFX_ship_part_shiva_nuke"
+	icon_frame = 1
+}

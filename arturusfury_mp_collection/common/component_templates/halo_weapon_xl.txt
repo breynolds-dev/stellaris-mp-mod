@@ -1,0 +1,91 @@
+weapon_component_template = {
+	key = "plasma_lance_xl"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	
+	icon = "GFX_ship_part_plasma_lance"
+	icon_frame = 1
+
+	damage = { min = 200.0 max = 500 }
+	windup = { min = 15.0 max = 17.0 }
+	total_fire_time = 40
+	range = 100.0
+	accuracy = 0.75
+	power = -150
+	cost = 150.00
+	tracking = 0.5
+	armor_penetration = 1.00
+	shield_damage = 1.5
+	
+	firing_arc = 35.0
+	min_range = 15.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_plasma_lance" }
+	component_set = "plasma_lance"
+	projectile_gfx = "plasma_lance_gfx"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_long_range weapon_role_anti_armor }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+weapon_component_template = {
+	type = instant
+	
+	key = "super_mac_xl"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	
+	icon = "GFX_ship_part_super_mac"
+	icon_frame = 1
+	
+	damage = { min = 250.0 max = 500 }
+	windup = { min = 12.0 max = 17.0 }
+	total_fire_time = 100
+	range = 110.0
+	accuracy = 0.95
+	power = -120
+	cost = 120.00
+	tracking = 0.5
+	armor_penetration = 0.5
+	shield_penetration = 1.50
+	
+	firing_arc = 25.0
+	min_range = 5.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_super_mac" }
+	component_set = "super_mac"
+	projectile_gfx = "kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_long_range }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
